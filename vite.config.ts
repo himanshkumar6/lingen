@@ -1,38 +1,41 @@
-import path from "path";
-import fs from "fs";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import path from "path";
+import fs from "fs";
+import { blogPosts } from "./data/blogData";
+
+const baseUrl = "https://linkgen.in";
 
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
 
-    // ✅ AUTO SITEMAP + ROBOTS GENERATOR
     {
       name: "generate-seo-files",
       apply: "build",
       closeBundle() {
-        const distPath = path.resolve(__dirname, "dist");
-        const baseUrl = "https://linkgen.in";
-
+        const distPath = path.resolve(process.cwd(), "dist");
         if (!fs.existsSync(distPath)) return;
 
-        const routes = [
+        const staticRoutes = [
           "/",
-          "/anime-name-generator",
-          "/instagram-bio-generator",
           "/blog",
           "/contact",
           "/about",
           "/privacy-policy",
           "/terms",
+          "/disclaimer",
         ];
+
+        const blogRoutes = blogPosts.map((post) => `/blog/${post.slug}`);
+
+        const allRoutes = [...staticRoutes, ...blogRoutes];
 
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes
+${allRoutes
   .map(
     (route) => `
   <url>
@@ -46,23 +49,18 @@ ${routes
 
         fs.writeFileSync(path.join(distPath, "sitemap.xml"), sitemap);
 
-        const robots = `
-User-agent: *
+        const robots = `User-agent: *
 Allow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
 `;
 
         fs.writeFileSync(path.join(distPath, "robots.txt"), robots);
+
+        console.log("✅ Sitemap & robots generated successfully");
       },
     },
   ],
-
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
 
   build: {
     outDir: "dist",
