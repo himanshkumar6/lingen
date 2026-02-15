@@ -4,7 +4,7 @@ export const blogPosts = [
     slug: "how-to-write-a-bio-for-instagram",
     excerpt:
       "Learn how to write a professional, catchy and SEO-optimized Instagram bio that attracts followers in the United States.",
-    coverImage: "./public/blog/instagram-bio.png",
+    coverImage: "/public/blog/instagram-bio.png",
     category: "Instagram Growth",
     publishDate: "15 Feb 2026",
     readingTime: "8 min read",
