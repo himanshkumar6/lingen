@@ -34,17 +34,20 @@ function generateSitemap() {
     return;
   }
 
-  const htmlFiles = getAllHtmlFiles(distPath);
+  const htmlFiles = getAllHtmlFiles(distPath);  // Ensures all subpages are included.
 
   const routes = htmlFiles.map((filePath) => {
     const relativePath = path.relative(distPath, filePath);
     let route = "/" + relativePath.replace(/\\/g, "/");
 
+    // Ensure you are handling index.html and any subdirectories
     route = route.replace("index.html", "");
     route = route.replace(".html", "");
 
     return route;
   });
+
+  console.log("Found routes:", routes);  // Check what's being added here.
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -64,5 +67,6 @@ ${routes
 
   console.log("✅ Sitemap generated successfully");
 }
+
 
 generateSitemap();
