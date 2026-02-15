@@ -358,7 +358,7 @@ Yes. Instagram indexes keywords in bios and names. Clear niche keywords improve 
     slug: "how-to-change-youtube-shorts-thumbnail",
     excerpt:
       "A complete guide for creators in the USA on how to update and optimize YouTube Shorts thumbnails.",
-    coverImage: "../public/blog/shorts-thumbnail.png",
+    coverImage: "/blog/shorts-thumbnail.png",
     category: "YouTube Growth",
     publishDate: "15 Feb 2026",
     readingTime: "6 min read",
@@ -683,7 +683,7 @@ And now you know how to control it.
     slug: "what-is-a-thumbnail",
     excerpt:
       "Understand what thumbnails are, why they matter, and how creators in the US use them to increase CTR.",
-    coverImage: "../public/blog/thumbnail-guide.png",
+    coverImage: "/blog/thumbnail-guide.png",
     category: "YouTube SEO",
     publishDate: "15 Feb 2026",
     readingTime: "7 min read",
@@ -1085,7 +1085,7 @@ And that moment determines everything.
     slug: "what-are-tags",
     excerpt:
       "Learn what tags are, how they work, and why they matter for SEO and YouTube growth in the US market.",
-    coverImage: "../public/blog/tags-guide.png",
+    coverImage: "/blog/tags-guide.png",
     category: "SEO Basics",
     publishDate: "15 Feb 2026",
     readingTime: "9 min read",
