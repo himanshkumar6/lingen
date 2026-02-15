@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from 'fs'
+import path from 'path'
 
 const distPath = path.resolve(__dirname, "dist"); // Path to your dist folder
 const baseUrl = "https://linkgen.in";
