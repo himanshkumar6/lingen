@@ -1,7 +1,7 @@
 import fs from "fs-extra";
 import path from "path";
 import puppeteer from "puppeteer";
-import { blogPosts } from "data/blogData.ts"; // adjust path if needed
+import { blogPosts } from "../data/blogData.ts"; // adjust path if needed
 
 const baseUrl = "http://localhost:4173"; // vite preview default
 const distPath = path.resolve("dist");
