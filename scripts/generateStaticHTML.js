@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs'
+import path from 'path'
 
 // Static base URL for your site
 const baseUrl = 'https://linkgen.in';
