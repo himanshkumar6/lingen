@@ -18,27 +18,46 @@ const YouTubeTags: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
 
+  const API_KEY = import.meta.env.VITE_YT_API_KEY;
+
   const extractTags = async () => {
     if (!url) return;
+
     setLoading(true);
+    setTags([]);
 
-    await new Promise((r) => setTimeout(r, 1200));
+    try {
+      // Extract Video ID (supports watch, shorts, youtu.be)
+      const regex =
+        /(?:youtube\.com\/(?:.*v=|shorts\/)|youtu\.be\/)([^&?/]+)/;
+      const match = url.match(regex);
+      const videoId = match ? match[1] : null;
 
-    const mockTags = [
-      "youtube seo",
-      "youtube growth strategy",
-      "viral video tips",
-      "youtube algorithm 2026",
-      "video ranking tricks",
-      "creator economy",
-      "how to grow on youtube fast",
-      "youtube keyword research",
-      "content creator tips",
-      "video marketing strategy",
-    ];
+      if (!videoId) {
+        alert("Invalid YouTube URL");
+        setLoading(false);
+        return;
+      }
 
-    setTags(mockTags);
-    setLoading(false);
+      const response = await fetch(
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${API_KEY}`
+      );
+
+      const data = await response.json();
+
+      if (!data.items || data.items.length === 0) {
+        throw new Error("Video not found");
+      }
+
+      const snippet = data.items[0].snippet;
+
+      setTags(snippet.tags || []);
+    } catch (error) {
+      console.error(error);
+      alert("Failed to extract tags");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleCopy = () => {
@@ -49,7 +68,6 @@ const YouTubeTags: React.FC = () => {
 
   return (
     <>
-      {/* Schema Markup */}
       <JsonLd
         type="SoftwareApplication"
         data={{
@@ -78,7 +96,6 @@ const YouTubeTags: React.FC = () => {
 
         {/* ================= INPUT SECTION ================= */}
         <section className="max-w-3xl mx-auto bg-card border border-border rounded-2xl p-6 md:p-10 shadow-sm space-y-6">
-
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-grow">
               <Youtube className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-red-500" />
@@ -203,14 +220,13 @@ const YouTubeTags: React.FC = () => {
             </ul>
           </div>
 
-          {/* Internal Linking */}
           <div className="bg-primary/5 border border-border rounded-2xl p-8 text-center space-y-4">
             <h3 className="text-lg font-semibold text-foreground">
               Explore More Free SEO Tools
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                to="/youtube-description"
+                to="/youtube-description-extractor"
                 className="px-4 py-2 bg-background border border-border rounded-lg hover:border-primary hover:text-primary transition"
               >
                 YouTube Description Extractor
@@ -229,6 +245,7 @@ const YouTubeTags: React.FC = () => {
               </Link>
             </div>
           </div>
+
         </section>
       </Container>
     </>

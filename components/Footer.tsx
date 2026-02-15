@@ -54,14 +54,6 @@ const Footer: React.FC = () => {
                   Contact Support
                 </Link>
               </li>
-              <li>
-                <a
-                  href="/sitemap.xml"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Sitemap
-                </a>
-              </li>
             </ul>
           </div>
 

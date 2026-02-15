@@ -1,55 +1,85 @@
-
-import { GoogleGenAI } from "@google/genai";
 import { sanitizeInput } from "../lib/validation";
+import Groq from "groq-sdk";
 
-/**
- * ARCHITECT NOTE: 
- * In a real-world SaaS, you would call your Node.js/Next.js backend proxy here.
- * Exposing process.env.API_KEY in the frontend is a security risk.
- */
+const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
-export const generateBio = async (niche: string, keywords: string, tone: string): Promise<string[]> => {
+if (!API_KEY) {
+  throw new Error("VITE_GROQ_API_KEY is missing in .env");
+}
+
+const groq = new Groq({
+  apiKey: API_KEY,
+  dangerouslyAllowBrowser: true,
+});
+
+/* ============================= */
+/*        GENERATE BIO           */
+/* ============================= */
+
+export const generateBio = async (
+  niche: string,
+  keywords: string,
+  tone: string,
+): Promise<string[]> => {
   const safeNiche = sanitizeInput(niche);
   const safeKeywords = sanitizeInput(keywords);
-  
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-  const prompt = `Generate 3 creative Instagram bios for a ${safeNiche} creator. 
-  Include keywords: ${safeKeywords}. 
-  Tone: ${tone}. 
-  Keep them short, use emojis, and make them engaging. 
-  Format: Return ONLY the 3 bios separated by new lines, no numbers or bullets.`;
+
+  const prompt = `
+Generate 3 creative Instagram bios for a ${safeNiche} creator.
+Include keywords: ${safeKeywords}.
+Tone: ${tone}.
+Keep them under 150 characters.
+Return ONLY the 3 bios separated by new lines.
+`;
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-1.5-flash-latest',
-      contents: prompt,
+    const completion = await groq.chat.completions.create({
+      model: "llama-3.3-70b-versatile", // ✅ VALID GROQ MODEL
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.8,
     });
-    
-    const text = response.text || "";
-    return text.split('\n').filter(line => line.trim().length > 5);
-  } catch (error: any) {
-    console.error("Gemini Generation Error:", error);
-    if (error.status === 429) throw new Error("Rate limit reached. Please try again in a minute.");
-    throw new Error("The AI service is temporarily unavailable.");
+
+    const text = completion.choices[0]?.message?.content || "";
+
+    return text
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => line.length > 5);
+  } catch (error) {
+    console.error("Groq Bio Error:", error);
+    throw new Error("AI service unavailable.");
   }
 };
 
-export const generateAnimeNames = async (theme: string, type: string): Promise<string[]> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-  const prompt = `Generate 5 unique and cool anime-style names for a ${type} with a ${theme} theme. 
-  Provide original Japanese-sounding names (with meaning) or cool English translations. 
-  Format: Return ONLY the names, one per line.`;
+/* ============================= */
+/*     GENERATE ANIME NAMES     */
+/* ============================= */
+
+export const generateAnimeNames = async (
+  theme: string,
+  type: string,
+): Promise<string[]> => {
+  const prompt = `
+Generate 5 unique anime-style names for a ${type} with a ${theme} theme.
+Each name must include a short meaning in brackets.
+Return ONLY names, one per line.
+`;
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-1.5-flash-latest',
-      contents: prompt,
+    const completion = await groq.chat.completions.create({
+      model: "llama-3.3-70b-versatile", // ✅ VALID GROQ MODEL
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.9,
     });
-    
-    const text = response.text || "";
-    return text.split('\n').filter(line => line.trim().length > 0).map(line => line.replace(/^[-*•]\s*\d*[.)]?\s*/, '').trim());
+
+    const text = completion.choices[0]?.message?.content || "";
+
+    return text
+      .split("\n")
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0);
   } catch (error) {
-    console.error("Gemini Anime Name Error:", error);
-    throw new Error("Failed to generate names. Please try again.");
+    console.error("Groq Anime Error:", error);
+    throw new Error("AI service unavailable.");
   }
 };

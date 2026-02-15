@@ -1,9 +1,7 @@
-
 import React, { useState } from 'react';
-import { Youtube, Search, Copy, Check, FileText, Loader2, AlertCircle, Info, TrendingUp, Target, Zap } from 'lucide-react';
+import { Youtube, Search, Copy, Check, FileText, Loader2, AlertCircle, BarChart, Hash, Globe, Info } from 'lucide-react';
 import SEOWrapper from '../components/SEOWrapper';
 import { JsonLd } from '../lib/seo';
-import { fetchVideoMetadata } from '../services/youtube';
 import { isValidYoutubeUrl, sanitizeInput } from '../lib/validation';
 
 const YouTubeDescription: React.FC = () => {
@@ -13,19 +11,48 @@ const YouTubeDescription: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState('');
 
+  const API_KEY = import.meta.env.VITE_YT_API_KEY;
+
+  const extractVideoId = (inputUrl: string) => {
+    const regex =
+      /(?:youtube\.com\/(?:.*v=|shorts\/)|youtu\.be\/)([^&?/]+)/;
+    const match = inputUrl.match(regex);
+    return match ? match[1] : null;
+  };
+
   const extractDescription = async () => {
     const cleanUrl = sanitizeInput(url);
+
     if (!isValidYoutubeUrl(cleanUrl)) {
       setError('Please enter a valid YouTube video URL (e.g. https://youtube.com/watch?v=...)');
       return;
     }
 
+    const videoId = extractVideoId(cleanUrl);
+
+    if (!videoId) {
+      setError('Invalid YouTube URL');
+      return;
+    }
+
     setError('');
     setLoading(true);
+    setDescription('');
 
     try {
-      const data = await fetchVideoMetadata(cleanUrl);
-      setDescription(data.description);
+      const response = await fetch(
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${API_KEY}`
+      );
+
+      const data = await response.json();
+
+      if (!data.items || data.items.length === 0) {
+        throw new Error('Video not found or private');
+      }
+
+      const snippet = data.items[0].snippet;
+
+      setDescription(snippet.description || '');
     } catch (err: any) {
       setError(err.message || 'Failed to extract description. The video might be private or deleted.');
       setDescription('');
@@ -41,48 +68,67 @@ const YouTubeDescription: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  // ✅ FIXED: High Value Content for SEO
   const articleContent = (
-    <div className="space-y-8">
-      <section>
-        <p className="text-lg leading-relaxed">
-          In the competitive landscape of digital video, your <strong>YouTube Description</strong> acts as the connective tissue between your content and the search engine algorithm. While many creators focus solely on the visual aspects of their videos, high-ranking channels know that the text accompanying their video is a goldmine for SEO and viewer conversion. Our <strong>YouTube Description Extractor</strong> is designed to help you decode the strategies of top performers.
-        </p>
-      </section>
-
-      <section>
-        <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
-          <Target className="text-primary w-6 h-6" /> The Strategy of "Above the Fold" Content
-        </h3>
+    <div className="space-y-10 text-muted-foreground leading-relaxed">
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
+          <BarChart className="w-6 h-6 text-primary" />
+          The Importance of YouTube Description SEO
+        </h2>
         <p>
-          The first two sentences of your description are arguably the most important real estate on your entire channel. This is the snippet that appears in Google and YouTube search results. By extracting descriptions from successful videos in your niche, you'll notice a pattern: they almost always include their primary keyword within the first 100 characters while providing a clear value proposition to the viewer.
+          YouTube is the world's second-largest search engine. To rank your videos, your description must act as a 
+          road map for YouTube's algorithm. Our <strong>YouTube Description Extractor</strong> allows you to analyze 
+          how top-performing creators structure their metadata, keyword density, and call-to-actions (CTAs).
         </p>
       </section>
 
-      <section>
-        <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
-          <TrendingUp className="text-green-500 w-6 h-6" /> Why Timestamps and Chapters are Non-Negotiable
-        </h3>
-        <p>
-          As we move into 2025, user retention is the king of metrics. YouTube's "Chapters" feature, powered by timestamps in the description, allows users to navigate directly to the information they need. This not only improves user experience but also allows your video to appear in "Key Moments" on Google Search results, significantly increasing your organic reach. Our extractor helps you see how competitors structure these timestamps for maximum clarity.
-        </p>
-      </section>
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="bg-card p-6 rounded-2xl border border-border">
+          <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
+            <Hash className="w-5 h-5 text-primary" /> Metadata Insights
+          </h3>
+          <p className="text-sm">
+            By extracting descriptions, you can identify hidden hashtags and social media linking strategies 
+            that influencers use to boost their engagement rates and cross-platform growth.
+          </p>
+        </div>
+        <div className="bg-card p-6 rounded-2xl border border-border">
+          <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
+            <Globe className="w-5 h-5 text-primary" /> Competitive Research
+          </h3>
+          <p className="text-sm">
+            Understand how competitors use timestamps to improve "Audience Retention." Learning their 
+            chapter-marking style can help you keep viewers on your videos longer.
+          </p>
+        </div>
+      </div>
 
-      <section className="bg-muted/50 p-6 rounded-2xl border border-border">
-        <h4 className="font-bold text-foreground mb-2">The Creator's Research Workflow:</h4>
-        <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-          <li>Extract descriptions from the top 5 videos for your target keyword.</li>
-          <li>Analyze their use of secondary keywords and long-tail phrases.</li>
-          <li>Observe their Call-to-Action (CTA) placement—are they pushing for subs, newsletters, or affiliate sales?</li>
-          <li>Note their hashtag strategy (YouTube typically only counts the first three as highly relevant).</li>
+      <section className="bg-primary/5 p-8 rounded-3xl border border-primary/10">
+        <h3 className="text-xl font-bold text-foreground mb-4">Pro Tips for YouTube Descriptions</h3>
+        <ul className="grid gap-4">
+          <li className="flex gap-3">
+            <div className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+            <span><strong>The First 200 Characters:</strong> This is the most critical part. Ensure your primary keyword appears here as it shows up in search snippets.</span>
+          </li>
+          <li className="flex gap-3">
+            <div className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+            <span><strong>Call-To-Action (CTA):</strong> Always include a link to subscribe or a lead magnet within the top third of the description.</span>
+          </li>
+          <li className="flex gap-3">
+            <div className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+            <span><strong>Timestamp Accuracy:</strong> Use the 00:00 format to help Google index your video chapters for "Key Moments" in search results.</span>
+          </li>
         </ul>
       </section>
     </div>
   );
 
   const faqs = [
-    { q: "How long should a YouTube description be?", a: "YouTube allows up to 5,000 characters. For best SEO results, aim for at least 250-500 words of unique, high-quality text." },
-    { q: "Do hashtags in the description help?", a: "Yes, but don't overdo it. The first three hashtags appear above your video title and are indexed most heavily." },
-    { q: "Can I use this tool to copy descriptions?", a: "We recommend using this tool for research and inspiration only. Copying descriptions directly can lead to duplicate content flags and harms your brand's unique voice." }
+    { q: "How long should a YouTube description be?", a: "YouTube allows up to 5,000 characters. For best SEO results, aim for at least 250-500 words of unique, high-quality text that describes the video content accurately." },
+    { q: "Can I use this tool for any video?", a: "Yes, you can extract descriptions from any public YouTube video or Short. Just paste the URL and our tool will retrieve the metadata instantly." },
+    { q: "Do hashtags in the description help?", a: "Yes, hashtags help in categorizing your video. The first three hashtags you include will appear above your video title on some devices." },
+    { q: "Is copying descriptions bad for SEO?", a: "Directly copying can lead to 'Duplicate Content' issues. Use this tool for research and then write your own unique description to maintain your brand voice." }
   ];
 
   return (
@@ -90,26 +136,27 @@ const YouTubeDescription: React.FC = () => {
       <JsonLd
         type="SoftwareApplication"
         data={{
-          name: "YouTube Description Extractor",
+          name: "YouTube Description Extractor & SEO Analyzer",
           operatingSystem: "Web",
-          applicationCategory: "BusinessApplication",
+          applicationCategory: "MultimediaApplication",
           offers: { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          description: "Analyze and extract metadata from YouTube descriptions to improve your video SEO."
+          description: "Free tool to extract and analyze YouTube video descriptions for SEO research and metadata optimization."
         }}
       />
+
       <SEOWrapper
-        title="YT SEO Tool"
-        articleTitle="Mastering the Art of the YouTube Description"
+        title="YouTube Description Extractor - Free SEO Tool"
+        articleTitle="Optimizing Your Video Metadata for Search Rankings"
         articleContent={articleContent}
         faqs={faqs}
       >
         <div className="space-y-24">
           <header className="text-center space-y-8 max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-7xl font-black tracking-tight text-foreground leading-[1.1]">
-              YT Description Extractor
+              YT Description <span className="text-primary">Extractor</span>
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-              Extract and analyze descriptions from any YouTube video for SEO research.
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+              Extract metadata and analyze descriptions from any YouTube video to improve your ranking strategy.
             </p>
           </header>
 
@@ -117,17 +164,18 @@ const YouTubeDescription: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-4">
               <div className="relative flex-grow group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Youtube className="h-5 w-5 text-red-500 group-focus-within:scale-110 transition-transform" />
+                  <Youtube className="h-5 w-5 text-red-500" />
                 </div>
                 <input
                   type="text"
-                  placeholder="https://www.youtube.com/watch?v=..."
+                  placeholder="Paste YouTube Video or Shorts URL..."
                   className="block w-full pl-12 pr-4 py-5 border-2 border-border bg-background rounded-2xl focus:border-primary outline-none transition-all text-lg shadow-sm"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && extractDescription()}
                 />
               </div>
+
               <button
                 onClick={extractDescription}
                 disabled={loading || !url}
@@ -137,43 +185,40 @@ const YouTubeDescription: React.FC = () => {
                 {loading ? 'Analyzing...' : 'Extract'}
               </button>
             </div>
-            {error && <div className="text-destructive text-sm mt-4 p-4 bg-destructive/10 rounded-xl border border-destructive/20 flex items-center gap-2 font-semibold animate-in fade-in zoom-in"><AlertCircle className="w-4 h-4" /> {error}</div>}
+
+            {error && (
+              <div className="text-destructive text-sm mt-4 p-4 bg-destructive/10 rounded-xl border border-destructive/20 flex items-center gap-2 font-semibold">
+                <AlertCircle className="w-4 h-4" /> {error}
+              </div>
+            )}
           </div>
 
           {description && (
-            <div className="space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <div className="space-y-6">
               <div className="flex items-center justify-between border-b border-border pb-4">
                 <h3 className="flex items-center gap-2 font-black text-xl text-foreground">
-                  <FileText className="w-6 h-6 text-primary" /> Analysis Results
+                  <FileText className="w-6 h-6 text-primary" /> Description Metadata
                 </h3>
                 <button
                   onClick={handleCopy}
                   className="flex items-center gap-2 px-5 py-2.5 bg-primary/10 text-primary rounded-xl font-bold text-sm hover:bg-primary/20 transition-all border border-primary/20"
                 >
                   {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
-                  {copied ? 'Copied to Clipboard' : 'Copy Text'}
+                  {copied ? 'Copied' : 'Copy Text'}
                 </button>
               </div>
 
-              <div className="bg-muted/30 rounded-2xl p-6 md:p-8 border border-border shadow-inner max-h-[500px] overflow-y-auto custom-scrollbar">
+              <div className="bg-muted/30 rounded-2xl p-6 md:p-8 border border-border shadow-inner max-h-[500px] overflow-y-auto">
                 <pre className="whitespace-pre-wrap font-sans text-foreground leading-relaxed text-base">
                   {description}
                 </pre>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800/50">
-                  <p className="text-[10px] font-black text-indigo-400 uppercase tracking-tighter mb-1">Character Count</p>
-                  <p className="text-2xl font-black text-indigo-700 dark:text-indigo-300">{description.length}</p>
-                </div>
-                <div className="p-4 rounded-2xl bg-pink-50 dark:bg-pink-900/20 border border-pink-100 dark:border-pink-800/50">
-                  <p className="text-[10px] font-black text-pink-400 uppercase tracking-tighter mb-1">Word Count</p>
-                  <p className="text-2xl font-black text-pink-700 dark:text-pink-300">{description.split(/\s+/).length}</p>
-                </div>
-                <div className="p-4 rounded-2xl bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-800/50">
-                  <p className="text-[10px] font-black text-green-400 uppercase tracking-tighter mb-1">Links Found</p>
-                  <p className="text-2xl font-black text-green-700 dark:text-green-300">{(description.match(/https?:\/\/[^\s]+/g) || []).length}</p>
-                </div>
+              <div className="bg-blue-500/10 p-4 rounded-xl border border-blue-500/20 flex gap-3 text-sm text-blue-600">
+                <Info className="w-5 h-5 shrink-0" />
+                <p>
+                  <strong>Note:</strong> Descriptions are often used by YouTube to determine "Related Videos." Analyze the keywords above to understand why this video is ranking.
+                </p>
               </div>
             </div>
           )}
