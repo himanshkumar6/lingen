@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vite preview & node scripts/generateStaticHTML.js",
-    "preview": "vite preview",
-    "ssg": "node scripts/generateStaticHTML.js"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@google/genai": "^1.41.0",
@@ -36,7 +35,6 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.0.0",
     "fs-extra": "^11.3.3",
-    "puppeteer": "^24.37.3",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
     "vite-plugin-sitemap": "^0.8.2"
