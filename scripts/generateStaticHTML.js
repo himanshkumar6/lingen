@@ -1,43 +1,62 @@
-import fs from "fs-extra";
-import path from "path";
-import puppeteer from "puppeteer";
-import { blogPosts } from "../data/blogData.ts"; // adjust path if needed
+const fs = require('fs');
+const path = require('path');
 
-const baseUrl = "http://localhost:4173"; // vite preview default
-const distPath = path.resolve("dist");
+// Static base URL for your site
+const baseUrl = 'https://linkgen.in';
 
-async function generate() {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+// Path to the output folder where build files are located
+const distPath = path.resolve(__dirname, 'dist');
 
-  const routes = [
-    "/",
-    "/blog",
-    ...blogPosts.map((post) => `/blog/${post.slug}`),
-  ];
+// Helper function to get all HTML files from a directory
+function getAllHtmlFiles(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let filePaths = [];
 
-  for (const route of routes) {
-    const url = baseUrl + route;
-    console.log("Prerendering:", url);
+  files.forEach(file => {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
 
-    await page.goto(url, {
-      waitUntil: "networkidle0",
-    });
+    // If the file is a directory, recurse into it
+    if (stat.isDirectory()) {
+      filePaths = filePaths.concat(getAllHtmlFiles(filePath));
+    } else if (filePath.endsWith('.html')) {
+      // Only include .html files
+      filePaths.push(filePath);
+    }
+  });
 
-    const html = await page.content();
-
-    const filePath =
-      route === "/"
-        ? path.join(distPath, "index.html")
-        : path.join(distPath, route, "index.html");
-
-    await fs.ensureDir(path.dirname(filePath));
-    await fs.writeFile(filePath, html);
-
-    console.log("Generated:", filePath);
-  }
-
-  await browser.close();
+  return filePaths;
 }
 
-generate();
+// Function to generate the sitemap
+function generateSitemap() {
+  // Step 1: Get all HTML files in the dist directory
+  const htmlFiles = getAllHtmlFiles(distPath);
+
+  // Step 2: Map the HTML file paths to URLs
+  const routes = htmlFiles.map(filePath => {
+    const relativePath = path.relative(distPath, filePath);
+    const url = `/${relativePath.replace(/\\/g, '/').replace(/\.html$/, '')}`;
+    return url;
+  });
+
+  // Step 3: Generate the sitemap XML content
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    ${routes
+      .map(route => `
+        <url>
+          <loc>${baseUrl}${route}</loc>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+      `)
+      .join('')}
+  </urlset>`;
+
+  // Step 4: Write the sitemap.xml file in the dist folder
+  fs.writeFileSync(path.join(distPath, 'sitemap.xml'), sitemap);
+  console.log('Sitemap generated successfully!');
+}
+
+generateSitemap();
