@@ -108,101 +108,135 @@ const YouTubeThumbnail: React.FC = () => {
         articleContent={articleContent}
         faqs={faqs}
       >
-        <div className="space-y-24">
-          <div className="max-w-3xl mx-auto space-y-10 text-center">
-            <h1 className="text-4xl md:text-7xl font-black tracking-tight text-foreground leading-[1.1]">
-              YT Thumbnail Downloader
+        <div className="space-y-20 lg:space-y-24">
+
+          {/* HERO */}
+          <div className="max-w-2xl mx-auto space-y-8 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-tight">
+              YouTube Thumbnail Downloader
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-              Download high-quality YouTube thumbnails for research and design inspiration.
+
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              Download high-quality thumbnails instantly for research, inspiration,
+              and competitive analysis.
             </p>
+
             <div className="relative group">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <Youtube className="h-6 w-6 text-red-500 transition-transform group-focus-within:rotate-12" />
+                <Youtube className="h-5 w-5 text-red-500 transition-transform group-focus-within:rotate-12" />
               </div>
+
               <input
                 type="text"
-                placeholder="Paste Video URL (e.g., https://youtu.be/...)"
-                className="block w-full pl-12 pr-4 py-5 border-2 border-border bg-background rounded-2xl focus:border-primary outline-none transition-all text-lg shadow-sm"
+                placeholder="Paste YouTube Video URL..."
+                className="block w-full pl-12 pr-4 py-4 border border-border bg-background rounded-2xl focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-base shadow-sm"
                 value={url}
-                onChange={(e) => {
-                  handleUrlChange(e.target.value);
-                }}
+                onChange={(e) => handleUrlChange(e.target.value)}
               />
             </div>
-            {error && <p className="text-destructive text-sm font-bold flex items-center justify-center gap-1 animate-pulse"><AlertCircle className="w-4 h-4" /> {error}</p>}
+
+            {error && (
+              <p className="text-destructive text-sm font-medium flex items-center justify-center gap-1">
+                <AlertCircle className="w-4 h-4" /> {error}
+              </p>
+            )}
           </div>
 
+          {/* RESULT SECTION */}
           {videoId && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 animate-in fade-in slide-in-from-bottom-8 duration-700 max-w-5xl mx-auto">
+
+              {/* IMAGE PREVIEW */}
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-black text-foreground">Image Preview</h3>
-                  <span className="text-[10px] font-bold text-green-600 bg-green-500/10 px-2 py-0.5 rounded-full border border-green-500/20 uppercase tracking-tighter">Verified Link</span>
-                </div>
-                <div className="group relative overflow-hidden rounded-3xl border-4 border-border shadow-2xl">
+                <h3 className="font-semibold text-foreground text-lg">
+                  Thumbnail Preview
+                </h3>
+
+                <div className="relative overflow-hidden rounded-2xl border border-border shadow-md">
                   <img
                     src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
                     alt="YouTube Thumbnail Preview"
-                    className="w-full transition-transform duration-500 group-hover:scale-105"
+                    className="w-full transition-transform duration-500 hover:scale-[1.02]"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                      (e.target as HTMLImageElement).src =
+                        `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                     }}
                   />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                    <ImageIcon className="w-12 h-12 text-white" />
-                  </div>
                 </div>
               </div>
 
+              {/* DOWNLOAD OPTIONS */}
               <div className="space-y-6">
-                <h3 className="font-black text-foreground">Download in High Definition</h3>
+                <h3 className="font-semibold text-foreground text-lg">
+                  Download Options
+                </h3>
+
                 <div className="grid gap-4">
+
+                  {/* MAX */}
                   <button
-                    onClick={() => handleDownload('max')}
-                    className="flex items-center justify-between p-5 bg-primary/5 border-2 border-primary/10 rounded-2xl hover:bg-primary/10 hover:border-primary/30 transition-all group"
+                    onClick={() => handleDownload("max")}
+                    className="flex items-center justify-between p-5 bg-primary/5 border border-primary/20 rounded-2xl hover:bg-primary/10 transition-all"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="bg-primary p-2.5 rounded-xl text-white shadow-lg shadow-primary/30">
-                        <Download className="w-5 h-5" />
+                      <div className="bg-primary text-white p-2 rounded-lg">
+                        <Download className="w-4 h-4" />
                       </div>
                       <div className="text-left">
-                        <p className="font-black text-foreground">Max Resolution (4K/HD)</p>
-                        <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">1920x1080 • Best for analysis</p>
+                        <p className="font-semibold text-foreground">
+                          Max Resolution
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          1920x1080 • Best quality available
+                        </p>
                       </div>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors" />
+                    <ExternalLink className="w-4 h-4 text-muted-foreground" />
                   </button>
 
+                  {/* HQ */}
                   <button
-                    onClick={() => handleDownload('hq')}
-                    className="flex items-center justify-between p-5 bg-card border-2 border-border rounded-2xl hover:border-primary/40 transition-all group"
+                    onClick={() => handleDownload("hq")}
+                    className="flex items-center justify-between p-5 bg-card border border-border rounded-2xl hover:border-primary/40 transition-all"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="bg-slate-700 p-2.5 rounded-xl text-white">
-                        <Download className="w-5 h-5" />
+                      <div className="bg-muted p-2 rounded-lg">
+                        <Download className="w-4 h-4" />
                       </div>
                       <div className="text-left">
-                        <p className="font-bold text-foreground">Standard High Quality</p>
-                        <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">480x360 • Smaller file size</p>
+                        <p className="font-semibold text-foreground">
+                          Standard High Quality
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          480x360 • Smaller file
+                        </p>
                       </div>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-slate-400 transition-colors" />
+                    <ExternalLink className="w-4 h-4 text-muted-foreground" />
                   </button>
+
                 </div>
 
-                <div className="p-5 bg-primary/10 rounded-2xl border border-primary/20 flex gap-4 text-sm text-primary">
-                  <Info className="w-5 h-5 shrink-0 mt-0.5" />
+                {/* INFO BOX */}
+                <div className="p-5 bg-muted/40 rounded-2xl border border-border flex gap-3 text-sm">
+                  <Info className="w-5 h-5 shrink-0 text-primary mt-0.5" />
                   <div>
-                    <p className="font-bold mb-1">Pro Strategy:</p>
-                    <p>Always check the 'Max Resolution' first. Many top creators use 4K source files which our tool can retrieve for your design mood-board.</p>
+                    <p className="font-semibold text-foreground mb-1">
+                      Pro Tip:
+                    </p>
+                    <p className="text-muted-foreground">
+                      Always check Max Resolution first. Many creators upload
+                      higher-quality source images.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           )}
+
         </div>
       </SEOWrapper>
+
     </>
   );
 };

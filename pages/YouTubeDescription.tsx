@@ -77,8 +77,8 @@ const YouTubeDescription: React.FC = () => {
           The Importance of YouTube Description SEO
         </h2>
         <p>
-          YouTube is the world's second-largest search engine. To rank your videos, your description must act as a 
-          road map for YouTube's algorithm. Our <strong>YouTube Description Extractor</strong> allows you to analyze 
+          YouTube is the world's second-largest search engine. To rank your videos, your description must act as a
+          road map for YouTube's algorithm. Our <strong>YouTube Description Extractor</strong> allows you to analyze
           how top-performing creators structure their metadata, keyword density, and call-to-actions (CTAs).
         </p>
       </section>
@@ -89,7 +89,7 @@ const YouTubeDescription: React.FC = () => {
             <Hash className="w-5 h-5 text-primary" /> Metadata Insights
           </h3>
           <p className="text-sm">
-            By extracting descriptions, you can identify hidden hashtags and social media linking strategies 
+            By extracting descriptions, you can identify hidden hashtags and social media linking strategies
             that influencers use to boost their engagement rates and cross-platform growth.
           </p>
         </div>
@@ -98,7 +98,7 @@ const YouTubeDescription: React.FC = () => {
             <Globe className="w-5 h-5 text-primary" /> Competitive Research
           </h3>
           <p className="text-sm">
-            Understand how competitors use timestamps to improve "Audience Retention." Learning their 
+            Understand how competitors use timestamps to improve "Audience Retention." Learning their
             chapter-marking style can help you keep viewers on your videos longer.
           </p>
         </div>
@@ -162,7 +162,7 @@ const YouTubeDescription: React.FC = () => {
 
           <div className="max-w-3xl mx-auto w-full">
             <div className="flex flex-col md:flex-row gap-4">
-              <div className="relative flex-grow group">
+              <div className="relative grow group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                   <Youtube className="h-5 w-5 text-red-500" />
                 </div>
@@ -179,7 +179,7 @@ const YouTubeDescription: React.FC = () => {
               <button
                 onClick={extractDescription}
                 disabled={loading || !url}
-                className="px-10 py-5 bg-primary text-white rounded-2xl font-black hover:opacity-90 active:scale-95 transition-all disabled:bg-slate-300 flex items-center justify-center gap-2 shadow-xl shadow-primary/20"
+                className="px-10 py-5 bg-primary text-white rounded-2xl font-black hover:opacity-90 active:scale-95 transition-all disabled:bg-primary flex items-center justify-center gap-2 shadow-xl shadow-primary/20"
               >
                 {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Search className="w-5 h-5" />}
                 {loading ? 'Analyzing...' : 'Extract'}
@@ -208,7 +208,7 @@ const YouTubeDescription: React.FC = () => {
                 </button>
               </div>
 
-              <div className="bg-muted/30 rounded-2xl p-6 md:p-8 border border-border shadow-inner max-h-[500px] overflow-y-auto">
+              <div className="bg-muted/30 rounded-2xl p-6 md:p-8 border border-border shadow-inner max-h-125 overflow-y-auto">
                 <pre className="whitespace-pre-wrap font-sans text-foreground leading-relaxed text-base">
                   {description}
                 </pre>

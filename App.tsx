@@ -9,9 +9,12 @@ import StylishFonts from './pages/StylishFonts';
 import BioCounter from './pages/BioCounter';
 import AnimeNames from './pages/AnimeNames';
 import Legal from './pages/Legal';
+import BlogArticle from './pages/BlogArticle';
 import { ThemeProvider } from './lib/theme';
 import PageLayout from './components/Layout/PageLayout';
 import { Suspense } from 'react';
+import Blog from './pages/Blog';
+
 
 const App: React.FC = () => {
   return (
@@ -33,6 +36,9 @@ const App: React.FC = () => {
               <Route path="/disclaimer" element={<Legal type="disclaimer" />} />
               <Route path="/contact" element={<Legal type="contact" />} />
               <Route path="/about" element={<Legal type="about" />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogArticle />} />
+
             </Routes>
           </Suspense>
         </PageLayout>
