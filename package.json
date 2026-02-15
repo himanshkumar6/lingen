@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && vite preview & node scripts/generateStaticHTML.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "ssg": "node scripts/generateStaticHTML.js"
   },
   "dependencies": {
     "@google/genai": "^1.41.0",
