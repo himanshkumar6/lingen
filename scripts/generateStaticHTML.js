@@ -1,24 +1,21 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+const fs = require("fs");
+const path = require("path");
 
-// ✅ Fix for __dirname in ES Module
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+const distPath = path.resolve(__dirname, "dist"); // Path to your dist folder
 const baseUrl = "https://linkgen.in";
-const distPath = path.resolve(__dirname, "../dist");
 
-// Helper: recursively get all HTML files
+// This function scans directories and adds all HTML files
 function getAllHtmlFiles(dirPath) {
   const files = fs.readdirSync(dirPath);
   let filePaths = [];
 
+  // Loop through each file and folder
   for (const file of files) {
     const fullPath = path.join(dirPath, file);
     const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
+      // Recursively get HTML files from subdirectories
       filePaths = filePaths.concat(getAllHtmlFiles(fullPath));
     } else if (fullPath.endsWith(".html")) {
       filePaths.push(fullPath);
@@ -28,27 +25,34 @@ function getAllHtmlFiles(dirPath) {
   return filePaths;
 }
 
+// Function to generate the sitemap
 function generateSitemap() {
   if (!fs.existsSync(distPath)) {
     console.log("❌ dist folder not found");
     return;
   }
 
-  const htmlFiles = getAllHtmlFiles(distPath);  // Ensures all subpages are included.
+  const htmlFiles = getAllHtmlFiles(distPath); // Get all .html files recursively
+
+  if (htmlFiles.length === 0) {
+    console.log("❌ No HTML files found in the dist directory.");
+    return;
+  }
 
   const routes = htmlFiles.map((filePath) => {
     const relativePath = path.relative(distPath, filePath);
     let route = "/" + relativePath.replace(/\\/g, "/");
 
-    // Ensure you are handling index.html and any subdirectories
+    // Remove 'index.html' or '.html' to match route paths
     route = route.replace("index.html", "");
     route = route.replace(".html", "");
 
     return route;
   });
 
-  console.log("Found routes:", routes);  // Check what's being added here.
+  console.log("Found routes:", routes);  // Debug log for the routes
 
+  // Create sitemap XML content
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes
@@ -63,10 +67,11 @@ ${routes
       .join("")}
 </urlset>`;
 
+  // Write sitemap to the dist folder
   fs.writeFileSync(path.join(distPath, "sitemap.xml"), sitemap);
 
-  console.log("✅ Sitemap generated successfully");
+  console.log("✅ Sitemap generated successfully!");
 }
 
-
+// Run the function
 generateSitemap();
