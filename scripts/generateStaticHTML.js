@@ -1,7 +1,13 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const distPath = path.resolve(__dirname, "dist"); // Path to your dist folder
+// Get current file path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Path to your dist folder
+const distPath = path.resolve(__dirname, "dist");
 const baseUrl = "https://linkgen.in";
 
 // This function scans directories and adds all HTML files
