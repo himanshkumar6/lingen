@@ -1,7 +1,15 @@
 {
   "headers": {
-    "x-nextjs-stale-time": "4294967294",
+    "x-nextjs-stale-time": "300",
     "x-nextjs-prerender": "1",
     "x-next-cache-tags": "_N_T_/layout,_N_T_/character-counter/layout,_N_T_/character-counter/page,_N_T_/character-counter"
-  }
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/character-counter/__PAGE__",
+    "/character-counter",
+    "/_index",
+    "/_head"
+  ]
 }

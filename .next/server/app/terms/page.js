@@ -1,1 +1,17 @@
-"use strict";(()=>{var e={};e.id=66,e.ids=[66],e.modules={10846:e=>{e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},19121:e=>{e.exports=require("next/dist/server/app-render/action-async-storage.external.js")},3295:e=>{e.exports=require("next/dist/server/app-render/after-task-async-storage.external.js")},29294:e=>{e.exports=require("next/dist/server/app-render/work-async-storage.external.js")},63033:e=>{e.exports=require("next/dist/server/app-render/work-unit-async-storage.external.js")},33873:e=>{e.exports=require("path")},79551:e=>{e.exports=require("url")},79535:(e,r,t)=>{t.r(r),t.d(r,{GlobalError:()=>s.a,__next_app__:()=>u,pages:()=>l,routeModule:()=>m,tree:()=>p});var n=t(70260),i=t(28203),a=t(25155),s=t.n(a),o=t(67292),d={};for(let e in o)0>["default","tree","pages","GlobalError","__next_app__","routeModule"].indexOf(e)&&(d[e]=()=>o[e]);t.d(r,d);let p=["",{children:["terms",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(t.bind(t,74440)),"D:\\LinkGen.in\\app\\terms\\page.tsx"]}]},{metadata:{icon:[async e=>(await Promise.resolve().then(t.bind(t,86364))).default(e)],apple:[],openGraph:[],twitter:[],manifest:void 0}}]},{layout:[()=>Promise.resolve().then(t.bind(t,53215)),"D:\\LinkGen.in\\app\\layout.tsx"],"not-found":[()=>Promise.resolve().then(t.t.bind(t,19937,23)),"next/dist/client/components/not-found-error"],forbidden:[()=>Promise.resolve().then(t.t.bind(t,69116,23)),"next/dist/client/components/forbidden-error"],unauthorized:[()=>Promise.resolve().then(t.t.bind(t,41485,23)),"next/dist/client/components/unauthorized-error"],metadata:{icon:[async e=>(await Promise.resolve().then(t.bind(t,86364))).default(e)],apple:[],openGraph:[],twitter:[],manifest:void 0}}],l=["D:\\LinkGen.in\\app\\terms\\page.tsx"],u={require:t,loadChunk:()=>Promise.resolve()},m=new n.AppPageRouteModule({definition:{kind:i.RouteKind.APP_PAGE,page:"/terms/page",pathname:"/terms",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:p}})},74440:(e,r,t)=>{t.r(r),t.d(r,{default:()=>s,metadata:()=>a});var n=t(62740),i=t(95051);let a={title:"Terms of Service | LinkGen.in",description:"Read our terms of service and conditions for using LinkGen.in."};function s(){return(0,n.jsx)(i.default,{type:"terms"})}}};var r=require("../../webpack-runtime.js");r.C(e);var t=e=>r(r.s=e),n=r.X(0,[638,459,77,763,468],()=>t(79535));module.exports=n})();
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/terms/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__914363d7._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_65e60196._.js")
+R.c("server/chunks/ssr/_2d2f73e1._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__75591ca1._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_6e285db9._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_f9713a08._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_174ae28d._.js")
+R.c("server/chunks/ssr/app_2fecf24e._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_ece394eb.js")
+R.c("server/chunks/ssr/_b1c3bd21._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_9774470f._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_45780354.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_15817684.js")
+R.c("server/chunks/ssr/_next-internal_server_app_terms_page_actions_3b82705a.js")
+R.m(41057)
+module.exports=R.m(41057).exports

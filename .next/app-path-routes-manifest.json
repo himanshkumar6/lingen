@@ -1,1 +1,22 @@
-{"/_not-found/page":"/_not-found","/api/gemini/route":"/api/gemini","/api/youtube/route":"/api/youtube","/icon.svg/route":"/icon.svg","/character-counter/page":"/character-counter","/anime-name-generator/page":"/anime-name-generator","/font-converter/page":"/font-converter","/page":"/","/instagram-bio-generator/page":"/instagram-bio-generator","/youtube-description-extractor/page":"/youtube-description-extractor","/youtube-thumbnail-downloader/page":"/youtube-thumbnail-downloader","/youtube-tag-extractor/page":"/youtube-tag-extractor","/about/page":"/about","/blog/page":"/blog","/contact/page":"/contact","/privacy-policy/page":"/privacy-policy","/terms/page":"/terms","/blog/[slug]/page":"/blog/[slug]","/disclaimer/page":"/disclaimer"}
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/anime-name-generator/page": "/anime-name-generator",
+  "/api/gemini/route": "/api/gemini",
+  "/api/youtube/route": "/api/youtube",
+  "/blog/[slug]/page": "/blog/[slug]",
+  "/blog/page": "/blog",
+  "/character-counter/page": "/character-counter",
+  "/contact/page": "/contact",
+  "/disclaimer/page": "/disclaimer",
+  "/font-converter/page": "/font-converter",
+  "/icon.svg/route": "/icon.svg",
+  "/instagram-bio-generator/page": "/instagram-bio-generator",
+  "/page": "/",
+  "/privacy-policy/page": "/privacy-policy",
+  "/terms/page": "/terms",
+  "/youtube-description-extractor/page": "/youtube-description-extractor",
+  "/youtube-tag-extractor/page": "/youtube-tag-extractor",
+  "/youtube-thumbnail-downloader/page": "/youtube-thumbnail-downloader"
+}

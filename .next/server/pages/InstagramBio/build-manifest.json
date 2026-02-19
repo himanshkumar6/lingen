@@ -1,0 +1,17 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/InstagramBio": [
+      "static/chunks/a2e7adddcfab1a79.js",
+      "static/chunks/21bacc4485f02580.js",
+      "static/chunks/da4b2f4d91e4d35a.js",
+      "static/chunks/7183ba905d44fc63.js",
+      "static/chunks/turbopack-5deeacb9374add7b.js"
+    ]
+  },
+  "ampFirstPages": []
+}

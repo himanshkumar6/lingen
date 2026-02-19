@@ -1,1 +1,17 @@
-"use strict";(()=>{var e={};e.id=977,e.ids=[977],e.modules={10846:e=>{e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},19121:e=>{e.exports=require("next/dist/server/app-render/action-async-storage.external.js")},3295:e=>{e.exports=require("next/dist/server/app-render/after-task-async-storage.external.js")},29294:e=>{e.exports=require("next/dist/server/app-render/work-async-storage.external.js")},63033:e=>{e.exports=require("next/dist/server/app-render/work-unit-async-storage.external.js")},33873:e=>{e.exports=require("path")},79551:e=>{e.exports=require("url")},59143:(e,t,r)=>{r.r(t),r.d(t,{GlobalError:()=>i.a,__next_app__:()=>u,pages:()=>l,routeModule:()=>c,tree:()=>p});var n=r(70260),a=r(28203),o=r(25155),i=r.n(o),s=r(67292),d={};for(let e in s)0>["default","tree","pages","GlobalError","__next_app__","routeModule"].indexOf(e)&&(d[e]=()=>s[e]);r.d(t,d);let p=["",{children:["contact",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(r.bind(r,6531)),"D:\\LinkGen.in\\app\\contact\\page.tsx"]}]},{metadata:{icon:[async e=>(await Promise.resolve().then(r.bind(r,86364))).default(e)],apple:[],openGraph:[],twitter:[],manifest:void 0}}]},{layout:[()=>Promise.resolve().then(r.bind(r,53215)),"D:\\LinkGen.in\\app\\layout.tsx"],"not-found":[()=>Promise.resolve().then(r.t.bind(r,19937,23)),"next/dist/client/components/not-found-error"],forbidden:[()=>Promise.resolve().then(r.t.bind(r,69116,23)),"next/dist/client/components/forbidden-error"],unauthorized:[()=>Promise.resolve().then(r.t.bind(r,41485,23)),"next/dist/client/components/unauthorized-error"],metadata:{icon:[async e=>(await Promise.resolve().then(r.bind(r,86364))).default(e)],apple:[],openGraph:[],twitter:[],manifest:void 0}}],l=["D:\\LinkGen.in\\app\\contact\\page.tsx"],u={require:r,loadChunk:()=>Promise.resolve()},c=new n.AppPageRouteModule({definition:{kind:a.RouteKind.APP_PAGE,page:"/contact/page",pathname:"/contact",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:p}})},6531:(e,t,r)=>{r.r(t),r.d(t,{default:()=>i,metadata:()=>o});var n=r(62740),a=r(95051);let o={title:"Contact Us | LinkGen.in",description:"Get in touch with the LinkGen.in team for support or inquiries."};function i(){return(0,n.jsx)(a.default,{type:"contact"})}}};var t=require("../../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),n=t.X(0,[638,459,77,763,468],()=>r(59143));module.exports=n})();
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/contact/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__02d3c259._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_65e60196._.js")
+R.c("server/chunks/ssr/_6ae9f846._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__75591ca1._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_6e285db9._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_f9713a08._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_174ae28d._.js")
+R.c("server/chunks/ssr/app_2fecf24e._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_ece394eb.js")
+R.c("server/chunks/ssr/_b1c3bd21._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_9774470f._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_45780354.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_15817684.js")
+R.c("server/chunks/ssr/_next-internal_server_app_contact_page_actions_44e32ac3.js")
+R.m(77633)
+module.exports=R.m(77633).exports
