@@ -1,1 +1,17 @@
-{"/_app":"pages/_app.js","/_error":"pages/_error.js","/AnimeNames":"pages/AnimeNames.html","/Blog":"pages/Blog.html","/BioCounter":"pages/BioCounter.html","/BlogArticle":"pages/BlogArticle.html","/Home":"pages/Home.html","/InstagramBio":"pages/InstagramBio.html","/Legal":"pages/Legal.html","/StylishFonts":"pages/StylishFonts.html","/YouTubeTags":"pages/YouTubeTags.html","/YouTubeDescription":"pages/YouTubeDescription.html","/YouTubeThumbnail":"pages/YouTubeThumbnail.html","/_document":"pages/_document.js","/404":"pages/404.html"}
+{
+  "/AnimeNames": "pages/AnimeNames.html",
+  "/BioCounter": "pages/BioCounter.html",
+  "/Blog": "pages/Blog.html",
+  "/BlogArticle": "pages/BlogArticle.html",
+  "/Home": "pages/Home.html",
+  "/InstagramBio": "pages/InstagramBio.html",
+  "/Legal": "pages/Legal.html",
+  "/StylishFonts": "pages/StylishFonts.html",
+  "/YouTubeDescription": "pages/YouTubeDescription.html",
+  "/YouTubeTags": "pages/YouTubeTags.html",
+  "/YouTubeThumbnail": "pages/YouTubeThumbnail.html",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
+}
