@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { APP_NAME, SUPPORT_EMAIL } from "../constants";
 
 import { Container } from "./Layout/Container";
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
-                  to="/"
+                  href="/"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Home
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  href="/about"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   About Us
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contact Support
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
-                  to="/privacy-policy"
+                  href="/privacy-policy"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Privacy Policy
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/terms"
+                  href="/terms"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Terms of Service
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/disclaimer"
+                  href="/disclaimer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Disclaimer

@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import { Copy, Check, Type } from "lucide-react";
 import { Container } from "../components/Layout/Container";
 import { JsonLd } from "../lib/seo";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface FontItem {
   name: string;
@@ -376,19 +376,19 @@ const StylishFonts: React.FC = () => {
               </h3>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  to="/character-counter"
+                  href="/character-counter"
                   className="px-4 py-2 bg-background border border-border rounded-lg hover:border-primary hover:text-primary transition"
                 >
                   Bio Character Counter
                 </Link>
                 <Link
-                  to="/instagram-bio-generator"
+                  href="/instagram-bio-generator"
                   className="px-4 py-2 bg-background border border-border rounded-lg hover:border-primary hover:text-primary transition"
                 >
                   Instagram Bio Generator
                 </Link>
                 <Link
-                  to="/youtube-tag-extractor"
+                  href="/youtube-tag-extractor"
                   className="px-4 py-2 bg-background border border-border rounded-lg hover:border-primary hover:text-primary transition"
                 >
                   YouTube Tag Extractor

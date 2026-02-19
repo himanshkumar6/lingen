@@ -1,11 +1,16 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import { blogPosts } from "../data/blogData";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
 
 const BlogArticle = () => {
-  const { slug } = useParams();
+
+  const params = useParams();
+  const slug = Array.isArray(params?.slug)
+    ? params.slug[0]
+    : params?.slug;
+
   const post = blogPosts.find((p) => p.slug === slug);
 
   const [progress, setProgress] = useState(0);
@@ -247,11 +252,10 @@ const BlogArticle = () => {
                 <a
                   key={heading.id}
                   href={`#${heading.id}`}
-                  className={`block pl-3 border-l-2 transition ${
-                    activeId === heading.id
-                      ? "text-primary border-primary font-medium"
-                      : "text-muted-foreground border-transparent hover:text-primary"
-                  }`}
+                  className={`block pl-3 border-l-2 transition ${activeId === heading.id
+                    ? "text-primary border-primary font-medium"
+                    : "text-muted-foreground border-transparent hover:text-primary"
+                    }`}
                 >
                   {heading.text}
                 </a>

@@ -11,8 +11,6 @@ const YouTubeDescription: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState('');
 
-  const API_KEY = import.meta.env.VITE_YT_API_KEY;
-
   const extractVideoId = (inputUrl: string) => {
     const regex =
       /(?:youtube\.com\/(?:.*v=|shorts\/)|youtu\.be\/)([^&?/]+)/;
@@ -40,19 +38,14 @@ const YouTubeDescription: React.FC = () => {
     setDescription('');
 
     try {
-      const response = await fetch(
-        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${API_KEY}`
-      );
-
+      const response = await fetch(`/api/youtube?v=${videoId}`);
       const data = await response.json();
 
-      if (!data.items || data.items.length === 0) {
-        throw new Error('Video not found or private');
+      if (data.error) {
+        throw new Error(data.error);
       }
 
-      const snippet = data.items[0].snippet;
-
-      setDescription(snippet.description || '');
+      setDescription(data.description || '');
     } catch (err: any) {
       setError(err.message || 'Failed to extract description. The video might be private or deleted.');
       setDescription('');
@@ -68,7 +61,6 @@ const YouTubeDescription: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // ✅ FIXED: High Value Content for SEO
   const articleContent = (
     <div className="space-y-10 text-muted-foreground leading-relaxed">
       <section className="space-y-4">

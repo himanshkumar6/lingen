@@ -19,8 +19,6 @@ const YouTubeTags: React.FC = () => {
   const [noTags, setNoTags] = useState(false);
   const [error, setError] = useState("");
 
-  const API_KEY = import.meta.env.VITE_YT_API_KEY;
-
   const extractTags = async () => {
     if (!url) return;
 
@@ -41,24 +39,19 @@ const YouTubeTags: React.FC = () => {
         return;
       }
 
-      const response = await fetch(
-        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${API_KEY}`
-      );
-
+      const response = await fetch(`/api/youtube?v=${videoId}`);
       const data = await response.json();
 
-      if (!data.items || data.items.length === 0) {
-        setError("Video not found");
+      if (data.error) {
+        setError(data.error);
         setLoading(false);
         return;
       }
 
-      const snippet = data.items[0].snippet;
-
-      if (!snippet.tags || snippet.tags.length === 0) {
+      if (!data.tags || data.tags.length === 0) {
         setNoTags(true);
       } else {
-        setTags(snippet.tags);
+        setTags(data.tags);
       }
     } catch (err) {
       console.error(err);
@@ -119,7 +112,6 @@ const YouTubeTags: React.FC = () => {
       />
 
       <Container className="py-16 md:py-24 space-y-24">
-
         {/* HEADER */}
         <header className="text-center space-y-6 max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
@@ -214,10 +206,7 @@ const YouTubeTags: React.FC = () => {
         )}
 
         {/* ================= HIGH VALUE SEO CONTENT ================= */}
-
         <section className="max-w-4xl mx-auto space-y-20 border-t border-border pt-20">
-
-          {/* WHY TAGS MATTER */}
           <div className="space-y-6">
             <h2 className="text-2xl md:text-4xl font-bold text-foreground">
               01. Why YouTube Tags Still Matter in 2026
@@ -230,7 +219,6 @@ const YouTubeTags: React.FC = () => {
             </p>
           </div>
 
-          {/* COMPETITOR STRATEGY */}
           <div className="space-y-6">
             <h3 className="text-xl md:text-2xl font-semibold text-foreground">
               02. How to Use Competitor Tags Strategically
@@ -243,12 +231,10 @@ const YouTubeTags: React.FC = () => {
             </p>
           </div>
 
-          {/* BEST PRACTICES */}
           <div className="space-y-6">
             <h3 className="text-xl md:text-2xl font-semibold text-foreground">
               03. Best Practices for YouTube Tags
             </h3>
-
             <ul className="space-y-3 text-muted-foreground list-decimal pl-6">
               <li><strong>Primary keyword first:</strong> Add your main keyword as the first tag.</li>
               <li><strong>Use long-tail variations:</strong> Include natural search phrases.</li>
@@ -257,14 +243,11 @@ const YouTubeTags: React.FC = () => {
             </ul>
           </div>
 
-          {/* FAQ SECTION */}
           <div className="space-y-10">
             <h3 className="text-xl md:text-2xl font-semibold text-foreground">
               04. Frequently Asked Questions
             </h3>
-
             <div className="space-y-6">
-
               {[
                 {
                   q: "Are YouTube tags visible publicly?",
@@ -279,20 +262,8 @@ const YouTubeTags: React.FC = () => {
                   a: "Yes. This YouTube tag extractor is completely free to use."
                 },
                 {
-                  q: "Are YouTube tags visible publicly?",
-                  a: "No. YouTube does not display tags on the video page. However, they exist in the video’s metadata. Tools like this extractor retrieve them for SEO research and competitor analysis."
-                },
-                {
-                  q: "Do YouTube tags improve ranking in 2026?",
-                  a: "Tags help clarify context and topic relevance, especially for spelling variations and niche terms. However, ranking depends more on watch time, audience retention, engagement, and click-through rate."
-                },
-                {
                   q: "Why does some video show no tags?",
-                  a: "Some creators do not add tags manually. Others rely mainly on optimized titles and descriptions. If no tags are present in the metadata, this tool will show a \"no tags found\" message."
-                },
-                {
-                  q: "Is this tool safe and free to use?",
-                  a: "Yes. This tool does not modify any video data. It only reads publicly available metadata via the YouTube API and is free for research and educational use."
+                  a: "Some creators do not add tags manually. Others rely mainly on optimized titles and descriptions."
                 }
               ].map((faq, index) => (
                 <div
@@ -307,20 +278,14 @@ const YouTubeTags: React.FC = () => {
                       {faq.q}
                     </p>
                   </div>
-
                   <p className="text-muted-foreground pl-12 leading-relaxed">
                     {faq.a}
                   </p>
                 </div>
               ))}
-
             </div>
           </div>
-
         </section>
-
-
-
       </Container>
     </>
   );

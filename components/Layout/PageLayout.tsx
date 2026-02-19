@@ -1,9 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import PageLoader from "../PageLoader";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -14,7 +15,7 @@ interface PageLayoutProps {
  * Centralizes standard page elements and layout guards.
  */
 const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   // Ensure window scrolls to top on route change
   useEffect(() => {

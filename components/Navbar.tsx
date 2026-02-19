@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Zap, ChevronDown, LayoutGrid, BookOpen, Sun, Moon, Instagram, Youtube, FileText, Menu, X, ShieldCheck, Info } from 'lucide-react';
 import { useTheme } from '../lib/theme';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,7 +13,7 @@ const Navbar: React.FC = () => {
   const [toolsOpen, setToolsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -20,7 +23,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [location]);
+  }, [pathname]);
 
   return (
     <nav
@@ -30,7 +33,7 @@ const Navbar: React.FC = () => {
         }`}
     >
       <Container className="flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group">
           <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
             <Zap className="h-6 w-6 fill-current" />
           </div>
@@ -41,7 +44,7 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <Link to="/" className={`text-sm font-semibold transition-colors hover:text-primary ${location.pathname === '/' ? 'text-primary' : 'text-muted-foreground'}`}>Home</Link>
+          <Link href="/" className={`text-sm font-semibold transition-colors hover:text-primary ${pathname === '/' ? 'text-primary' : 'text-muted-foreground'}`}>Home</Link>
 
           <div
             className="relative"
@@ -67,7 +70,7 @@ const Navbar: React.FC = () => {
                         { to: "/youtube-thumbnail-downloader", icon: <Youtube className="text-red-500" />, title: "Thumbnail Downloader", sub: "High Quality Images" },
                         { to: "/youtube-description-extractor", icon: <FileText className="text-blue-500" />, title: "SEO Description Extractor", sub: "YouTube SEO Tool" },
                       ].map((item) => (
-                        <Link key={item.to} to={item.to} className="flex items-center gap-4 rounded-xl p-3 transition-colors hover:bg-secondary">
+                        <Link key={item.to} href={item.to} className="flex items-center gap-4 rounded-xl p-3 transition-colors hover:bg-secondary">
                           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-background border border-border">
                             {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, { className: "w-5 h-5" })}
                           </div>
@@ -79,7 +82,7 @@ const Navbar: React.FC = () => {
                       ))}
                     </div>
                     <div className="mt-2 border-t border-border p-2">
-                      <Link to="/" className="flex items-center justify-center gap-2 rounded-lg bg-secondary py-2 text-xs font-bold text-primary transition-colors hover:bg-primary hover:text-white">
+                      <Link href="/" className="flex items-center justify-center gap-2 rounded-lg bg-secondary py-2 text-xs font-bold text-primary transition-colors hover:bg-primary hover:text-white">
                         <LayoutGrid className="h-3.5 w-3.5" /> Explore All Free Tools
                       </Link>
                     </div>
@@ -89,8 +92,8 @@ const Navbar: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          <Link to="/blog" className="text-sm font-semibold text-muted-foreground transition-colors hover:text-primary">Articles</Link>
-          <Link to="/about" className="text-sm font-semibold text-muted-foreground transition-colors hover:text-primary">About</Link>
+          <Link href="/blog" className="text-sm font-semibold text-muted-foreground transition-colors hover:text-primary">Articles</Link>
+          <Link href="/about" className="text-sm font-semibold text-muted-foreground transition-colors hover:text-primary">About</Link>
         </div>
 
         <div className="flex items-center gap-3">
@@ -103,7 +106,7 @@ const Navbar: React.FC = () => {
           </button>
 
           {/* AdSense Approval ke liye navigation strong rakhein */}
-          <Link to="/contact" className="hidden sm:flex h-10 items-center justify-center rounded-xl bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-transform hover:scale-105 active:scale-95">
+          <Link href="/contact" className="hidden sm:flex h-10 items-center justify-center rounded-xl bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-transform hover:scale-105 active:scale-95">
             Contact Us
           </Link>
 
@@ -128,22 +131,22 @@ const Navbar: React.FC = () => {
             <div className="container mx-auto px-6 py-10 space-y-8">
               <div className="space-y-4">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">Navigation</p>
-                <Link to="/" className="block text-2xl font-black text-foreground hover:text-primary transition-colors">Home</Link>
-                <Link to="/blog" className="block text-2xl font-black text-foreground hover:text-primary transition-colors">Blog & Guides</Link>
-                <Link to="/about" className="block text-2xl font-black text-foreground hover:text-primary transition-colors">About Us</Link>
-                <Link to="/contact" className="block text-2xl font-black text-foreground hover:text-primary transition-colors">Support</Link>
+                <Link href="/" className="block text-2xl font-black text-foreground hover:text-primary transition-colors">Home</Link>
+                <Link href="/blog" className="block text-2xl font-black text-foreground hover:text-primary transition-colors">Blog & Guides</Link>
+                <Link href="/about" className="block text-2xl font-black text-foreground hover:text-primary transition-colors">About Us</Link>
+                <Link href="/contact" className="block text-2xl font-black text-foreground hover:text-primary transition-colors">Support</Link>
               </div>
 
               <div className="space-y-4">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">Free Tools</p>
                 <div className="grid gap-4">
-                  <Link to="/instagram-bio-generator" className="flex items-center gap-4 text-lg font-bold text-foreground hover:text-primary">
+                  <Link href="/instagram-bio-generator" className="flex items-center gap-4 text-lg font-bold text-foreground hover:text-primary">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-background border border-border">
                       <Instagram className="w-5 h-5 text-pink-500" />
                     </div>
                     Bio Generator
                   </Link>
-                  <Link to="/privacy-policy" className="flex items-center gap-4 text-lg font-bold text-foreground hover:text-primary">
+                  <Link href="/privacy-policy" className="flex items-center gap-4 text-lg font-bold text-foreground hover:text-primary">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-background border border-border">
                       <ShieldCheck className="w-5 h-5 text-green-500" />
                     </div>
