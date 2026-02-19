@@ -1,0 +1,7 @@
+__turbopack_load_page_chunks__("/InstagramBio", [
+  "static/chunks/a2e7adddcfab1a79.js",
+  "static/chunks/21bacc4485f02580.js",
+  "static/chunks/bf54165158540313.js",
+  "static/chunks/7183ba905d44fc63.js",
+  "static/chunks/turbopack-5f2c7f60b581e6db.js"
+])
