@@ -1,0 +1,6 @@
+__turbopack_load_page_chunks__("/YouTubeTags", [
+  "static/chunks/4b34159e235e0cb1.js",
+  "static/chunks/bf54165158540313.js",
+  "static/chunks/21bacc4485f02580.js",
+  "static/chunks/turbopack-a444d6889147d1c7.js"
+])

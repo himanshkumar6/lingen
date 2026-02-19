@@ -15,6 +15,7 @@
   "/instagram-bio-generator/page": "/instagram-bio-generator",
   "/page": "/",
   "/privacy-policy/page": "/privacy-policy",
+  "/sitemap.xml/route": "/sitemap.xml",
   "/terms/page": "/terms",
   "/youtube-description-extractor/page": "/youtube-description-extractor",
   "/youtube-tag-extractor/page": "/youtube-tag-extractor",
