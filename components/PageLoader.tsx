@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 const PageLoader: React.FC = () => {
   const [loading, setLoading] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     // Trigger loading state on location change
@@ -16,7 +18,7 @@ const PageLoader: React.FC = () => {
     }, 600);
 
     return () => clearTimeout(timer);
-  }, [location]);
+  }, [pathname]);
 
   return (
     <AnimatePresence>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import { blogPosts } from "../data/blogData";
 
 const Blog = () => {
@@ -54,7 +54,7 @@ const Blog = () => {
               </p>
 
               <Link
-                to={`/blog/${featured.slug}`}
+                href={`/blog/${featured.slug}`}
                 className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition shadow-md"
               >
                 Read Full Article →
@@ -98,7 +98,7 @@ const Blog = () => {
                 </p>
 
                 <Link
-                  to={`/blog/${post.slug}`}
+                  href={`/blog/${post.slug}`}
                   className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary hover:text-white transition"
                 >
                   Read Article

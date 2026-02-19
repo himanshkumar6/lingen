@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Tool } from '../types';
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -15,7 +15,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
     >
       <Link
-        to={tool.path}
+        href={tool.path}
         className="group relative block h-full overflow-hidden rounded-2xl md:rounded-[2rem] border border-border bg-card p-6 md:p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 active:scale-[0.99]"
       >
         {/* Subtle elegance: faint primary surface shift on hover */}
