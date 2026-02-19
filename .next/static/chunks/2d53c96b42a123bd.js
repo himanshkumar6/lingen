@@ -1,7 +1,0 @@
-__turbopack_load_page_chunks__("/YouTubeThumbnail", [
-  "static/chunks/0ffebb7e8cac06ff.js",
-  "static/chunks/21bacc4485f02580.js",
-  "static/chunks/bf54165158540313.js",
-  "static/chunks/7183ba905d44fc63.js",
-  "static/chunks/turbopack-c35440dbc1424ca6.js"
-])
