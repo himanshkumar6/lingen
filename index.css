@@ -116,10 +116,11 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   text-wrap: balance;
-  line-height: 1.1;
+  line-height: 1.2;
 }
+
 
 /* ============================= */
 /* DESIGN ELEMENTS */
@@ -138,6 +139,11 @@ h6 {
   background: hsla(var(--card) / 0.85); /* reduced transparency */
   backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid hsla(var(--border) / 0.5);
+}
+
+.prose-optimal {
+  max-width: 70ch !important;
+  margin-inline: auto;
 }
 
 .transition-premium {

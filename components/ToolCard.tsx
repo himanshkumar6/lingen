@@ -35,7 +35,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
 
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <h3 className="text-xl font-bold tracking-tight text-foreground">
+              <h3 className="text-lg md:text-xl font-bold tracking-tight text-foreground">
                 {tool.name}
               </h3>
               {tool.isAi && (
@@ -45,7 +45,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
               )}
             </div>
 
-            <p className="text-sm leading-relaxed text-muted-foreground">
+            <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
               {tool.description}
             </p>
           </div>
