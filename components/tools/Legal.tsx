@@ -44,7 +44,7 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
               <div className="bg-muted/30 p-8 rounded-2xl border border-border/50 space-y-4">
                 <h4 className="font-bold text-foreground text-xl">Response Time</h4>
                 <p>
-                  We typically respond within <strong>24–48 business hours</strong>.
+                  We typically respond within <span>24–48 business hours</span>.
                 </p>
               </div>
             </div>
@@ -82,8 +82,7 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
             <p>Last updated: {new Date().toLocaleDateString()}</p>
 
             <p>
-              Your privacy is important to us. This Privacy Policy explains how <strong>{APP_NAME}</strong>
-              collects, uses, and safeguards information when you use our website.
+              Your privacy is important to us. This Privacy Policy explains how <span className="text-foreground font-bold">{APP_NAME}</span> collects, uses, and safeguards information when you use our website.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground">1. Information We Collect</h2>
@@ -101,12 +100,12 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
 
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Google AdSense:</strong> We use Google AdSense to display ads.
+                <span>Google AdSense:</span> We use Google AdSense to display ads.
                 Google may use cookies to serve ads based on prior visits to this and other websites.
                 Users may opt out of personalized advertising by visiting Google Ads Settings.
               </li>
               <li>
-                <strong>Analytics:</strong> We may use analytics tools to understand website traffic and improve user experience.
+                <span>Analytics:</span> We may use analytics tools to understand website traffic and improve user experience.
               </li>
             </ul>
 
@@ -137,7 +136,7 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
 
             <h2 className="text-2xl font-bold text-foreground">1. Informational Purpose</h2>
             <p>
-              All tools and content provided on <strong>{APP_NAME}</strong> are for informational and educational purposes only.
+              All tools and content provided on <span className="text-foreground font-bold">{APP_NAME}</span> are for informational and educational purposes only.
               We do not guarantee specific SEO rankings, monetization approval, or platform growth.
             </p>
 
@@ -167,7 +166,7 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
 
             <h2 className="text-2xl font-bold text-foreground">1. Acceptance of Terms</h2>
             <p>
-              By accessing <strong>{APP_NAME}</strong>, you agree to comply with these Terms of Service and applicable laws.
+              By accessing <span className="text-foreground font-bold">{APP_NAME}</span>, you agree to comply with these Terms of Service and applicable laws.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground">2. Permitted Use</h2>
