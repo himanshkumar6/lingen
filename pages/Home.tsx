@@ -200,7 +200,7 @@ const Home: React.FC = () => {
               </div>
 
               <div className="flex justify-center">
-                <div className="relative w-full max-w-105 rounded-3xl border border-border bg-gradient-to-br from-primary/10 via-indigo-500/10 to-primary/5 p-10 shadow-xl shadow-primary/10">
+                <div className="relative w-full max-w-105 rounded-3xl border border-border bg-linear-to-br from-primary/10 via-indigo-500/10 to-primary/5 p-10 shadow-xl shadow-primary/10">
                   <div className="space-y-6 text-center">
                     <div className="h-12 w-12 mx-auto rounded-xl bg-primary/15 flex items-center justify-center text-primary font-bold text-lg">⚡</div>
                     <h3 className="text-xl md:text-2xl font-semibold text-foreground">Built for Speed</h3>
