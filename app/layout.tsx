@@ -1,5 +1,6 @@
 import "@/index.css";
 import type { Metadata } from "next";
+import Snowfall from "@/components/Snowfall";
 import { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -18,16 +19,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="saas-grid min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col relative overflow-x-hidden">
+
+        {/* Snow Background Layer */}
+        <Snowfall />
+
+        {/* Main App Layer */}
         <ThemeProvider>
-          <Navbar />
+          <div className="relative z-10 flex flex-col min-h-screen">
 
-          <main className="flex-1">
-            {children}
-          </main>
+            <Navbar />
 
-          <Footer />
+            <main className="flex-1">
+              {children}
+            </main>
+
+            <Footer />
+
+          </div>
         </ThemeProvider>
+
       </body>
     </html>
   );
