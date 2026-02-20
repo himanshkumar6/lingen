@@ -43,7 +43,7 @@ const HeroContent: React.FC = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-6 leading-tight"
+          className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-6 leading-tight"
         >
           Streamline Your Workflow with <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
@@ -53,7 +53,7 @@ const HeroContent: React.FC = () => {
 
         <motion.p
           variants={itemVariants}
-          className="text-base sm:text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl leading-relaxed font-medium"
+          className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl leading-relaxed font-medium"
         >
           Access a comprehensive suite of tools designed for YouTube and Instagram growth. Generate AI bios, extract video tags, and optimize your metadata efficiently.
         </motion.p>

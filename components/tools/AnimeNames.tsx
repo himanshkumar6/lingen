@@ -137,7 +137,7 @@ const AnimeNames: React.FC = () => {
         </section>
       </div>
 
-      <section className="relative max-w-6xl mx-auto mt-24 px-5 sm:px-8 lg:px-12">
+      <Container className="mt-24">
         <div className="bg-card border border-border rounded-3xl p-8 sm:p-12 lg:p-16 shadow-xl">
           <div className="text-center mb-12 lg:mb-16 space-y-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-tight">
@@ -225,7 +225,7 @@ const AnimeNames: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Container>
     </Container>
   );
 };

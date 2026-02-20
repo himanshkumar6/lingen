@@ -39,7 +39,7 @@ const Home: React.FC = () => {
       <Hero />
 
       <Container>
-        <section className="mt-10 md:mt-14 mb-16 flex justify-center">
+        <section className="mt-10 md:mt-14 mb-16 flex justify-center px-4">
           <div className="relative w-full max-w-xl">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <input

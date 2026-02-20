@@ -107,7 +107,7 @@ export default function BlogArticle() {
             <span>{post.readingTime}</span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
+          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight max-w-3xl">
             <span className="text-primary">{post.title.charAt(0)}</span>
             {post.title.slice(1)}
           </h1>
@@ -133,20 +133,30 @@ export default function BlogArticle() {
 
       {/* Content */}
       <Container className="grid grid-cols-1 lg:grid-cols-4 gap-10">
-        <article className="lg:col-span-3 pb-20">
+        <article className="lg:col-span-3 pb-20 prose-optimal">
           <div className="prose md:prose-lg max-w-none dark:prose-invert">
             <ReactMarkdown
               components={{
                 h2: ({ children }) => {
                   const text = String(children);
                   const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-                  return <h2 id={id}>{children}</h2>;
+                  return <h2 id={id} className="text-xl md:text-2xl font-bold">{children}</h2>;
                 },
                 h3: ({ children }) => {
                   const text = String(children);
                   const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-                  return <h3 id={id}>{children}</h3>;
+                  return <h3 id={id} className="text-lg md:text-xl font-bold">{children}</h3>;
                 },
+                table: ({ children }) => (
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full">{children}</table>
+                  </div>
+                ),
+                pre: ({ children }) => (
+                  <div className="overflow-x-auto my-6 rounded-xl bg-muted/50 p-4">
+                    <pre className="m-0">{children}</pre>
+                  </div>
+                ),
               }}
             >
               {post.content}
