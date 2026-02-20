@@ -21,96 +21,85 @@ const StylishFonts: React.FC = () => {
     setTimeout(() => setCopiedIndex(null), 2000);
   };
 
-  /* ======================
-     FONT DATABASE (50+)
-  =======================*/
-
   const baseDecorators = ["乂", "亗", "么", "々", "メ", "么", "๛", "⚔", "☬", "♛", "ঔ", "ঊ"];
 
   const fontMaps: FontItem[] = useMemo(() => {
+
     const unicodeBold: any = {
-      a: "𝗮", b: "𝗯", c: "𝗰", d: "𝗱", e: "𝗲", f: "𝗳",
-      g: "𝗴", h: "𝗵", i: "𝗶", j: "𝗷", k: "𝗸", l: "𝗹",
-      m: "𝗺", n: "𝗻", o: "𝗼", p: "𝗽", q: "𝗾", r: "𝗿",
-      s: "𝘀", t: "𝘁", u: "𝘂", v: "𝘃", w: "𝘄", x: "𝘅",
-      y: "𝘆", z: "𝘇",
+      a: "𝗮", b: "𝗯", c: "𝗰", d: "𝗱", e: "𝗲", f: "𝗳", g: "𝗴", h: "𝗵", i: "𝗶", j: "𝗷",
+      k: "𝗸", l: "𝗹", m: "𝗺", n: "𝗻", o: "𝗼", p: "𝗽", q: "𝗾", r: "𝗿", s: "𝘀", t: "𝘁",
+      u: "𝘂", v: "𝘃", w: "𝘄", x: "𝘅", y: "𝘆", z: "𝘇",
+      A: "𝗔", B: "𝗕", C: "𝗖", D: "𝗗", E: "𝗘", F: "𝗙", G: "𝗚", H: "𝗛", I: "𝗜", J: "𝗝",
+      K: "𝗞", L: "𝗟", M: "𝗠", N: "𝗡", O: "𝗢", P: "𝗣", Q: "𝗤", R: "𝗥", S: "𝗦", T: "𝗧",
+      U: "𝗨", V: "𝗩", W: "𝗪", X: "𝗫", Y: "𝗬", Z: "𝗭"
+    };
+
+    const smallCapsMap: any = {
+      a: "ᴀ", b: "ʙ", c: "ᴄ", d: "ᴅ", e: "ᴇ", f: "ꜰ", g: "ɢ", h: "ʜ", i: "ɪ", j: "ᴊ",
+      k: "ᴋ", l: "ʟ", m: "ᴍ", n: "ɴ", o: "ᴏ", p: "ᴘ", q: "ǫ", r: "ʀ", s: "ꜱ", t: "ᴛ",
+      u: "ᴜ", v: "ᴠ", w: "ᴡ", x: "x", y: "ʏ", z: "ᴢ",
+      A: "ᴀ", B: "ʙ", C: "ᴄ", D: "ᴅ", E: "ᴇ", F: "ꜰ", G: "ɢ", H: "ʜ", I: "ɪ", J: "ᴊ",
+      K: "ᴋ", L: "ʟ", M: "ᴍ", N: "ɴ", O: "ᴏ", P: "ᴘ", Q: "ǫ", R: "ʀ", S: "ꜱ", T: "ᴛ",
+      U: "ᴜ", V: "ᴠ", W: "ᴡ", X: "x", Y: "ʏ", Z: "ᴢ"
+    };
+
+    const bubbleMap: any = {
+      a: "ⓐ", b: "ⓑ", c: "ⓒ", d: "ⓓ", e: "ⓔ", f: "ⓕ", g: "ⓖ", h: "ⓗ", i: "ⓘ", j: "ⓙ",
+      k: "ⓚ", l: "ⓛ", m: "ⓜ", n: "ⓝ", o: "ⓞ", p: "ⓟ", q: "ⓠ", r: "ⓡ", s: "ⓢ", t: "ⓣ",
+      u: "ⓤ", v: "ⓥ", w: "ⓦ", x: "ⓧ", y: "ⓨ", z: "ⓩ",
+      A: "Ⓐ", B: "Ⓑ", C: "Ⓒ", D: "Ⓓ", E: "Ⓔ", F: "Ⓕ", G: "Ⓖ", H: "Ⓗ", I: "Ⓘ", J: "Ⓙ",
+      K: "Ⓚ", L: "Ⓛ", M: "Ⓜ", N: "Ⓝ", O: "Ⓞ", P: "Ⓟ", Q: "Ⓠ", R: "Ⓡ", S: "Ⓢ", T: "Ⓣ",
+      U: "Ⓤ", V: "Ⓥ", W: "Ⓦ", X: "Ⓧ", Y: "Ⓨ", Z: "Ⓩ"
     };
 
     const transformMap = (text: string, map: any) =>
-      text.split("").map(c => map[c.toLowerCase()] || c).join("");
+      text.split("").map(c => map[c] || map[c.toLowerCase()] || c).join("");
+
+    function zalgo(text: string) {
+      const marks = ["̍", "̎", "̄", "̅", "̿", "̑", "̆", "̐", "͒", "͗", "͑", "̇", "̈"];
+      return text.split("").map(c => c + marks[Math.floor(Math.random() * marks.length)]).join("");
+    }
 
     const styles: FontItem[] = [
-      {
-        name: "Bold Sans",
-        category: "Professional",
-        transform: (text) => transformMap(text, unicodeBold),
-      },
-      {
-        name: "PUBG King",
-        category: "Gaming",
-        transform: (text) => `乂 ${text} 乂`,
-      },
-      {
-        name: "Free Fire Elite",
-        category: "Gaming",
-        transform: (text) => `亗 ${text} 亗`,
-      },
-      {
-        name: "Shadow Clan",
-        category: "Gaming",
-        transform: (text) => `☬ ${text} ☬`,
-      },
-      {
-        name: "Crown Style",
-        category: "Gaming",
-        transform: (text) => `♛ ${text} ♛`,
-      },
-      {
-        name: "Fire Gamer",
-        category: "Gaming",
-        transform: (text) => `🔥 ${text} 🔥`,
-      },
-      {
-        name: "Cute Hearts",
-        category: "Cute",
-        transform: (text) => `💖 ${text} 💖`,
-      },
-      {
-        name: "Aesthetic Stars",
-        category: "Decorative",
-        transform: (text) => `✦ ${text} ✦`,
-      },
+      { name: "Bold Sans", category: "Professional", transform: (t) => transformMap(t, unicodeBold) },
+      { name: "PUBG King", category: "Gaming", transform: (t) => `乂 ${t} 乂` },
+      { name: "Free Fire Elite", category: "Gaming", transform: (t) => `亗 ${t} 亗` },
+      { name: "Shadow Clan", category: "Gaming", transform: (t) => `☬ ${t} ☬` },
+      { name: "Crown Style", category: "Gaming", transform: (t) => `♛ ${t} ♛` },
+      { name: "Fire Gamer", category: "Gaming", transform: (t) => `🔥 ${t} 🔥` },
+      { name: "Cute Hearts", category: "Cute", transform: (t) => `💖 ${t} 💖` },
+      { name: "Aesthetic Stars", category: "Decorative", transform: (t) => `✦ ${t} ✦` }
     ];
 
-    // Generate 40+ additional gaming variants
     for (let i = 0; i < 40; i++) {
       styles.push({
         name: `Gaming Variant ${i + 1}`,
         category: "Gaming",
-        transform: (text: string) =>
-          `${baseDecorators[i % baseDecorators.length]} ${text} ${baseDecorators[i % baseDecorators.length]}`,
+        transform: (t) => `${baseDecorators[i % baseDecorators.length]} ${t} ${baseDecorators[i % baseDecorators.length]}`
       });
     }
 
+    styles.push(
+      { name: "Small Caps", category: "Professional", transform: (t) => transformMap(t, smallCapsMap) },
+      { name: "Bubble Circle", category: "Decorative", transform: (t) => transformMap(t, bubbleMap) },
+      { name: "Zalgo Glitch", category: "Decorative", transform: (t) => zalgo(t) }
+    );
+
     return styles;
+
   }, []);
 
   const categories = ["All", "Gaming", "Professional", "Cute", "Decorative"];
 
   const filteredFonts =
-    category === "All"
-      ? fontMaps
-      : fontMaps.filter((f) => f.category === category);
-
-  /* ======================
-     TOP 100 PUBG NAMES
-  =======================*/
+    category === "All" ? fontMaps : fontMaps.filter(f => f.category === category);
 
   const pubgNames = [
     "乂ShadowKing乂", "亗DarkHunter亗", "♛RoyalSniper♛", "☬GhostRider☬",
     "乂VenomX乂", "亗ToxicPro亗", "♛BulletMaster♛", "☬NoMercy☬",
     "乂AlphaBeast乂", "亗HeadshotPro亗"
   ];
+
 
   return (
     <>

@@ -27,8 +27,8 @@ const HeroContent: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="backdrop-blur-md 
-                     bg-white/40 dark:bg-white/[0.02]
-                     border border-slate-200/50 dark:border-white/[0.05]
+                     bg-white/40 dark:bg-white/2
+                     border border-slate-200/50 dark:border-white/5
                      rounded-[2.5rem] p-8 md:p-16 lg:p-20
                      shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]
                      transition-all duration-500 text-center"

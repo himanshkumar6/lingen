@@ -19,7 +19,7 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
 
   return (
     <Container className="py-16 md:py-24 lg:py-32">
-      <div className="max-w-3xl mx-auto bg-card/50 p-8 md:p-16 rounded-3xl border border-border/40 shadow-sm backdrop-blur-sm">
+      <div className="max-w-3xl mx-auto glass-card p-8 md:p-16 rounded-3xl shadow-sm">
         <h1 className="text-4xl font-black tracking-tight text-foreground mb-10 border-b border-border pb-6">
           {titles[type]}
         </h1>
@@ -54,7 +54,7 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
 
           <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <p className="text-lg">
-              Welcome to <strong>{APP_NAME}</strong>, a suite of productivity tools designed for digital creators and marketers.
+              Welcome to <span className="text-foreground font-bold">{APP_NAME}</span>, a suite of productivity tools designed for digital creators and marketers.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground">Our Mission</h2>

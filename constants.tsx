@@ -1,8 +1,4 @@
-
-import React from 'react';
 import { 
-  Instagram, 
-  Youtube, 
   Type, 
   Hash, 
   Image as ImageIcon, 

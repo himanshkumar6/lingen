@@ -1,4 +1,3 @@
-/* @import "tailwindcss"; */
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
@@ -26,40 +25,80 @@
   --radius-3xl: 2rem;
 
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  /* Hardened Prose Mapping */
+  --color-prose-body: hsl(var(--muted-foreground));
+  --color-prose-headings: hsl(var(--foreground));
+  --color-prose-lead: hsl(var(--muted-foreground));
+  --color-prose-links: hsl(var(--primary));
+  --color-prose-bold: hsl(var(--foreground));
+  --color-prose-counters: hsl(var(--muted-foreground));
+  --color-prose-bullets: hsl(var(--muted-foreground));
+  --color-prose-hr: hsl(var(--border));
+  --color-prose-quotes: hsl(var(--foreground));
+  --color-prose-quote-borders: hsl(var(--border));
+  --color-prose-captions: hsl(var(--muted-foreground));
+  --color-prose-code: hsl(var(--foreground));
+  --color-prose-pre-code: hsl(var(--foreground));
+  --color-prose-pre-bg: hsl(var(--muted) / 0.5);
+  --color-prose-th-borders: hsl(var(--border));
+  --color-prose-td-borders: hsl(var(--border));
 }
 
+/* ============================= */
+/* LIGHT MODE */
+/* ============================= */
+
 :root {
-  /* Light Mode - Professional Slate */
-  --background: 210 40% 98%;
-  --foreground: 222.2 84% 4.9%;
+  --background: 210 40% 97%; /* slightly reduced from 98% */
+  --foreground: 222 47% 11%; /* strong slate */
+
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --primary: 262.1 83.3% 57.8%;
+  --card-foreground: 222 47% 11%;
+
+  --primary: 262 83% 58%;
   --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 262.1 83.3% 57.8%;
+
+  --secondary: 210 40% 95%;
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 95%;
+  --muted-foreground: 220 15% 32%; /* ✅ Strong readable muted */
+
+  --border: 214 32% 90%;
+  --input: 214 32% 90%;
+  --ring: 262 83% 58%;
 }
+
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
+
 .dark {
-  /* Dark Mode - Sophisticated Zinc/Ebony */
-  --background: 240 10% 3.9%;
+  --background: 240 10% 4%;
   --foreground: 0 0% 98%;
-  --card: 240 10% 6%;
+
+  --card: 240 10% 7%;
   --card-foreground: 0 0% 98%;
-  --primary: 263.4 70% 50.4%;
+
+  --primary: 263 70% 50%;
   --primary-foreground: 210 40% 98%;
-  --secondary: 240 3.7% 15.9%;
+
+  --secondary: 240 4% 16%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 12%;
-  --muted-foreground: 240 5% 64.9%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 263.4 70% 50.4%;
+
+  --muted: 240 4% 14%;
+  --muted-foreground: 240 5% 72%; /* ✅ Improved readability */
+
+  --border: 240 4% 16%;
+  --input: 240 4% 16%;
+  --ring: 263 70% 50%;
 }
+
+/* ============================= */
+/* GLOBAL BASE */
+/* ============================= */
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: hsl(var(--background));
@@ -82,38 +121,54 @@ h6 {
   line-height: 1.1;
 }
 
+/* ============================= */
+/* DESIGN ELEMENTS */
+/* ============================= */
+
 .saas-grid {
   background-image: radial-gradient(
     circle at 1px 1px,
-    hsl(var(--border) / 0.3) 1px,
+    hsl(var(--border) / 0.35) 1px,
     transparent 0
   );
   background-size: 40px 40px;
 }
+
 .glass-card {
-  background: hsla(var(--card) / 0.7);
-  backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid hsla(var(--border) / 0.4);
+  background: hsla(var(--card) / 0.85); /* reduced transparency */
+  backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid hsla(var(--border) / 0.5);
 }
 
 .transition-premium {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* Custom scrollbar for premium feel */
+
+/* ============================= */
+/* SCROLLBAR */
+/* ============================= */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: hsl(var(--background));
 }
+
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--muted));
   border-radius: 10px;
   border: 2px solid hsl(var(--background));
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary) / 0.5);
 }
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
 
 @keyframes float {
   0% {
