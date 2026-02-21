@@ -50,3 +50,39 @@ export const generateAnimeNames = async (
     throw new Error("AI service unavailable.");
   }
 };
+export const generateAnimeIdentity = async (name: string): Promise<any> => {
+  try {
+    const response = await fetch("/api/gemini", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "generateAnimeIdentity",
+        params: { name }
+      })
+    });
+    const result = await response.json();
+    if (!result.success) throw new Error(result.error);
+    return result.data[0]; // Returns a single identity object
+  } catch (error) {
+    console.error("Gemini Identity Error:", error);
+    throw new Error("AI service unavailable.");
+  }
+};
+
+export const generateCuratedCharacters = async (): Promise<any[]> => {
+  try {
+    const response = await fetch("/api/gemini", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "generateCuratedCharacters"
+      })
+    });
+    const result = await response.json();
+    if (!result.success) throw new Error(result.error);
+    return result.data;
+  } catch (error) {
+    console.error("Gemini Curated Error:", error);
+    return [];
+  }
+};
