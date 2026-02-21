@@ -93,6 +93,11 @@
   --border: 240 4% 16%;
   --input: 240 4% 16%;
   --ring: 263 70% 50%;
+
+  /* Anime Portal Theme Overrides */
+  --portal-purple: 270 50% 10%;
+  --portal-neon-orange: 25 100% 55%;
+  --portal-neon-purple: 280 100% 65%;
 }
 
 /* ============================= */
@@ -151,6 +156,30 @@ h6 {
 
 .transition-premium {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anime-portal-bg {
+  background: radial-gradient(circle at center, hsl(var(--portal-purple)) 0%, #000 100%);
+}
+
+.neon-border {
+  border: 1px solid hsla(var(--portal-neon-orange) / 0.3);
+  box-shadow: 0 0 15px hsla(var(--portal-neon-orange) / 0.1), 0 0 5px hsla(var(--portal-neon-orange) / 0.2);
+}
+
+.neon-glow-text {
+  text-shadow: 0 0 10px hsla(var(--portal-neon-orange) / 0.5), 0 0 20px hsla(var(--portal-neon-orange) / 0.3);
+}
+
+.glass-portal {
+  background: hsla(var(--portal-purple) / 0.4);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid hsla(var(--portal-neon-purple) / 0.2);
+}
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* ============================= */

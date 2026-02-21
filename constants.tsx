@@ -1,9 +1,9 @@
-import { 
-  Type, 
-  Hash, 
-  Image as ImageIcon, 
-  Sparkles, 
-  AlignLeft, 
+import {
+  Type,
+  Hash,
+  Image as ImageIcon,
+  Sparkles,
+  AlignLeft,
   Smile,
   Info,
   FileText
@@ -69,6 +69,15 @@ export const TOOLS: Tool[] = [
     description: 'Generate unique anime-style names for your brand or OC.',
     icon: <Smile className="w-6 h-6 text-orange-500" />,
     path: '/anime-name-generator',
+    category: 'General',
+    isAi: true
+  },
+  {
+    id: 'anime-multiverse',
+    name: 'Anime Multiverse Generator',
+    description: 'Enter the anime portal to discover your unique character identity and universe.',
+    icon: <Sparkles className="w-6 h-6 text-orange-600" />,
+    path: '/anime-multiverse-generator',
     category: 'General',
     isAi: true
   }
