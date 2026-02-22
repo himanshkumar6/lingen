@@ -41,15 +41,15 @@ const HeroContent: React.FC = () => {
           <span>Free Productivity Tools for Creators</span>
         </motion.div>
 
-        <motion.h1
-          variants={itemVariants}
-          className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-6 leading-tight"
-        >
-          Streamline Your Workflow with <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
-            Smart Creator Utilities
-          </span>
-        </motion.h1>
+      <motion.h1
+  variants={itemVariants}
+  className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-6 leading-tight"
+>
+  Make Your Work Easier with <br className="hidden md:block" />
+  <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
+    Smart Tools
+  </span>
+</motion.h1>
 
         <motion.p
           variants={itemVariants}
