@@ -170,9 +170,15 @@ h6 {
 /* ============================= */
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 html {
@@ -182,4 +188,93 @@ html {
 h2,
 h3 {
   scroll-margin-top: 120px;
+}
+
+/* ============================= */
+/* DEMON SLAYER CINEMATIC UPGRADE */
+/* ============================= */
+
+/* WIND SWAY */
+@keyframes wind-sway {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* DEPTH BLUR */
+.animate-snow-far {
+  animation:
+    snow-far linear infinite,
+    wind-sway 12s ease-in-out infinite;
+  filter: blur(2px);
+}
+
+.animate-snow-mid {
+  animation:
+    snow-mid linear infinite,
+    wind-sway 8s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+.animate-snow-front {
+  animation:
+    snow-front linear infinite,
+    wind-sway 5s ease-in-out infinite;
+  filter: blur(0.5px);
+}
+
+/* HERO SPOTLIGHT PARTICLES */
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 999px;
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+/* FREEZE BURST EFFECT */
+.freeze-burst .animate-snow-front,
+.freeze-burst .animate-snow-mid,
+.freeze-burst .animate-snow-far {
+  animation-play-state: paused;
+  filter: blur(3px) brightness(1.5);
+}
+.sparkle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 999px;
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
 }
