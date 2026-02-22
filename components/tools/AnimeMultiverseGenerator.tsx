@@ -235,9 +235,9 @@ const AnimeMultiverseGenerator: React.FC = () => {
                 <input
                   type="text"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Enter your full name..."
-                  className="w-full h-16 pl-14 pr-6 bg-transparent border-none outline-none text-foreground placeholder:text-muted-foreground/40 text-lg font-medium"
+                  onChange={(e) => setName(e.target.value.toUpperCase())}
+                  placeholder="Enter your name..."
+                  className="w-full h-16 pl-14 pr-6 bg-transparent border-none outline-none text-foreground placeholder:text-muted-foreground/40 text-lg font-medium uppercase"
                   required
                   minLength={2}
                   maxLength={50}

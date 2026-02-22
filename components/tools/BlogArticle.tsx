@@ -12,7 +12,6 @@ interface Heading {
 }
 
 export default function BlogArticle() {
-  // ✅ Properly typed params
   const params = useParams<{ slug: string }>();
   const slug = params?.slug;
 
@@ -22,7 +21,6 @@ export default function BlogArticle() {
   const [headings, setHeadings] = useState<Heading[]>([]);
   const [activeId, setActiveId] = useState("");
 
-  // 🔹 Scroll Progress
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight =
@@ -38,7 +36,6 @@ export default function BlogArticle() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 🔹 Extract Headings
   useEffect(() => {
     if (!post) return;
 
@@ -58,7 +55,6 @@ export default function BlogArticle() {
     return () => clearTimeout(timeout);
   }, [post]);
 
-  // 🔹 Active Heading Tracking
   useEffect(() => {
     const handleScroll = () => {
       let current = "";
@@ -133,19 +129,32 @@ export default function BlogArticle() {
 
       {/* Content */}
       <Container className="grid grid-cols-1 lg:grid-cols-4 gap-10">
-        <article className="lg:col-span-3 pb-20 prose-optimal">
-          <div className="prose md:prose-lg max-w-none dark:prose-invert">
+
+        {/* ARTICLE SURFACE FIXED */}
+        <article className="lg:col-span-3 pb-20 prose-optimal bg-card rounded-2xl p-6 md:p-10 shadow-sm border border-border">
+          
+          {/* PROSE VISIBILITY FIXED */}
+          <div className="prose md:prose-lg max-w-none dark:prose-invert prose-p:text-foreground prose-headings:text-foreground prose-strong:text-foreground prose-li:text-foreground">
+            
             <ReactMarkdown
               components={{
                 h2: ({ children }) => {
                   const text = String(children);
                   const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-                  return <h2 id={id} className="text-xl md:text-2xl font-bold">{children}</h2>;
+                  return (
+                    <h2 id={id} className="text-xl md:text-2xl font-bold">
+                      {children}
+                    </h2>
+                  );
                 },
                 h3: ({ children }) => {
                   const text = String(children);
                   const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-                  return <h3 id={id} className="text-lg md:text-xl font-bold">{children}</h3>;
+                  return (
+                    <h3 id={id} className="text-lg md:text-xl font-bold">
+                      {children}
+                    </h3>
+                  );
                 },
                 table: ({ children }) => (
                   <div className="overflow-x-auto my-8">
@@ -176,10 +185,11 @@ export default function BlogArticle() {
                 <a
                   key={heading.id}
                   href={`#${heading.id}`}
-                  className={`block pl-3 border-l-2 transition ${activeId === heading.id
-                    ? "text-primary border-primary font-medium"
-                    : "text-muted-foreground border-transparent hover:text-primary"
-                    }`}
+                  className={`block pl-3 border-l-2 transition ${
+                    activeId === heading.id
+                      ? "text-primary border-primary font-medium"
+                      : "text-muted-foreground border-transparent hover:text-primary"
+                  }`}
                 >
                   {heading.text}
                 </a>
@@ -187,6 +197,7 @@ export default function BlogArticle() {
             </div>
           </div>
         </aside>
+
       </Container>
     </div>
   );
