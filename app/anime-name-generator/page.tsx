@@ -1,7 +1,7 @@
 "use client";
 
-import AnimeNames from "@/components/tools/AnimeNames";
+import AnimeMultiverseGenerator from "@/components/tools/AnimeMultiverseGenerator";
 
-export default function AnimeNamesPage() {
-  return <AnimeNames />;
+export default function AnimeMultiversePage() {
+  return <AnimeMultiverseGenerator />;
 }
