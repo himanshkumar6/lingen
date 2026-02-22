@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/font-converter",
     "/character-counter",
     "/anime-name-generator",
+    "/anime-multiverse-generator",
     "/privacy-policy",
     "/terms",
     "/disclaimer",
