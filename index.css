@@ -43,6 +43,10 @@
   --color-prose-pre-bg: hsl(var(--muted) / 0.5);
   --color-prose-th-borders: hsl(var(--border));
   --color-prose-td-borders: hsl(var(--border));
+
+  /* Tokyo Command Typography */
+  --font-display: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  --font-body: Inter, "Plus Jakarta Sans", sans-serif;
 }
 
 /* ============================= */
@@ -68,6 +72,16 @@
   --border: 214 32% 90%;
   --input: 214 32% 90%;
   --ring: 262 83% 58%;
+
+  /* Tokyo Command Interface (Light Mode) */
+  --cmd-bg: 210 40% 97%;
+  --cmd-accent: 262 83% 58%;
+  --cmd-accent-rgb: 139, 92, 246;
+  --cmd-glow: 262 83% 58% / 0.15; /* Reduced intensity (-40%+) */
+  --cmd-fog: 210 40% 90% / 0.05;
+  --cmd-spotlight: 262 83% 58% / 0.05;
+  --cmd-vignette: 0 0% 100% / 0; /* Fully transparent in light mode */
+  --cmd-card-elevated: 0 0% 100% / 0.8;
 }
 
 /* ============================= */
@@ -94,10 +108,15 @@
   --input: 240 4% 16%;
   --ring: 263 70% 50%;
 
-  /* Anime Portal Theme Overrides */
-  --portal-purple: 270 50% 10%;
-  --portal-neon-orange: 25 100% 55%;
-  --portal-neon-purple: 280 100% 65%;
+  /* Tokyo Command Interface (Cinematic Dark Region) */
+  --cmd-bg: 240 45% 4%; /* #070711 */
+  --cmd-accent: 263 70% 50%;
+  --cmd-accent-rgb: 99, 102, 241;
+  --cmd-glow: 263 70% 50% / 0.3;
+  --cmd-fog: 240 10% 10% / 0.1;
+  --cmd-spotlight: 263 70% 50% / 0.15;
+  --cmd-vignette: 0 0% 0% / 0.6;
+  --cmd-card-elevated: 240 10% 7% / 0.6;
 }
 
 /* ============================= */

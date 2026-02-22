@@ -26,7 +26,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
     <div className="flex min-h-screen flex-col bg-background selection:bg-primary/10 selection:text-primary">
       <PageLoader />
       <Navbar />
-      <main className="flex-grow">
+      <main className="grow">
         {children}
       </main>
       <Footer />
