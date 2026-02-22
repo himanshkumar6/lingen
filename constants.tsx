@@ -75,7 +75,7 @@ export const TOOLS: Tool[] = [
   {
     id: 'anime-multiverse',
     name: 'Anime Name Generator (Free) – Create Random Anime Character Names',
-    description: 'Generate unique anime names instantly with our free anime name generator. Create cool anime character names, usernames, and alter-ego identities in seconds.',
+    description: 'Generate unique anime names instantly with our free anime name generator.',
     icon: <Sparkles className="w-6 h-6 text-orange-600" />,
     path: '/anime-name-generator',
     category: 'General',
