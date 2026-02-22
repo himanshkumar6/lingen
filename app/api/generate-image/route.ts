@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export const runtime = "nodejs";
+
 export async function POST(req: NextRequest) {
   try {
     const { prompt } = await req.json();
@@ -12,11 +14,7 @@ export async function POST(req: NextRequest) {
 
     const pollinationsUrl = `https://gen.pollinations.ai/image/${encodedPrompt}?model=flux&width=512&height=512`;
 
-    const response = await fetch(pollinationsUrl, {
-      headers: {
-        Authorization: `Bearer ${process.env.POLLINATIONS_API_KEY}`,
-      },
-    });
+    const response = await fetch(pollinationsUrl);
 
     if (!response.ok) {
       const errorText = await response.text();
