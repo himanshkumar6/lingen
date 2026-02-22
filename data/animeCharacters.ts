@@ -1,10 +1,10 @@
 export interface AnimeCharacter {
-  description: string;
-  image: any;
   id: string;
   name: string;
   anime: string;
   role: string;
+  description: string;
+  poster: string; // Licensed official poster URL
 }
 
 export const ANIME_CHARACTERS: AnimeCharacter[] = [
@@ -14,8 +14,9 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     name: "Naruto Uzumaki",
     anime: "Naruto",
     role: "Protagonist",
-    description: "",
-    image: undefined,
+    description:
+      "A young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.",
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sasuke-uchiha",
@@ -23,7 +24,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Rival",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sakura-haruno",
@@ -31,7 +32,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kakashi-hatake",
@@ -39,7 +40,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Legendary Sannin
@@ -49,7 +50,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tsunade",
@@ -57,7 +58,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Hokage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "orochimaru",
@@ -65,7 +66,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Uchiha Clan
@@ -75,7 +76,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Anti-Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "madara-uchiha",
@@ -83,7 +84,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "obito-uchiha",
@@ -91,7 +92,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shisui-uchiha",
@@ -99,7 +100,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Akatsuki
@@ -109,7 +110,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "konan",
@@ -117,7 +118,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kisame-hoshigaki",
@@ -125,7 +126,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "deidara",
@@ -133,7 +134,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sasori",
@@ -141,7 +142,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hidan",
@@ -149,7 +150,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kakuzu",
@@ -157,7 +158,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zetsu",
@@ -165,7 +166,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Konoha 11
@@ -175,7 +176,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ino-yamanaka",
@@ -183,7 +184,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "choji-akimichi",
@@ -191,7 +192,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hinata-hyuga",
@@ -199,7 +200,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "neji-hyuga",
@@ -207,7 +208,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rock-lee",
@@ -215,7 +216,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tenten",
@@ -223,7 +224,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kiba-inuzuka",
@@ -231,7 +232,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shino-aburame",
@@ -239,7 +240,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Hokage
@@ -249,7 +250,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Hokage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tobirama-senju",
@@ -257,7 +258,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Hokage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hiruzen-sarutobi",
@@ -265,7 +266,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Hokage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "minato-namikaze",
@@ -273,7 +274,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Hokage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Sand Village
@@ -283,7 +284,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Kazekage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "temari",
@@ -291,7 +292,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kankuro",
@@ -299,7 +300,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Final Arc
@@ -309,7 +310,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Final Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "indra-otsutsuki",
@@ -317,7 +318,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ashura-otsutsuki",
@@ -325,7 +326,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Other Major Characters
@@ -335,7 +336,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Jinchuriki",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yamato",
@@ -343,7 +344,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "danzo-shimura",
@@ -351,7 +352,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kabuto-yakushi",
@@ -359,7 +360,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "anko-mitarashi",
@@ -367,7 +368,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kurama",
@@ -375,7 +376,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Naruto",
     role: "Tailed Beast",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Straw Hat Pirates
   {
@@ -384,7 +385,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "roronoa-zoro",
@@ -392,7 +393,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Swordsman",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nami",
@@ -400,7 +401,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Navigator",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "usopp",
@@ -408,7 +409,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Sniper",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sanji",
@@ -416,7 +417,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Cook",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tony-tony-chopper",
@@ -424,7 +425,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Doctor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nico-robin",
@@ -432,7 +433,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Archaeologist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "franky",
@@ -440,7 +441,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Shipwright",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "brook",
@@ -448,7 +449,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Musician",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "jinbe",
@@ -456,7 +457,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Helmsman",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Yonko
@@ -466,7 +467,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Yonko",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "blackbeard",
@@ -474,7 +475,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Yonko",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "big-mom",
@@ -482,7 +483,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Yonko",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kaido",
@@ -490,7 +491,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Yonko",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "whitebeard",
@@ -498,7 +499,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Yonko",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Revolutionary Army
@@ -508,7 +509,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Revolutionary Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sabo",
@@ -516,7 +517,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Revolutionary",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Marines
@@ -526,7 +527,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Marine Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sengoku",
@@ -534,7 +535,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Fleet Admiral",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "akainu",
@@ -542,7 +543,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Admiral",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "aokiji",
@@ -550,7 +551,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Admiral",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kizaru",
@@ -558,7 +559,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Admiral",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "fujitora",
@@ -566,7 +567,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Admiral",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "smoker",
@@ -574,7 +575,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Marine",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "coby",
@@ -582,7 +583,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Marine",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Warlords
@@ -592,7 +593,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Warlord",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "crocodile",
@@ -600,7 +601,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Warlord",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "boa-hancock",
@@ -608,7 +609,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Warlord",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "donquixote-doflamingo",
@@ -616,7 +617,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Warlord",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bartholomew-kuma",
@@ -624,7 +625,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Warlord",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gecko-moria",
@@ -632,7 +633,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Warlord",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Worst Generation
@@ -642,7 +643,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Supernova",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "eustass-kid",
@@ -650,7 +651,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Supernova",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "killer",
@@ -658,7 +659,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Supernova",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Major Arc Villains
@@ -668,7 +669,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "enel",
@@ -676,7 +677,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rob-lucci",
@@ -684,7 +685,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "caesar-clown",
@@ -692,7 +693,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Whitebeard Pirates
@@ -702,7 +703,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "marco",
@@ -710,7 +711,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Big Mom Pirates
@@ -720,7 +721,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "perospero",
@@ -728,7 +729,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Wano Arc
@@ -738,7 +739,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Samurai",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yamato",
@@ -746,7 +747,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others Major
@@ -756,7 +757,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Pirate",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "silvers-rayleigh",
@@ -764,7 +765,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vinsmoke-judge",
@@ -772,7 +773,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "charlotte-pudding",
@@ -780,7 +781,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bon-clay",
@@ -788,7 +789,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ivankov",
@@ -796,7 +797,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Revolutionary",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shirahoshi",
@@ -804,7 +805,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Princess",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vivi",
@@ -812,7 +813,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Princess",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "carrot",
@@ -820,7 +821,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "king",
@@ -828,7 +829,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "queen",
@@ -836,7 +837,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "One Piece",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "eren-yeager",
@@ -844,7 +845,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mikasa-ackerman",
@@ -852,7 +853,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "armin-arlert",
@@ -860,7 +861,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Strategist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Survey Corps
@@ -870,7 +871,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "erwin-smith",
@@ -878,7 +879,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hanji-zoe",
@@ -886,7 +887,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "jean-kirstein",
@@ -894,7 +895,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Soldier",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "connie-springer",
@@ -902,7 +903,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Soldier",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sasha-blouse",
@@ -910,7 +911,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Soldier",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "historia-reiss",
@@ -918,7 +919,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Queen",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ymir",
@@ -926,7 +927,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Titan Shifter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Titan Shifters
@@ -936,7 +937,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Armored Titan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bertolt-hoover",
@@ -944,7 +945,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Colossal Titan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "annie-leonhart",
@@ -952,7 +953,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Female Titan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zeke-yeager",
@@ -960,7 +961,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Beast Titan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "pieck-finger",
@@ -968,7 +969,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Cart Titan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "porco-galliard",
@@ -976,7 +977,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Jaw Titan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "marcel-galliard",
@@ -984,7 +985,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lara-tybur",
@@ -992,7 +993,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "War Hammer Titan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Marley & Others
@@ -1002,7 +1003,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Warrior Candidate",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "falco-grice",
@@ -1010,7 +1011,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Warrior Candidate",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "magath",
@@ -1018,7 +1019,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "General",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "willy-tybur",
@@ -1026,7 +1027,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Political Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Royal Bloodline
@@ -1036,7 +1037,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Founding Titan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dina-fritz",
@@ -1044,7 +1045,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Royal Blood",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "karl-fritz",
@@ -1052,7 +1053,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "King",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rod-reiss",
@@ -1060,7 +1061,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Noble",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Military Police
@@ -1070,7 +1071,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kitz-woermann",
@@ -1078,7 +1079,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Final Arc Important
@@ -1088,7 +1089,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Yeagerist Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "onyankopon",
@@ -1096,7 +1097,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nicolo",
@@ -1104,7 +1105,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hitch-dreyse",
@@ -1112,7 +1113,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Attack on Titan",
     role: "Military Police",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -1121,7 +1122,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Kira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "l-lawliet",
@@ -1129,7 +1130,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Detective",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Kira Support
@@ -1139,7 +1140,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Second Kira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "teru-mikami",
@@ -1147,7 +1148,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Kira Follower",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kiyomi-takada",
@@ -1155,7 +1156,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Kira Spokesperson",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Task Force
@@ -1165,7 +1166,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Task Force Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "touta-matsuda",
@@ -1173,7 +1174,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Detective",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shuichi-aizawa",
@@ -1181,7 +1182,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Detective",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kanzo-mogi",
@@ -1189,7 +1190,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Detective",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hideki-ide",
@@ -1197,7 +1198,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Detective",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Wammy House
@@ -1207,7 +1208,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Detective",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mello",
@@ -1215,7 +1216,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Detective",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "watari",
@@ -1223,7 +1224,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Shinigami
@@ -1233,7 +1234,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Shinigami",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rem",
@@ -1241,7 +1242,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Shinigami",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sidoh",
@@ -1249,7 +1250,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Shinigami",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Corporate / Yotsuba Arc
@@ -1259,7 +1260,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Corporate Kira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Family
@@ -1269,7 +1270,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Family",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sachiko-yagami",
@@ -1277,7 +1278,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "Family",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -1287,7 +1288,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Death Note",
     role: "FBI Agent",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -1296,7 +1297,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nezuko-kamado",
@@ -1304,7 +1305,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Demon",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zenitsu-agatsuma",
@@ -1312,7 +1313,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Slayer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "inosuke-hashibira",
@@ -1320,7 +1321,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Slayer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Hashira
@@ -1330,7 +1331,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Water Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shinobu-kocho",
@@ -1338,7 +1339,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Insect Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kyojuro-rengoku",
@@ -1346,7 +1347,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Flame Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tengen-uzui",
@@ -1354,7 +1355,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Sound Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mitsuri-kanroji",
@@ -1362,7 +1363,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Love Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "muichiro-tokito",
@@ -1370,7 +1371,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Mist Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gyomei-himejima",
@@ -1378,7 +1379,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Stone Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sanemi-shinazugawa",
@@ -1386,7 +1387,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Wind Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "obanai-iguro",
@@ -1394,7 +1395,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Serpent Hashira",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Upper Moons
@@ -1404,7 +1405,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kokushibo",
@@ -1412,7 +1413,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Upper Moon One",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "doma",
@@ -1420,7 +1421,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Upper Moon Two",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "akaza",
@@ -1428,7 +1429,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Upper Moon Three",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hantengu",
@@ -1436,7 +1437,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Upper Moon Four",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gyokko",
@@ -1444,7 +1445,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Upper Moon Five",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "daki",
@@ -1452,7 +1453,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Upper Moon Six",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gyutaro",
@@ -1460,7 +1461,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Upper Moon Six",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Lower Moons
@@ -1470,7 +1471,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Lower Moon One",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rui",
@@ -1478,7 +1479,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Lower Moon Five",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Kamado Family
@@ -1488,7 +1489,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Slayer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "genya-shinazugawa",
@@ -1496,7 +1497,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Slayer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sabito",
@@ -1504,7 +1505,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Former Slayer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "makomo",
@@ -1512,7 +1513,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Former Slayer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "urokodaki",
@@ -1520,7 +1521,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Other Important Demons
@@ -1530,7 +1531,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Ally Demon",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yushiro",
@@ -1538,7 +1539,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Ally Demon",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Swordsmith Village
@@ -1548,7 +1549,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Swordsmith",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kotetsu",
@@ -1556,7 +1557,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Demon Slayer",
     role: "Villager",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -1565,7 +1566,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "megumi-fushiguro",
@@ -1573,7 +1574,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nobara-kugisaki",
@@ -1581,7 +1582,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "satoru-gojo",
@@ -1589,7 +1590,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Special Grade Sorcerers
@@ -1599,7 +1600,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Special Grade",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "suguru-geto",
@@ -1607,7 +1608,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Curses
@@ -1617,7 +1618,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mahito",
@@ -1625,7 +1626,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Curse",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "jogo",
@@ -1633,7 +1634,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Curse",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hanami",
@@ -1641,7 +1642,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Curse",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dagon",
@@ -1649,7 +1650,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Curse",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Tokyo Students
@@ -1659,7 +1660,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "toge-inumaki",
@@ -1667,7 +1668,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "panda",
@@ -1675,7 +1676,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Teachers & Elders
@@ -1685,7 +1686,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mei-mei",
@@ -1693,7 +1694,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "utahime-iori",
@@ -1701,7 +1702,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Teacher",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yaga-masamichi",
@@ -1709,7 +1710,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Principal",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Kyoto Students
@@ -1719,7 +1720,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mai-zenin",
@@ -1727,7 +1728,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "noritoshi-kamo",
@@ -1735,7 +1736,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "miwa-kasumi",
@@ -1743,7 +1744,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kokichi-muta",
@@ -1751,7 +1752,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Zenin Clan
@@ -1761,7 +1762,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Clan Head",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "toji-fushiguro",
@@ -1769,7 +1770,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Culling Game Arc
@@ -1779,7 +1780,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Culling Player",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hiromi-higuruma",
@@ -1787,7 +1788,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Culling Player",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kinji-hakari",
@@ -1795,7 +1796,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kirara-hoshi",
@@ -1803,7 +1804,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Sorcerer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "reiji-star",
@@ -1811,7 +1812,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Culling Player",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -1821,7 +1822,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Cursed Womb",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "eso",
@@ -1829,7 +1830,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Cursed Womb",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kechizu",
@@ -1837,7 +1838,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Jujutsu Kaisen",
     role: "Cursed Womb",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Saiyans
   {
@@ -1846,7 +1847,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vegeta",
@@ -1854,7 +1855,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Rival",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gohan",
@@ -1862,7 +1863,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "goten",
@@ -1870,7 +1871,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "trunks",
@@ -1878,7 +1879,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "future-trunks",
@@ -1886,7 +1887,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "broly",
@@ -1894,7 +1895,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bardock",
@@ -1902,7 +1903,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Z Fighters
@@ -1912,7 +1913,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "krillin",
@@ -1920,7 +1921,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yamcha",
@@ -1928,7 +1929,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tien",
@@ -1936,7 +1937,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "chiaotzu",
@@ -1944,7 +1945,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "android-18",
@@ -1952,7 +1953,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Android",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "android-17",
@@ -1960,7 +1961,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Android",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "android-16",
@@ -1968,7 +1969,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Android",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Major Villains
@@ -1978,7 +1979,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "cell",
@@ -1986,7 +1987,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "majin-buu",
@@ -1994,7 +1995,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kid-buu",
@@ -2002,7 +2003,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "cooler",
@@ -2010,7 +2011,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "beerus",
@@ -2018,7 +2019,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "God of Destruction",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "whis",
@@ -2026,7 +2027,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Angel",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zamasu",
@@ -2034,7 +2035,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "goku-black",
@@ -2042,7 +2043,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Gods & Angels
@@ -2052,7 +2053,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Angel",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zeno",
@@ -2060,7 +2061,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Omni King",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Saiyan Royal & Family
@@ -2070,7 +2071,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nappa",
@@ -2078,7 +2079,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "king-vegeta",
@@ -2086,7 +2087,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan King",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Tournament of Power
@@ -2096,7 +2097,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "toppo",
@@ -2104,7 +2105,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dyspo",
@@ -2112,7 +2113,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kefla",
@@ -2120,7 +2121,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Fusion",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "caulifla",
@@ -2128,7 +2129,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kale",
@@ -2136,7 +2137,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Saiyan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hit",
@@ -2144,7 +2145,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Support Characters
@@ -2154,7 +2155,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "chi-chi",
@@ -2162,7 +2163,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "videl",
@@ -2170,7 +2171,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "master-roshi",
@@ -2178,7 +2179,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mr-satan",
@@ -2186,7 +2187,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Comedic",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dabura",
@@ -2194,7 +2195,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ginyu",
@@ -2202,7 +2203,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dragon Ball",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -2211,7 +2212,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rukia-kuchiki",
@@ -2219,7 +2220,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Shinigami",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "orihime-inoue",
@@ -2227,7 +2228,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "uryu-ishida",
@@ -2235,7 +2236,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Quincy",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yasutora-sado",
@@ -2243,7 +2244,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Soul Society Captains
@@ -2253,7 +2254,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kenpachi-zaraki",
@@ -2261,7 +2262,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "toshirō-hitsugaya",
@@ -2269,7 +2270,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "soi-fon",
@@ -2277,7 +2278,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mayuri-kurotsuchi",
@@ -2285,7 +2286,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shunsui-kyoraku",
@@ -2293,7 +2294,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Captain Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "jushiro-ukitake",
@@ -2301,7 +2302,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "genryusai-yamamoto",
@@ -2309,7 +2310,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Captain Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Lieutenants
@@ -2319,7 +2320,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Lieutenant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rangiku-matsumoto",
@@ -2327,7 +2328,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Lieutenant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ikki-ikkaku",
@@ -2335,7 +2336,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Lieutenant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yumichika-ayasegawa",
@@ -2343,7 +2344,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Major Villains
@@ -2353,7 +2354,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gin-ichimaru",
@@ -2361,7 +2362,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kaname-tosen",
@@ -2369,7 +2370,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Espada
@@ -2379,7 +2380,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "grimmjow",
@@ -2387,7 +2388,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nelliel",
@@ -2395,7 +2396,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "coyote-starrk",
@@ -2403,7 +2404,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tier-harribel",
@@ -2411,7 +2412,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "szayelaporro",
@@ -2419,7 +2420,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "aaroniero",
@@ -2427,7 +2428,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zommari",
@@ -2435,7 +2436,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yammy",
@@ -2443,7 +2444,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Espada",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Arrancar
@@ -2453,7 +2454,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Arrancar",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tesra",
@@ -2461,7 +2462,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Arrancar",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Sternritter (Thousand-Year Blood War)
@@ -2471,7 +2472,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "jugram-haschwalth",
@@ -2479,7 +2480,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Sternritter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "uriyu-ishida",
@@ -2487,7 +2488,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Sternritter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "as-nodt",
@@ -2495,7 +2496,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Sternritter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bazz-b",
@@ -2503,7 +2504,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Sternritter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "candice",
@@ -2511,7 +2512,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Sternritter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Royal Guard
@@ -2521,7 +2522,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Royal Guard",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ouetsu-nimaiya",
@@ -2529,7 +2530,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Royal Guard",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -2539,7 +2540,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yoruichi-shihoin",
@@ -2547,7 +2548,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "isshin-kurosaki",
@@ -2555,7 +2556,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Shinigami",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ryuken-ishida",
@@ -2563,7 +2564,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Quincy",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kon",
@@ -2571,7 +2572,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Bleach",
     role: "Comedic",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -2580,7 +2581,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "katsuki-bakugo",
@@ -2588,7 +2589,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Rival",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shoto-todoroki",
@@ -2596,7 +2597,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Class 1-A
@@ -2606,7 +2607,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tenya-iida",
@@ -2614,7 +2615,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tsuyu-asui",
@@ -2622,7 +2623,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "eijiro-kirishima",
@@ -2630,7 +2631,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "denki-kaminari",
@@ -2638,7 +2639,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "momo-yaoyorozu",
@@ -2646,7 +2647,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "fumikage-tokoyami",
@@ -2654,7 +2655,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mina-ashido",
@@ -2662,7 +2663,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hanta-sero",
@@ -2670,7 +2671,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kyoka-jiro",
@@ -2678,7 +2679,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rikido-sato",
@@ -2686,7 +2687,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mezo-shoji",
@@ -2694,7 +2695,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "minoru-mineta",
@@ -2702,7 +2703,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "koji-koda",
@@ -2710,7 +2711,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "toru-hagakure",
@@ -2718,7 +2719,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yuga-aoyama",
@@ -2726,7 +2727,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Teachers
@@ -2736,7 +2737,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Symbol of Peace",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shota-aizawa",
@@ -2744,7 +2745,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Teacher",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "present-mic",
@@ -2752,7 +2753,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Teacher",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "midnight",
@@ -2760,7 +2761,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Teacher",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Big 3
@@ -2770,7 +2771,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Big Three",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nejire-hado",
@@ -2778,7 +2779,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Big Three",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tamaki-amajiki",
@@ -2786,7 +2787,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Big Three",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Pro Heroes
@@ -2796,7 +2797,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Pro Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hawks",
@@ -2804,7 +2805,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Pro Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "best-jeanist",
@@ -2812,7 +2813,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Pro Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "edgeshot",
@@ -2820,7 +2821,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Pro Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mt-lady",
@@ -2828,7 +2829,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Pro Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gran-torino",
@@ -2836,7 +2837,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // League of Villains
@@ -2846,7 +2847,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "all-for-one",
@@ -2854,7 +2855,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dabi",
@@ -2862,7 +2863,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "himiko-toga",
@@ -2870,7 +2871,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "twice",
@@ -2878,7 +2879,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mr-compress",
@@ -2886,7 +2887,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "spinner",
@@ -2894,7 +2895,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Paranormal Liberation Front
@@ -2904,7 +2905,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gigantomachia",
@@ -2912,7 +2913,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "My Hero Academia",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -2921,7 +2922,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "killua-zoldyck",
@@ -2929,7 +2930,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kurapika",
@@ -2937,7 +2938,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "leorio-paradinight",
@@ -2945,7 +2946,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Zoldyck Family
@@ -2955,7 +2956,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zeno-zoldyck",
@@ -2963,7 +2964,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "illumi-zoldyck",
@@ -2971,7 +2972,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kalluto-zoldyck",
@@ -2979,7 +2980,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "alluka-zoldyck",
@@ -2987,7 +2988,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Phantom Troupe
@@ -2997,7 +2998,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hisoka-morow",
@@ -3005,7 +3006,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Anti-Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "feitan",
@@ -3013,7 +3014,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Phantom Troupe",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "phinks",
@@ -3021,7 +3022,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Phantom Troupe",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "machi",
@@ -3029,7 +3030,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Phantom Troupe",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nobunaga",
@@ -3037,7 +3038,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Phantom Troupe",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shizuku",
@@ -3045,7 +3046,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Phantom Troupe",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "uvogin",
@@ -3053,7 +3054,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Phantom Troupe",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "pakunoda",
@@ -3061,7 +3062,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Phantom Troupe",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Hunter Association
@@ -3071,7 +3072,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Chairman",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "pariston-hill",
@@ -3079,7 +3080,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Vice Chairman",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ging-freecss",
@@ -3087,7 +3088,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "biscuit-krueger",
@@ -3095,7 +3096,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "morel",
@@ -3103,7 +3104,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "knov",
@@ -3111,7 +3112,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kite",
@@ -3119,7 +3120,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Chimera Ant Arc
@@ -3129,7 +3130,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "neferpitou",
@@ -3137,7 +3138,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Royal Guard",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shaiapouf",
@@ -3145,7 +3146,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Royal Guard",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "menthuthuyoupi",
@@ -3153,7 +3154,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Royal Guard",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "komugi",
@@ -3161,7 +3162,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -3171,7 +3172,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "wing",
@@ -3179,7 +3180,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zushi",
@@ -3187,7 +3188,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "razor",
@@ -3195,7 +3196,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Game Master",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tserriednich",
@@ -3203,7 +3204,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Hunter x Hunter",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -3212,7 +3213,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "touka-kirishima",
@@ -3220,7 +3221,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hideyoshi-nagachika",
@@ -3228,7 +3229,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Friend",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Anteiku
@@ -3238,7 +3239,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Anteiku Manager",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yomo-renji",
@@ -3246,7 +3247,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hinami-fueguchi",
@@ -3254,7 +3255,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "koma-enji",
@@ -3262,7 +3263,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "irimi-kaya",
@@ -3270,7 +3271,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Aogiri Tree
@@ -3280,7 +3281,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tatara",
@@ -3288,7 +3289,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Aogiri Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ayato-kirishima",
@@ -3296,7 +3297,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "noro",
@@ -3304,7 +3305,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // CCG Investigators
@@ -3314,7 +3315,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Investigator",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "akira-mado",
@@ -3322,7 +3323,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Investigator",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "juuzou-suzuya",
@@ -3330,7 +3331,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Investigator",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kishou-arima",
@@ -3338,7 +3339,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "CCG Reaper",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kureo-mado",
@@ -3346,7 +3347,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Investigator",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "haise-sasaki",
@@ -3354,7 +3355,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Protagonist (Re)",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Quinx Squad
@@ -3364,7 +3365,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Quinx",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mutsuki-tooru",
@@ -3372,7 +3373,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Quinx",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "saiko-yonabayashi",
@@ -3380,7 +3381,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Quinx",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ginshi-shirazu",
@@ -3388,7 +3389,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Quinx",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Other Major Ghouls
@@ -3398,7 +3399,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yakumo-oomori",
@@ -3406,7 +3407,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "uta",
@@ -3414,7 +3415,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "romi-hori",
@@ -3422,7 +3423,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Final Arc
@@ -3432,7 +3433,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Ghoul",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "furuta-nimura",
@@ -3440,7 +3441,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Ghoul",
     role: "Final Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -3449,7 +3450,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "thors",
@@ -3457,7 +3458,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "askeladd",
@@ -3465,7 +3466,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Anti-Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "canute",
@@ -3473,7 +3474,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "King",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "einar",
@@ -3481,7 +3482,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Farmer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Vikings
@@ -3491,7 +3492,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "thorkell",
@@ -3499,7 +3500,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "snake",
@@ -3507,7 +3508,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "olmar",
@@ -3515,7 +3516,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Farmer's Son",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ketil",
@@ -3523,7 +3524,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Landowner",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Royal Family
@@ -3533,7 +3534,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "King",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "harald",
@@ -3541,7 +3542,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Prince",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Supporting Characters
@@ -3551,7 +3552,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Explorer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ari",
@@ -3559,7 +3560,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Villager",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "helga",
@@ -3567,7 +3568,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Mother",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ylva",
@@ -3575,7 +3576,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Sister",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ragnar",
@@ -3583,7 +3584,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Guardian",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "garm",
@@ -3591,7 +3592,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Baltic Sea Arc
@@ -3601,7 +3602,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bug-eyes",
@@ -3609,7 +3610,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Merchant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "halfdan",
@@ -3617,7 +3618,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Merchant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -3627,7 +3628,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Commander",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "atli",
@@ -3635,7 +3636,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "torgrim",
@@ -3643,7 +3644,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "wulf",
@@ -3651,7 +3652,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "cordelia",
@@ -3659,7 +3660,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sigurd",
@@ -3667,7 +3668,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Vinland Saga",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Characters
   {
@@ -3676,7 +3677,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "pochita",
@@ -3684,7 +3685,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Chainsaw Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "makima",
@@ -3692,7 +3693,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Control Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "power",
@@ -3700,7 +3701,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Blood Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "aki-hayakawa",
@@ -3708,7 +3709,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Devil Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Public Safety
@@ -3718,7 +3719,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Devil Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kobeni",
@@ -3726,7 +3727,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Devil Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kishibe",
@@ -3734,7 +3735,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "angel-devil",
@@ -3742,7 +3743,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "beam",
@@ -3750,7 +3751,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Shark Fiend",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "violence-fiend",
@@ -3758,7 +3759,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Fiend",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "prinz",
@@ -3766,7 +3767,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Spider Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Devils
@@ -3776,7 +3777,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "darkness-devil",
@@ -3784,7 +3785,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Primal Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "future-devil",
@@ -3792,7 +3793,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "curse-devil",
@@ -3800,7 +3801,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "fox-devil",
@@ -3808,7 +3809,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Hybrids
@@ -3818,7 +3819,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Hybrid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "reze",
@@ -3826,7 +3827,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Bomb Devil Hybrid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "quanxi",
@@ -3834,7 +3835,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Crossbow Hybrid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sword-man",
@@ -3842,7 +3843,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Hybrid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "whip-hybrid",
@@ -3850,7 +3851,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Hybrid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "spear-hybrid",
@@ -3858,7 +3859,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Hybrid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Assassins Arc
@@ -3868,7 +3869,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tolka",
@@ -3876,7 +3877,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Doll",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Control Devil Arc
@@ -3886,7 +3887,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Control Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Supporting
@@ -3896,7 +3897,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Famine Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yoshida",
@@ -3904,7 +3905,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Devil Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "asa-mitaka",
@@ -3912,7 +3913,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "War Devil Host",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yuko",
@@ -3920,7 +3921,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Chainsaw Man",
     role: "Justice Devil Host",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Forger Family
   {
@@ -3929,7 +3930,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Spy (Twilight)",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yor-forger",
@@ -3937,7 +3938,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Assassin (Thorn Princess)",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "anya-forger",
@@ -3945,7 +3946,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Telepath",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bond-forger",
@@ -3953,7 +3954,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Precognitive Dog",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // WISE
@@ -3963,7 +3964,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "WISE Handler",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "franky",
@@ -3971,7 +3972,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Informant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nightfall",
@@ -3979,7 +3980,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Spy (Nightfall)",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Garden
@@ -3989,7 +3990,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Garden Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "matthew",
@@ -3997,7 +3998,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Desmond Family
@@ -4007,7 +4008,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Eden Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "donovan-desmond",
@@ -4015,7 +4016,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Political Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "melinda-desmond",
@@ -4023,7 +4024,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Mother",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Eden Academy
@@ -4033,7 +4034,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "henderson",
@@ -4041,7 +4042,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Housemaster",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "emile",
@@ -4049,7 +4050,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ewen",
@@ -4057,7 +4058,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // State Security Service (SSS)
@@ -4067,7 +4068,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "SSS Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Supporting
@@ -4077,7 +4078,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Coworker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "millie",
@@ -4085,7 +4086,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Coworker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dominic",
@@ -4093,7 +4094,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Chef",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Arc Characters
@@ -4103,7 +4104,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "daybreak",
@@ -4111,7 +4112,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Spy",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Villain Arc
@@ -4121,7 +4122,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Spy x Family",
     role: "Terrorist Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Class D Core
   {
@@ -4130,7 +4131,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "horikita-suzune",
@@ -4138,7 +4139,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Strategist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "karuizawa-kei",
@@ -4146,7 +4147,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hirata-yosuke",
@@ -4154,7 +4155,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "koenji-rokusuke",
@@ -4162,7 +4163,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Wildcard",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sudo-ken",
@@ -4170,7 +4171,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Athlete",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "airi-sakura",
@@ -4178,7 +4179,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ike-kanji",
@@ -4186,7 +4187,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yamauchi-haruki",
@@ -4194,7 +4195,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Class C (Ryuen's Class)
@@ -4204,7 +4205,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ibuki-mio",
@@ -4212,7 +4213,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ishizaki-daichi",
@@ -4220,7 +4221,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "albert-yamada",
@@ -4228,7 +4229,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Enforcer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Class B (Ichinose's Class)
@@ -4238,7 +4239,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shibata-so",
@@ -4246,7 +4247,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Athlete",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kanzaki-ryoji",
@@ -4254,7 +4255,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Strategist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Class A (Sakayanagi's Class)
@@ -4264,7 +4265,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Genius Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "katsuragi-kohei",
@@ -4272,7 +4273,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Strategist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Student Council
@@ -4282,7 +4283,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Student Council President",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nagumo-miyabi",
@@ -4290,7 +4291,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "President (Successor)",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kiriyama-ikuto",
@@ -4298,7 +4299,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Vice President",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Teachers
@@ -4308,7 +4309,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Class D Teacher",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hoshinomiya-chie",
@@ -4316,7 +4317,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Class B Teacher",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sakagami",
@@ -4324,7 +4325,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Class C Teacher",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mashima",
@@ -4332,7 +4333,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Class A Teacher",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // White Room / Advanced Plot
@@ -4342,7 +4343,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "White Room Founder",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yagami-takuya",
@@ -4350,7 +4351,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "White Room Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "amasawa-ichika",
@@ -4358,7 +4359,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "White Room Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -4368,7 +4369,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kiryuin-fuuka",
@@ -4376,7 +4377,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Classroom of the Elite",
     role: "Student Council",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Character
   {
@@ -4385,7 +4386,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Protagonist / Shadow Monarch",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Family
@@ -4395,7 +4396,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Sister",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sung-ilhwan",
@@ -4403,7 +4404,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Shadow Army
@@ -4413,7 +4414,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Shadow General",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "beru",
@@ -4421,7 +4422,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Shadow Marshal",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tusk",
@@ -4429,7 +4430,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Shadow Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "iron",
@@ -4437,7 +4438,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Shadow Knight",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tank",
@@ -4445,7 +4446,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Shadow Beast",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "greed",
@@ -4453,7 +4454,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Shadow Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Korean S-Rank Hunters
@@ -4463,7 +4464,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "S-Rank Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "baek-yoonho",
@@ -4471,7 +4472,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Guild Master",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "choi-jong-in",
@@ -4479,7 +4480,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Guild Master",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "go-gunhee",
@@ -4487,7 +4488,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Association Chairman",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "woo-jinchul",
@@ -4495,7 +4496,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Investigator",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lim-taegyu",
@@ -4503,7 +4504,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "S-Rank Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "min-byunggu",
@@ -4511,7 +4512,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Healer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // International Hunters
@@ -4521,7 +4522,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "National Level Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "christopher-reed",
@@ -4529,7 +4530,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "National Level Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "liu-zhigang",
@@ -4537,7 +4538,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "National Level Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "goto-ryuji",
@@ -4545,7 +4546,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "S-Rank Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Monarchs
@@ -4555,7 +4556,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Dungeon Boss",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "frost-monarch",
@@ -4563,7 +4564,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Monarch",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "beast-monarch",
@@ -4571,7 +4572,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Monarch",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dragon-monarch",
@@ -4579,7 +4580,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Dragon Monarch",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shadow-monarch",
@@ -4587,7 +4588,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Original Shadow Monarch",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Guild Members
@@ -4597,7 +4598,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Vice Guild Master",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "han-songyi",
@@ -4605,7 +4606,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kim-chul",
@@ -4613,7 +4614,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Villains / Others
@@ -4623,7 +4624,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Corrupt Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hwang-dongsuk",
@@ -4631,7 +4632,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hwang-dongsoo",
@@ -4639,7 +4640,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Solo Leveling",
     role: "S-Rank Hunter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main
   {
@@ -4648,7 +4649,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hinata-tachibana",
@@ -4656,7 +4657,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Heroine",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "naoto-tachibana",
@@ -4664,7 +4665,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Detective",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Toman Founders
@@ -4674,7 +4675,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ken-ryuguji",
@@ -4682,7 +4683,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Vice Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "keisuke-baji",
@@ -4690,7 +4691,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "takashi-mitsuya",
@@ -4698,7 +4699,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kazutora-hanemiya",
@@ -4706,7 +4707,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "pah-chin",
@@ -4714,7 +4715,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "peh-yan",
@@ -4722,7 +4723,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Vice Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hakkai-shiba",
@@ -4730,7 +4731,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Vice Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "chifuyu-matsuno",
@@ -4738,7 +4739,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Vice Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "haruki-hayashida",
@@ -4746,7 +4747,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Valhalla
@@ -4756,7 +4757,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Black Dragons
@@ -4766,7 +4767,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "seishu-inui",
@@ -4774,7 +4775,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hajime-kokonoi",
@@ -4782,7 +4783,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Strategist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Tenjiku
@@ -4792,7 +4793,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ran-haitani",
@@ -4800,7 +4801,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rindou-haitani",
@@ -4808,7 +4809,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kakucho",
@@ -4816,7 +4817,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kanji-mochizuki",
@@ -4824,7 +4825,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -4834,7 +4835,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shinichiro-sano",
@@ -4842,7 +4843,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Founder",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "south-terano",
@@ -4850,7 +4851,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "senju-kawaragi",
@@ -4858,7 +4859,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "takeomi-akashi",
@@ -4866,7 +4867,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "wakasa-imaushi",
@@ -4874,7 +4875,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Founder",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "benkei-arashi",
@@ -4882,7 +4883,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Founder",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yasuhiro-muto",
@@ -4890,7 +4891,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Final Timeline
@@ -4900,7 +4901,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Tokyo Revengers",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Character
   {
@@ -4909,7 +4910,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "daniel-park-second-body",
@@ -4917,7 +4918,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // J-High Core
@@ -4927,7 +4928,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Boxer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vasco",
@@ -4935,7 +4936,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Leader (Burn Knuckles)",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "jay-hong",
@@ -4943,7 +4944,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Elite Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vin-jin",
@@ -4951,7 +4952,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "logan-lee",
@@ -4959,7 +4960,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Rival",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Big Deal
@@ -4969,7 +4970,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Leader (Big Deal)",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "samuel-seo",
@@ -4977,7 +4978,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lineman",
@@ -4985,7 +4986,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Workers
@@ -4995,7 +4996,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Leader (Workers)",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gun",
@@ -5003,7 +5004,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Top Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "goo",
@@ -5011,7 +5012,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Top Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "johan-seong",
@@ -5019,7 +5020,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "God Dog Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rhyun",
@@ -5027,7 +5028,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // God Dog
@@ -5037,7 +5038,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Legend",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Allied
@@ -5047,7 +5048,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Hostel Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "warren-chae",
@@ -5055,7 +5056,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sally-park",
@@ -5063,7 +5064,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Burn Knuckles
@@ -5073,7 +5074,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Executives / Strong Fighters
@@ -5083,7 +5084,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "King of Ansan",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gongseop-ji",
@@ -5091,7 +5092,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "King of Suwon",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "seokdu-wang",
@@ -5099,7 +5100,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "King of Pyeongtaek",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hansoo-seong",
@@ -5107,7 +5108,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Martial Artist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Family
@@ -5117,7 +5118,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Daniel's Original Body",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mrs-park",
@@ -5125,7 +5126,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Mother",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -5135,7 +5136,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yuseong",
@@ -5143,7 +5144,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mandeok-bang",
@@ -5151,7 +5152,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Executive",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tom-lee",
@@ -5159,7 +5160,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Legendary Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sofia-alex",
@@ -5167,7 +5168,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Trainer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "cho-ma",
@@ -5175,7 +5176,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Lookism",
     role: "Fighter",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main
   {
@@ -5184,7 +5185,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yuno",
@@ -5192,7 +5193,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Rival",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "noelle-silva",
@@ -5200,7 +5201,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Royal Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Black Bulls
@@ -5210,7 +5211,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "magna-swing",
@@ -5218,7 +5219,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "luck-voltia",
@@ -5226,7 +5227,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gauche-adlai",
@@ -5234,7 +5235,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vanessa-enoteca",
@@ -5242,7 +5243,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Witch",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "finral-roulacase",
@@ -5250,7 +5251,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Spatial Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "charmy-pappitson",
@@ -5258,7 +5259,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Dwarf Hybrid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "henry-legolant",
@@ -5266,7 +5267,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gordon-agrippa",
@@ -5274,7 +5275,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Curse Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "grey",
@@ -5282,7 +5283,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Transformation Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zora-ideale",
@@ -5290,7 +5291,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Trap Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nacht-faust",
@@ -5298,7 +5299,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Vice Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Golden Dawn
@@ -5308,7 +5309,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mimosa-vermillion",
@@ -5316,7 +5317,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Healer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "klaus-lunettes",
@@ -5324,7 +5325,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "langris-vaude",
@@ -5332,7 +5333,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Spatial Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Crimson Lion
@@ -5342,7 +5343,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Royal Knight",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "fuegoleon-vermillion",
@@ -5350,7 +5351,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "leopold-vermillion",
@@ -5358,7 +5359,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Royal Mage",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Silver Eagles
@@ -5368,7 +5369,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Blue Rose
@@ -5378,7 +5379,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sol-marron",
@@ -5386,7 +5387,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Aqua Deer
@@ -5396,7 +5397,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Purple Orca
@@ -5406,7 +5407,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Wizard King
@@ -5416,7 +5417,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Wizard King",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Dark Triad
@@ -5426,7 +5427,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Dark Triad",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vanica-zogratis",
@@ -5434,7 +5435,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Dark Triad",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zenon-zogratis",
@@ -5442,7 +5443,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Dark Triad",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Devils
@@ -5452,7 +5453,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Devil King",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "megicula",
@@ -5460,7 +5461,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "beelzebub",
@@ -5468,7 +5469,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lucifugus",
@@ -5476,7 +5477,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "liebe",
@@ -5484,7 +5485,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Anti-Magic Devil",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Spade Kingdom
@@ -5494,7 +5495,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Heart Queen",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gaja",
@@ -5502,7 +5503,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Spirit Guardian",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -5512,7 +5513,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Elf Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rhya",
@@ -5520,7 +5521,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Elf",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vetto",
@@ -5528,7 +5529,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Elf",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "fana",
@@ -5536,7 +5537,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Black Clover",
     role: "Elf",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Duo
   {
@@ -5545,7 +5546,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ken-takakura",
@@ -5553,7 +5554,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Family
@@ -5563,7 +5564,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Psychic",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Friends
@@ -5573,7 +5574,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Friend",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "aira-shiratori",
@@ -5581,7 +5582,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Psychic",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Yokai
@@ -5591,7 +5592,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Yokai",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "acrobatic-silky",
@@ -5599,7 +5600,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Spirit",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "evil-eye",
@@ -5607,7 +5608,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Yokai",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Aliens
@@ -5617,7 +5618,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Alien",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "flatwoods-monster",
@@ -5625,7 +5626,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Alien",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // School Characters
@@ -5635,7 +5636,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "miko",
@@ -5643,7 +5644,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Cursed Entities
@@ -5653,7 +5654,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Cryptid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "reiko-kashima",
@@ -5661,7 +5662,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Urban Legend",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Arc Villains
@@ -5671,7 +5672,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Supporting
@@ -5681,7 +5682,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Paranormal
@@ -5691,7 +5692,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Occult",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "giant-worm",
@@ -5699,7 +5700,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Creature",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "possessed-student",
@@ -5707,7 +5708,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dandadan",
     role: "Victim",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main Protagonist
   {
@@ -5716,7 +5717,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Core Rivals
@@ -5726,7 +5727,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Striker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rin-itoshi",
@@ -5734,7 +5735,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Genius Striker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ryusei-shidou",
@@ -5742,7 +5743,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Wild Striker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hyoma-chigiri",
@@ -5750,7 +5751,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Speedster",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rensuke-kunigami",
@@ -5758,7 +5759,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Power Striker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "seishiro-nagi",
@@ -5766,7 +5767,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Prodigy",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "reo-mikage",
@@ -5774,7 +5775,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "All-Rounder",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "barou-shoei",
@@ -5782,7 +5783,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "King Striker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Team Z
@@ -5792,7 +5793,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Goalkeeper",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "raichi-jingo",
@@ -5800,7 +5801,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Midfielder",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "igarashi-gurimu",
@@ -5808,7 +5809,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Forward",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "imamura-yudai",
@@ -5816,7 +5817,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Forward",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Other Blue Lock Players
@@ -5826,7 +5827,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Playmaker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "otoshi-eita",
@@ -5834,7 +5835,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Stealth Striker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yukimiya-kenyu",
@@ -5842,7 +5843,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Dribbler",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hiori-yo",
@@ -5850,7 +5851,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Midfielder",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kurona-ranze",
@@ -5858,7 +5859,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "aryu-jyubei",
@@ -5866,7 +5867,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Striker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tokimitsu-aoshi",
@@ -5874,7 +5875,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Power Player",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // U-20 Japan
@@ -5884,7 +5885,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Midfield Genius",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "aiku-oliver",
@@ -5892,7 +5893,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Defender",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sendou-shuto",
@@ -5900,7 +5901,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Forward",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Coaches
@@ -5910,7 +5911,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Coach",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "anri-teieri",
@@ -5918,7 +5919,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Project Manager",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Neo Egoist League
@@ -5928,7 +5929,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "World-Class Striker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ness",
@@ -5936,7 +5937,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "Playmaker",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "loki",
@@ -5944,7 +5945,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "World Star",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // World Five
@@ -5954,7 +5955,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "World Five",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "pablo-cavazos",
@@ -5962,7 +5963,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "World Five",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dada-silva",
@@ -5970,7 +5971,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "World Five",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "leonardo-luna",
@@ -5978,7 +5979,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "World Five",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "julian-loki",
@@ -5986,7 +5987,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Blue Lock",
     role: "World Five",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main
   {
@@ -5995,7 +5996,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "emilia",
@@ -6003,7 +6004,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Royal Candidate",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "puck",
@@ -6011,7 +6012,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Great Spirit",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "beatrice",
@@ -6019,7 +6020,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Spirit",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rem",
@@ -6027,7 +6028,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Oni Maid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ram",
@@ -6035,7 +6036,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Oni Maid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Roswaal Mansion
@@ -6045,7 +6046,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Lord",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "frederica",
@@ -6053,7 +6054,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Maid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "petra",
@@ -6061,7 +6062,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Maid",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "garfiel",
@@ -6069,7 +6070,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Guardian",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Royal Selection
@@ -6079,7 +6080,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Royal Candidate",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "felix",
@@ -6087,7 +6088,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Knight",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "wilhelm",
@@ -6095,7 +6096,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Sword Saint",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   {
@@ -6104,7 +6105,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Royal Candidate",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "al",
@@ -6112,7 +6113,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Knight",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   {
@@ -6121,7 +6122,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Royal Candidate",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "julius",
@@ -6129,7 +6130,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Knight",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   {
@@ -6138,7 +6139,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Royal Candidate",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "reinhard",
@@ -6146,7 +6147,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Sword Saint",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Witch Cult
@@ -6156,7 +6157,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Archbishop of Sloth",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "regulus",
@@ -6164,7 +6165,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Archbishop of Greed",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sirius",
@@ -6172,7 +6173,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Archbishop of Wrath",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "capella",
@@ -6180,7 +6181,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Archbishop of Lust",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ley",
@@ -6188,7 +6189,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Archbishop of Gluttony",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "roy",
@@ -6196,7 +6197,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Archbishop of Gluttony",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Witches of Sin
@@ -6206,7 +6207,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Witch of Envy",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "echidna",
@@ -6214,7 +6215,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Witch of Greed",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "minerva",
@@ -6222,7 +6223,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Witch of Wrath",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sekmet",
@@ -6230,7 +6231,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Witch of Sloth",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "carmilla",
@@ -6238,7 +6239,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Witch of Lust",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "typhon",
@@ -6246,7 +6247,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Witch of Pride",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "daphne",
@@ -6254,7 +6255,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Witch of Gluttony",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -6264,7 +6265,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "meili",
@@ -6272,7 +6273,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "otto",
@@ -6280,7 +6281,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Merchant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ricardo",
@@ -6288,7 +6289,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Mercenary Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "heinkel",
@@ -6296,7 +6297,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Re:Zero",
     role: "Knight",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main
   {
@@ -6305,7 +6306,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Protagonist / Zero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "c-c",
@@ -6313,7 +6314,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Immortal Geass User",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nunnally-lamperouge",
@@ -6321,7 +6322,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Princess",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Black Knights
@@ -6331,7 +6332,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Ace Pilot",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "suzaku-kururugi",
@@ -6339,7 +6340,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Knight of Seven",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kaname-ohgi",
@@ -6347,7 +6348,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Black Knights Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "diethard-reid",
@@ -6355,7 +6356,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Strategist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tamaki",
@@ -6363,7 +6364,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Black Knight Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rakshata-chawla",
@@ -6371,7 +6372,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Scientist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Ashford Academy
@@ -6381,7 +6382,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Student Council President",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rivalz-cardemonde",
@@ -6389,7 +6390,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shirley-fenette",
@@ -6397,7 +6398,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nina-einstein",
@@ -6405,7 +6406,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Scientist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Britannian Royal Family
@@ -6415,7 +6416,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Emperor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "marianne",
@@ -6423,7 +6424,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Empress",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "cornelia",
@@ -6431,7 +6432,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Princess / General",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "euphemia",
@@ -6439,7 +6440,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Princess",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "schneizel",
@@ -6447,7 +6448,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Strategist Prince",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "clovis",
@@ -6455,7 +6456,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Prince",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Knights of the Round
@@ -6465,7 +6466,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Knight of Three",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "anya-alstreim",
@@ -6473,7 +6474,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Knight of Six",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bismarck-waldstein",
@@ -6481,7 +6482,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Knight of One",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Geass Users
@@ -6491,7 +6492,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Geass User",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "v-v",
@@ -6499,7 +6500,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Immortal",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rolo-lamperouge",
@@ -6507,7 +6508,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Geass User",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Military
@@ -6517,7 +6518,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Knightmare Pilot",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "villetta-nu",
@@ -6525,7 +6526,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lloyd-asplund",
@@ -6533,7 +6534,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Scientist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "cecile-croomy",
@@ -6541,7 +6542,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Engineer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Chinese Federation
@@ -6551,7 +6552,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "General",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tianzi",
@@ -6559,7 +6560,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Empress",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Others
@@ -6569,7 +6570,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Noble",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "orlando",
@@ -6577,7 +6578,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Code Geass",
     role: "Soldier",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // ===== PART 1 – Phantom Blood =====
   {
@@ -6586,7 +6587,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dio-brando",
@@ -6594,7 +6595,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "will-zeppeli",
@@ -6602,7 +6603,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Mentor",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "speedwagon",
@@ -6610,7 +6611,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== PART 2 – Battle Tendency =====
@@ -6620,7 +6621,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "caesar-zeppeli",
@@ -6628,7 +6629,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kars",
@@ -6636,7 +6637,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "esidisi",
@@ -6644,7 +6645,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Pillar Man",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "wamuu",
@@ -6652,7 +6653,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Pillar Man",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== PART 3 – Stardust Crusaders =====
@@ -6662,7 +6663,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dio",
@@ -6670,7 +6671,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "noriaki-kakyoin",
@@ -6678,7 +6679,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "muhammad-avdol",
@@ -6686,7 +6687,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "jean-pierre-polnareff",
@@ -6694,7 +6695,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "iggy",
@@ -6702,7 +6703,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== PART 4 – Diamond is Unbreakable =====
@@ -6712,7 +6713,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "koichi-hirose",
@@ -6720,7 +6721,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "okuyasu-nijimura",
@@ -6728,7 +6729,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rohan-kishibe",
@@ -6736,7 +6737,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Mangaka",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yoshikage-kira",
@@ -6744,7 +6745,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== PART 5 – Golden Wind =====
@@ -6754,7 +6755,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "bruno-bucciarati",
@@ -6762,7 +6763,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "leone-abbacchio",
@@ -6770,7 +6771,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "guido-mista",
@@ -6778,7 +6779,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "narancia",
@@ -6786,7 +6787,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "trish-una",
@@ -6794,7 +6795,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "diavolo",
@@ -6802,7 +6803,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== PART 6 – Stone Ocean =====
@@ -6812,7 +6813,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "enrico-pucci",
@@ -6820,7 +6821,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "weather-report",
@@ -6828,7 +6829,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ermes-costello",
@@ -6836,7 +6837,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== PART 7 – Steel Ball Run =====
@@ -6846,7 +6847,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gyro-zeppeli",
@@ -6854,7 +6855,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Ally",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "funny-valentine",
@@ -6862,7 +6863,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "diego-brando",
@@ -6870,7 +6871,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Rival",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== PART 8 – JoJolion =====
@@ -6880,7 +6881,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tooru",
@@ -6888,7 +6889,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Popular Stand Users =====
@@ -6898,7 +6899,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Stand",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "the-world",
@@ -6906,7 +6907,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Stand",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "killer-queen",
@@ -6914,7 +6915,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Stand",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gold-experience",
@@ -6922,7 +6923,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Stand",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "king-crimson",
@@ -6930,7 +6931,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Stand",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "made-in-heaven",
@@ -6938,7 +6939,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "JoJo",
     role: "Stand",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main
   {
@@ -6947,7 +6948,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Protagonist / Kaiju No. 8",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "reno-ichikawa",
@@ -6955,7 +6956,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kikoru-shinomiya",
@@ -6963,7 +6964,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Elite Cadet",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mina-ashiro",
@@ -6971,7 +6972,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Defense Force – 3rd Division
@@ -6981,7 +6982,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "soshiro-hoshina",
@@ -6989,7 +6990,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Vice Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "iori-furuhashi",
@@ -6997,7 +6998,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "haruichi-izumo",
@@ -7005,7 +7006,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "aoi-kaguragi",
@@ -7013,7 +7014,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Shinomiya Family
@@ -7023,7 +7024,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Defense Force Director",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Kaiju
@@ -7033,7 +7034,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kaiju-no-10",
@@ -7041,7 +7042,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Intelligent Kaiju",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kaiju-no-2",
@@ -7049,7 +7050,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Legendary Kaiju",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Defense Force High Command
@@ -7059,7 +7060,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Additional Cadets & Officers
@@ -7069,7 +7070,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Officer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rin-shinomiya",
@@ -7077,7 +7078,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Family Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Important Supporting
@@ -7087,7 +7088,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Backstory",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Numbered Weapon Hosts
@@ -7097,7 +7098,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Kaiju No. 8",
     role: "Elite Soldier",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // ===== Company 8 (Main Squad) =====
   {
@@ -7106,7 +7107,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "arthur-boyle",
@@ -7114,7 +7115,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Knight / Soldier",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "maki-oze",
@@ -7122,7 +7123,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Second Generation",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "takehisa-hinawa",
@@ -7130,7 +7131,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Lieutenant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "akitaru-obi",
@@ -7138,7 +7139,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "iris",
@@ -7146,7 +7147,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Sister",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tamaki-kotatsu",
@@ -7154,7 +7155,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Soldier",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "viktor-licht",
@@ -7162,7 +7163,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Scientist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Company 1 =====
@@ -7172,7 +7173,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rekka-hoshimiya",
@@ -7180,7 +7181,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Lieutenant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Company 2 =====
@@ -7190,7 +7191,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Company 5 =====
@@ -7200,7 +7201,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "toru-kishiri",
@@ -7208,7 +7209,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Lieutenant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Company 7 =====
@@ -7218,7 +7219,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Captain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "konro-sagamiya",
@@ -7226,7 +7227,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Lieutenant",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Evangelist / White-Clad =====
@@ -7236,7 +7237,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "haumea",
@@ -7244,7 +7245,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "White-Clad",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "charon",
@@ -7252,7 +7253,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "White-Clad",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "inca-kasugatani",
@@ -7260,7 +7261,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Pillar",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "arrow",
@@ -7268,7 +7269,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "White-Clad",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dragon",
@@ -7276,7 +7277,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Elite White-Clad",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "evangelist",
@@ -7284,7 +7285,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Main Villain",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Other Important =====
@@ -7294,7 +7295,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Anti-Hero",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "vulcan-joseph",
@@ -7302,7 +7303,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Engineer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "giovanni",
@@ -7310,7 +7311,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Scientist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nataku-son",
@@ -7318,7 +7319,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Fire Force",
     role: "Pillar",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // Main
   {
@@ -7327,7 +7328,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Protagonist / Ex-Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shin-asakura",
@@ -7335,7 +7336,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Telepath / Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lu-xiaotang",
@@ -7343,7 +7344,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "aoi-sakamoto",
@@ -7351,7 +7352,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Family",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hana-sakamoto",
@@ -7359,7 +7360,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Family",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // The Order (Elite Assassins)
@@ -7369,7 +7370,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Order Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "shishiba",
@@ -7377,7 +7378,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Order Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "osaragi",
@@ -7385,7 +7386,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Order Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hyo",
@@ -7393,7 +7394,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Order Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kamihate",
@@ -7401,7 +7402,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Order Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // JAA
@@ -7411,7 +7412,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "JAA Trainer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "sakamoto-young",
@@ -7419,7 +7420,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Flashback Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Villains
@@ -7429,7 +7430,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gaku",
@@ -7437,7 +7438,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "uzuki",
@@ -7445,7 +7446,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kashima",
@@ -7453,7 +7454,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // Other Important
@@ -7463,7 +7464,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "apart",
@@ -7471,7 +7472,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kanaguri",
@@ -7479,7 +7480,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Sakamoto Days",
     role: "Movie Assassin",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // ===== Main =====
   {
@@ -7488,7 +7489,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Protagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "regro-burnedead",
@@ -7496,7 +7497,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Guardian",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Easton Magic Academy (Friends) =====
@@ -7506,7 +7507,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lance-crown",
@@ -7514,7 +7515,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Elite Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dot-barrett",
@@ -7522,7 +7523,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lemon-irvine",
@@ -7530,7 +7531,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Divine Visionaries =====
@@ -7540,7 +7541,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Divine Visionary",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "wahlberg-baigan",
@@ -7548,7 +7549,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Headmaster",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ryoh-grantz",
@@ -7556,7 +7557,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Divine Visionary",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kaldo-gehennah",
@@ -7564,7 +7565,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Divine Visionary",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "tsurara-halestone",
@@ -7572,7 +7573,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Divine Visionary",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Magia Lupus (Arc Villains) =====
@@ -7582,7 +7583,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "abel-walker",
@@ -7590,7 +7591,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "wirth-madel",
@@ -7598,7 +7599,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Main Villain Side =====
@@ -7608,7 +7609,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "doom",
@@ -7616,7 +7617,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "famin",
@@ -7624,7 +7625,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "delisaster",
@@ -7632,7 +7633,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Easton Students (Important) =====
@@ -7642,7 +7643,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "silva-iron",
@@ -7650,7 +7651,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "max-land",
@@ -7658,7 +7659,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Mashle",
     role: "Student",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // ===== Main =====
   {
@@ -7667,7 +7668,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Protagonist / Shadow",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "minoru-kagenou",
@@ -7675,7 +7676,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Past Life",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Shadow Garden – Seven Shades =====
@@ -7685,7 +7686,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Shadow Garden Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "beta",
@@ -7693,7 +7694,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Seven Shades",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gamma",
@@ -7701,7 +7702,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Seven Shades",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "delta",
@@ -7709,7 +7710,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Seven Shades",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "epsilon",
@@ -7717,7 +7718,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Seven Shades",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "zeta",
@@ -7725,7 +7726,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Seven Shades",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "eta",
@@ -7733,7 +7734,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Seven Shades",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Numbered Members =====
@@ -7743,7 +7744,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Shadow Garden Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lambda",
@@ -7751,7 +7752,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Shadow Garden Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "omega",
@@ -7759,7 +7760,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Shadow Garden Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Royal Family =====
@@ -7769,7 +7770,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Princess",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "iris-midgar",
@@ -7777,7 +7778,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Princess",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "rose-oriana",
@@ -7785,7 +7786,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Princess",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== School & Allies =====
@@ -7795,7 +7796,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Scholar",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "claire-kagenou",
@@ -7803,7 +7804,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Sister",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Cult of Diablos =====
@@ -7813,7 +7814,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Ancient Entity",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lutheran",
@@ -7821,7 +7822,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Cult Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "nelson",
@@ -7829,7 +7830,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Cult Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "mordred",
@@ -7837,7 +7838,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Cult Member",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Other Important =====
@@ -7847,7 +7848,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "geta",
@@ -7855,7 +7856,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "The Eminence in Shadow",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   // ===== Main – Kingdom of Science =====
   {
@@ -7864,7 +7865,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Protagonist / Scientist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "taiju-oki",
@@ -7872,7 +7873,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "yuzuriha-ogawa",
@@ -7880,7 +7881,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "chrome",
@@ -7888,7 +7889,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Scientist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kohaku",
@@ -7896,7 +7897,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ginro",
@@ -7904,7 +7905,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Guard",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kinro",
@@ -7912,7 +7913,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Guard",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "suika",
@@ -7920,7 +7921,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Scout",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "gen-asagiri",
@@ -7928,7 +7929,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Mentalist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kaseki",
@@ -7936,7 +7937,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Craftsman",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ukyo-saionji",
@@ -7944,7 +7945,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Archer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "francois",
@@ -7952,7 +7953,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Butler / Chef",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "ryusui-nanami",
@@ -7960,7 +7961,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Navigator",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Tsukasa Empire =====
@@ -7970,7 +7971,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "hyoga",
@@ -7978,7 +7979,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "homura-momiji",
@@ -7986,7 +7987,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Scout",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Ishigami Village Elders =====
@@ -7996,7 +7997,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Priestess",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kokuyo",
@@ -8004,7 +8005,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Village Chief",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Treasure Island Arc =====
@@ -8014,7 +8015,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Main Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "kirisame",
@@ -8022,7 +8023,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Warrior",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "soyuz",
@@ -8030,7 +8031,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Leader",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Major Global Arc =====
@@ -8040,7 +8041,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Sniper",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "dr-xeno",
@@ -8048,7 +8049,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Scientist Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "chelsea",
@@ -8056,7 +8057,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Geographer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "luna-wright",
@@ -8064,7 +8065,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Support",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Historical / Flashback =====
@@ -8074,7 +8075,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Astronaut",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "lillian-weinberg",
@@ -8082,7 +8083,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Singer",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "connie-lee",
@@ -8090,7 +8091,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Astronaut",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
   {
     id: "darya-nikitina",
@@ -8098,7 +8099,7 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Astronaut",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 
   // ===== Mystery Entity =====
@@ -8108,6 +8109,6 @@ export const ANIME_CHARACTERS: AnimeCharacter[] = [
     anime: "Dr. Stone",
     role: "Final Antagonist",
     description: "",
-    image: undefined,
+    poster: "/posters/naruto-uzumaki.jpg",
   },
 ];
