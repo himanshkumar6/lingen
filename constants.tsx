@@ -68,16 +68,16 @@ export const TOOLS: Tool[] = [
     name: 'Anime Name Generator',
     description: 'Generate unique anime-style names for your brand or OC.',
     icon: <Smile className="w-6 h-6 text-orange-500" />,
-    path: '/anime-name-generator',
+    path: '/ai-anime-name-generator',
     category: 'General',
     isAi: true
   },
   {
     id: 'anime-multiverse',
-    name: 'Anime Multiverse Generator',
-    description: 'Enter the anime portal to discover your unique character identity and universe.',
+    name: 'Anime Name Generator (Free) – Create Random Anime Character Names',
+    description: 'Generate unique anime names instantly with our free anime name generator. Create cool anime character names, usernames, and alter-ego identities in seconds.',
     icon: <Sparkles className="w-6 h-6 text-orange-600" />,
-    path: '/anime-multiverse-generator',
+    path: '/anime-name-generator',
     category: 'General',
     isAi: true
   }
