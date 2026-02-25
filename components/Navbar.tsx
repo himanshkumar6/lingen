@@ -102,7 +102,8 @@ const Navbar: React.FC = () => {
             className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card text-muted-foreground transition-all hover:bg-secondary hover:text-primary"
             aria-label="Toggle Theme"
           >
-            {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+            {/* Only render icon AFTER hydration to avoid mismatch */}
+            {theme === 'dark' ? <Sun className="h-5 w-5" /> : theme === 'light' ? <Moon className="h-5 w-5" /> : <div className="h-5 w-5 opacity-0" />}
           </button>
 
           {/* AdSense Approval ke liye navigation strong rakhein */}

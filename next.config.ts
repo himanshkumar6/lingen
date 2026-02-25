@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
     // !! WARN !!
     ignoreBuildErrors: false,
   },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "20mb",
+    },
+  },
 };
 
 export default nextConfig;

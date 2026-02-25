@@ -8,7 +8,7 @@ export interface Tool {
   description: string;
   icon: React.ReactNode;
   path: string;
-  category: 'Instagram' | 'YouTube' | 'General';
+  category: 'Instagram' | 'YouTube' | 'General' | 'AI Tools';
   isAi?: boolean;
 }
 

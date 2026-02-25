@@ -80,6 +80,14 @@ export const TOOLS: Tool[] = [
     path: '/anime-name-generator',
     category: 'General',
     isAi: true
+  },
+  {
+    id: 'image-watermark-remover',
+    name: 'Free AI Watermark Remover – High Quality Photo Cleanup',
+    description: 'Instantly remove watermarks, logos, text, or unwanted objects from photos without quality loss. Our advanced AI ensures high-precision, professional results for free.',
+    icon: <Sparkles className="w-6 h-6 text-indigo-500" />,
+    path: '/image-watermark-remover',
+    category: 'General'
   }
 ];
 

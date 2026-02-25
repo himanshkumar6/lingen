@@ -20,6 +20,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col relative overflow-x-hidden">
+        {/* Anti-Flicker Script: Must run BEFORE React hydrates or any UI paints */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                let isDark = false;
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark' || theme === 'light') {
+                  isDark = theme === 'dark';
+                } else {
+                  isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                }
+                if (isDark) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
 
         {/* Snow Background Layer */}
         <Snowfall />
