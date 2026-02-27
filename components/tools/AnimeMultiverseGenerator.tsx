@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { ANIME_CHARACTERS, AnimeCharacter } from "@/data/animeCharacters";
 import { Container } from "@/components/Layout/Container";
+import SnowfallBackground from "@/components/background/SnowfallBackground";
 
 // Array of FAQs for both the Accordion UI and the SEO Schema
 const FAQS = [
@@ -47,6 +48,7 @@ const FAQS = [
   }
 ];
 
+
 const AnimeMultiverseGenerator: React.FC = () => {
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
@@ -61,10 +63,6 @@ const AnimeMultiverseGenerator: React.FC = () => {
     if (!name.trim() || loading) return;
 
     setLoading(true);
-    document.body.classList.add("freeze-burst");
-    setTimeout(() => {
-      document.body.classList.remove("freeze-burst");
-    }, 600);
     setIdentity(null);
 
     // Simulate neural processing
@@ -143,104 +141,8 @@ const AnimeMultiverseGenerator: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* 🌌 TOKYO COMMAND BACKGROUND SYSTEM (Layers -3 to 2) */}
-      <div className="fixed inset-0 z-[-3] pointer-events-none overflow-hidden bg-[hsl(var(--cmd-bg))]">
-        {/* Layer -2: Fog Gradient System */}
-        <div className="absolute inset-0 z-[-2] bg-[linear-gradient(to_bottom,transparent,hsl(var(--cmd-fog))),radial-gradient(circle_at_50%_70%,hsl(var(--cmd-fog)),transparent)] opacity-60" />
-
-        {/* Layer -1: Cinematic Atmosphere (Rising Embers) */}
-        <div className="absolute inset-0 z-[-1] overflow-hidden">
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={"ember-" + i}
-              className="absolute bg-primary/20 rounded-full blur-[3px] animate-ember"
-              style={{
-                width: `${4 + Math.random() * 6}px`,
-                height: `${4 + Math.random() * 6}px`,
-                left: `${Math.random() * 100}%`,
-                bottom: `-${Math.random() * 20}%`,
-                opacity: 0.1 + Math.random() * 0.2,
-                animationDuration: `${15 + Math.random() * 20}s`,
-                animationDelay: `-${Math.random() * 15}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Layer 0: Radial Spotlight Burst */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[140%] h-[140%] bg-[radial-gradient(circle,hsl(var(--cmd-spotlight))_0%,transparent_70%)] z-0 animate-pulse-slow opacity-60" />
-
-        {/* Layer 1: Anime Cinematic Snow & Particles */}
-        <div className="absolute inset-0 z-1 overflow-hidden pointer-events-none">
-          {/* BACK SNOW (far depth) */}
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={"back-" + i}
-              className="absolute bg-white/40 dark:bg-foreground/40 rounded-full blur-[2px] animate-snow-far"
-              style={{
-                width: `${1.5 + Math.random() * 1.5}px`,
-                height: `${1.5 + Math.random() * 1.5}px`,
-                left: `${Math.random() * 100}%`,
-                top: `-${Math.random() * 20}%`,
-                animationDuration: `${40 + Math.random() * 30}s`,
-                animationDelay: `-${Math.random() * 40}s`,
-              }}
-            />
-          ))}
-
-          {/* MID SNOW */}
-          {[...Array(25)].map((_, i) => (
-            <div
-              key={"mid-" + i}
-              className="absolute bg-white/60 dark:bg-foreground/60 rounded-full blur-[1px] animate-snow-mid"
-              style={{
-                width: `${2.5 + Math.random() * 2}px`,
-                height: `${2.5 + Math.random() * 2}px`,
-                left: `${Math.random() * 100}%`,
-                top: `-${Math.random() * 20}%`,
-                animationDuration: `${25 + Math.random() * 20}s`,
-                animationDelay: `-${Math.random() * 25}s`,
-              }}
-            />
-          ))}
-
-          {/* FRONT SNOW (hero cinematic) */}
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={"front-" + i}
-              className="absolute bg-white/80 dark:bg-white/80 rounded-full blur-[0.5px] animate-snow-front"
-              style={{
-                width: `${4 + Math.random() * 3}px`,
-                height: `${4 + Math.random() * 3}px`,
-                left: `${Math.random() * 100}%`,
-                top: `-${Math.random() * 20}%`,
-                animationDuration: `${15 + Math.random() * 10}s`,
-                animationDelay: `-${Math.random() * 20}s`,
-              }}
-            />
-          ))}
-
-          {/* FOREGROUND BLUR PARTICLES (Depth Perception) */}
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={"fg-" + i}
-              className="absolute bg-white/20 dark:bg-white/10 rounded-full blur-[12px] animate-snow-front"
-              style={{
-                width: `${80 + Math.random() * 120}px`,
-                height: `${80 + Math.random() * 120}px`,
-                left: `${Math.random() * 100}%`,
-                top: `-${Math.random() * 40}%`,
-                animationDuration: `${10 + Math.random() * 8}s`,
-                animationDelay: `-${Math.random() * 10}s`,
-                opacity: 0.1,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Layer 2: Edge Vignette (Atmospheric Framing) */}
-        <div className="absolute inset-0 z-2 shadow-[inset_0_0_150px_hsl(var(--cmd-vignette)/0.8)] pointer-events-none" />
-      </div>
+      {/* COMPONENTIZED ANIMATED BACKGROUND */}
+      <SnowfallBackground />
 
       <Container className="relative z-10 py-16 sm:py-20 lg:py-24 max-w-275 xl:max-w-287.5 mx-auto px-5 sm:px-8 animate-camera-breath">
 
@@ -258,21 +160,6 @@ const AnimeMultiverseGenerator: React.FC = () => {
             </span>{" "}
             Identity
 
-            {/* 🔥 DEMON SLAYER HERO SPARKLES (Optimized) */}
-            <div className="absolute inset-0 pointer-events-none -z-10 overflow-visible">
-              {[...Array(15)].map((_, i) => (
-                <div
-                  key={i}
-                  className="sparkle absolute"
-                  style={{
-                    left: `${20 + Math.random() * 60}%`,
-                    top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 5}s`,
-                    animationDuration: `${3 + Math.random() * 4}s`
-                  }}
-                />
-              ))}
-            </div>
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/80 max-w-2xl mx-auto font-medium leading-relaxed tracking-tight px-4">
@@ -523,30 +410,22 @@ const AnimeMultiverseGenerator: React.FC = () => {
       </Container>
 
       <style jsx global>{`
-        @keyframes ember {
-          0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
-          10% { opacity: 0.4; }
-          90% { opacity: 0.4; }
-          100% { transform: translateY(-100vh) translateX(40px) scale(0.5); opacity: 0; }
-        }
-        .animate-ember {
-          animation: ember linear infinite;
-        }
-
         @keyframes camera-breath {
-          0%, 100% { transform: scale(1) translateY(0); }
-          50% { transform: scale(1.005) translateY(-5px); }
+          0%, 100% { transform: translate3d(0, 0, 0); }
+          50% { transform: translate3d(0, -5px, 0); }
         }
         .animate-camera-breath {
           animation: camera-breath 10s ease-in-out infinite;
+          will-change: transform;
         }
 
         @keyframes reveal-cinematic {
-          0% { opacity: 0; transform: scale(0.95) translateY(40px); filter: blur(20px); }
-          100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+          0% { opacity: 0; transform: translate3d(0, 40px, 0) scale(0.95); filter: blur(20px); }
+          100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); filter: blur(0); }
         }
         .animate-reveal-cinematic {
           animation: reveal-cinematic 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          will-change: transform, opacity;
         }
 
         @keyframes spin-reverse {
@@ -558,58 +437,27 @@ const AnimeMultiverseGenerator: React.FC = () => {
         }
 
         @keyframes snow-far {
-          0% { transform: translateY(0) translateX(0); }
-          100% { transform: translateY(120vh) translateX(40px); }
+          0% { transform: translate3d(0, 0, 0); }
+          100% { transform: translate3d(40px, 120vh, 0); }
         }
         .animate-snow-far {
           animation: snow-far linear infinite;
-          will-change: transform;
         }
 
         @keyframes snow-mid {
-          0% { transform: translateY(0) translateX(0); }
-          100% { transform: translateY(120vh) translateX(-30px); }
+          0% { transform: translate3d(0, 0, 0); }
+          100% { transform: translate3d(-30px, 120vh, 0); }
         }
         .animate-snow-mid {
           animation: snow-mid linear infinite;
-          will-change: transform;
         }
 
         @keyframes snow-front {
-          0% { transform: translateY(0) translateX(0); }
-          100% { transform: translateY(120vh) translateX(20px); }
+          0% { transform: translate3d(0, 0, 0); }
+          100% { transform: translate3d(20px, 120vh, 0); }
         }
         .animate-snow-front {
           animation: snow-front linear infinite;
-          will-change: transform;
-        }
-
-        @keyframes wind-sway {
-          0%, 100% { transform: translateX(0); }
-          50% { transform: translateX(30px); }
-        }
-
-        @keyframes sparkle {
-          0%, 100% { opacity: 0; transform: scale(0.5) translateY(0); }
-          50% { opacity: 1; transform: scale(1.5) translateY(-10px); }
-        }
-        .sparkle {
-          width: 4px;
-          height: 4px;
-          background: white;
-          border-radius: 50%;
-          filter: blur(1px);
-          box-shadow: 0 0 10px white, 0 0 20px white;
-          animation: sparkle 4s infinite ease-in-out;
-        }
-
-        .freeze-burst .animate-snow-front,
-        .freeze-burst .animate-snow-mid,
-        .freeze-burst .animate-snow-far,
-        .freeze-burst .animate-ember {
-          animation-play-state: paused;
-          filter: blur(8px) brightness(1.5);
-          transition: filter 0.6s ease;
         }
       `}</style>
     </div>
