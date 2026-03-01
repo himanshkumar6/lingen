@@ -20,34 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* STEP 1: Privacy Script */}
-        <Script
-          src="https://cmp.gatekeeperconsent.com/min.js"
-          strategy="beforeInteractive"
-        />
-        {/* STEP 2: Ezoic Header Script */}
-        <Script
-          src="https://www.ezojs.com/ezoic/sa.min.js"
-          strategy="beforeInteractive"
-        />
-        {/* STEP 3: Initialization Script */}
-        <Script
-          id="ezoic-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.ezstandalone = window.ezstandalone || {};
-              ezstandalone.cmd = ezstandalone.cmd || [];
-            `,
-          }}
-        />
-        {/* STEP 4: Analytics Script */}
-        <Script
-          src="https://ezoicanalytics.com/analytics.js"
-          strategy="beforeInteractive"
-        />
-      </head>
+   
       <body className="min-h-screen flex flex-col relative overflow-x-hidden">
         {/* Anti-Flicker Script: Must run BEFORE React hydrates or any UI paints */}
         <script
