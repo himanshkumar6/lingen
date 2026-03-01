@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/character-counter",
     "/ai-anime-name-generator",
     "/anime-name-generator",
+    "image-watermark-remover",
     "/privacy-policy",
     "/terms",
     "/disclaimer",
