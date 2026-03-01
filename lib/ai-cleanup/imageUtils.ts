@@ -1,6 +1,11 @@
 // Utilities to handle HTML5 Canvas / Image object extraction to Tensors
 
-export async function imageToFloat32Array(imageSource: string, width: number, height: number, channels: number = 3): Promise<Float32Array> {
+export async function imageToFloat32Array(
+  imageSource: string,
+  width: number,
+  height: number,
+  channels: number = 3,
+): Promise<Float32Array> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.crossOrigin = "anonymous";
@@ -18,7 +23,7 @@ export async function imageToFloat32Array(imageSource: string, width: number, he
       // Convert from standard [r,g,b,a, r,g,b,a] HTML canvas data to [r... g... b...] or standard CHW or HWC.
       // Assuming ONNX placeholder model expects CHW float32 tensors scaled [0, 1] or [-1, 1]
       // Typically: shape [1, 3, H, W]
-      
+
       let j = 0;
       for (let i = 0; i < imgData.data.length; i += 4) {
         // Red
@@ -38,7 +43,11 @@ export async function imageToFloat32Array(imageSource: string, width: number, he
 
 // Convert mask from drawn canvas (black background, white strokes) to float32 tensor
 // Typically shape [1, 1, H, W]
-export async function maskToFloat32Array(maskSource: string, width: number, height: number): Promise<Float32Array> {
+export async function maskToFloat32Array(
+  maskSource: string,
+  width: number,
+  height: number,
+): Promise<Float32Array> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => {

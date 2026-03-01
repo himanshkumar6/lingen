@@ -1,313 +1,303 @@
 "use client";
 
-import React, { useEffect, useRef, useState, MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { useAICleanupStore } from "@/store/ai-cleanup-store";
-import { Undo, Eraser, Paintbrush } from "lucide-react";
+import { Undo, Eraser } from "lucide-react";
 
-interface Point {
+/* ================= TYPES ================= */
+
+interface RectMask {
   x: number;
   y: number;
+  w: number;
+  h: number;
 }
 
-interface Stroke {
-  points: Point[];
-  size: number;
-}
+/* ================= SAFE IMAGE LOADER ================= */
+
+const loadSafeImage = async (
+  src: string,
+): Promise<{ img: HTMLImageElement; url: string }> => {
+  const res = await fetch(src, { mode: "cors" });
+  const blob = await res.blob();
+  const objectUrl = URL.createObjectURL(blob);
+
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+
+    img.onload = () => resolve({ img, url: objectUrl });
+    img.onerror = reject;
+    img.src = objectUrl;
+  });
+};
+
+/* ================= COMPONENT ================= */
 
 export default function CanvasEditor() {
   const { image, setMask, isProcessing } = useAICleanupStore();
 
-  const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imgRef = useRef<HTMLImageElement | null>(null);
+  const objectUrlRef = useRef<string | null>(null);
 
-  const [strokes, setStrokes] = useState<Stroke[]>([]);
-  const [isDrawing, setIsDrawing] = useState(false);
-  const [brushSize, setBrushSize] = useState(30);
+  const startPointRef = useRef<{ x: number; y: number } | null>(null);
+  const previewRectRef = useRef<RectMask | null>(null);
+  const isSelectingRef = useRef(false);
+
+  const [rects, setRects] = useState<RectMask[]>([]);
   const [size, setSize] = useState({ w: 0, h: 0 });
 
-  const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
-  const [isHovering, setIsHovering] = useState(false);
+  /* ================= LOAD IMAGE ================= */
 
-  const currentPointsRef = useRef<Point[]>([]);
-
-  // --- 1. Load Image (FIXED FOR 100% ORIGINAL QUALITY) ---
   useEffect(() => {
     if (!image) return;
 
-    const img = new Image();
-    img.onload = () => {
-      imgRef.current = img;
-      
-      // Removed the 1024 max limit! 
-      // Canvas will now use the exact original resolution of the uploaded image.
-      setSize({ w: img.width, h: img.height });
-    };
-    img.src = image;
-  }, [image]);
+    let cancelled = false;
+    setRects([]);
+    previewRectRef.current = null;
+    isSelectingRef.current = false;
+    setMask(null);
 
-  // --- 2. Render Canvas (The "Magic Ink") ---
-  const redrawCanvas = () => {
+    loadSafeImage(image).then(({ img, url }) => {
+      if (cancelled) return;
+
+      if (objectUrlRef.current) URL.revokeObjectURL(objectUrlRef.current);
+
+      objectUrlRef.current = url;
+      imgRef.current = img;
+
+      setSize({
+        w: img.naturalWidth,
+        h: img.naturalHeight,
+      });
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [image, setMask]);
+
+  /* ================= CLEANUP ================= */
+
+  useEffect(() => {
+    return () => {
+      if (objectUrlRef.current) URL.revokeObjectURL(objectUrlRef.current);
+    };
+  }, []);
+
+  /* ================= DRAW ================= */
+
+  const redrawCanvas = useCallback(() => {
     const canvas = canvasRef.current;
-    if (!canvas || !imgRef.current) return;
+    const img = imgRef.current;
+
+    if (!canvas || !img) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // Fix: Disable image smoothing to prevent anti-aliasing artifacts
+    ctx.imageSmoothingEnabled = false;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(imgRef.current, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.strokeStyle = "rgba(168, 85, 247, 0.5)"; 
-    ctx.shadowColor = "rgba(168, 85, 247, 0.8)";
-    ctx.shadowBlur = 12;
+    rects.forEach((r) => {
+      ctx.fillStyle = "rgba(168,85,247,0.25)";
+      ctx.fillRect(r.x, r.y, r.w, r.h);
 
-    strokes.forEach((stroke) => {
-      if (stroke.points.length === 0) return;
-      ctx.lineWidth = stroke.size;
-      ctx.beginPath();
-      ctx.moveTo(stroke.points[0].x, stroke.points[0].y);
-      stroke.points.forEach((p) => ctx.lineTo(p.x, p.y));
-      ctx.stroke();
+      ctx.strokeStyle = "#a855f7";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(r.x, r.y, r.w, r.h);
     });
-  };
 
+    const previewRect = previewRectRef.current;
+    if (previewRect) {
+      ctx.setLineDash([6]);
+      ctx.strokeStyle = "#a855f7";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(
+        previewRect.x,
+        previewRect.y,
+        previewRect.w,
+        previewRect.h,
+      );
+      ctx.setLineDash([]);
+    }
+  }, [rects]);
+
+  // Initial draw and draw on size change
   useEffect(() => {
-    redrawCanvas();
-  }, [strokes, size]);
+    requestAnimationFrame(redrawCanvas);
+  }, [redrawCanvas, size]);
 
-  // --- 3. Coordinate Math ---
-  const getPos = (e: ReactMouseEvent | ReactTouchEvent) => {
+  /* ================= POSITION ================= */
+
+  const getPos = (e: React.MouseEvent | React.TouchEvent) => {
     const canvas = canvasRef.current;
     if (!canvas) return null;
+
     const rect = canvas.getBoundingClientRect();
-    
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
 
-    let clientX, clientY;
+    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
+    const clientY = "touches" in e ? e.touches[0].clientY : e.clientY;
 
-    if ("touches" in e) {
-      clientX = e.touches[0].clientX;
-      clientY = e.touches[0].clientY;
-    } else {
-      clientX = (e as ReactMouseEvent).clientX;
-      clientY = (e as ReactMouseEvent).clientY;
-    }
-
+    // Fix: Round coordinates to avoid sub-pixel blurring issues on canvas
     return {
-      x: (clientX - rect.left) * scaleX,
-      y: (clientY - rect.top) * scaleY,
+      x: Math.round((clientX - rect.left) * scaleX),
+      y: Math.round((clientY - rect.top) * scaleY),
     };
   };
 
-  // --- 4. Drawing Logic ---
-  const start = (e: ReactMouseEvent | ReactTouchEvent) => {
+  /* ================= MASK ================= */
+
+  const buildMask = useCallback(
+    (list: RectMask[]) => {
+      if (!list.length) {
+        setMask(null);
+        return;
+      }
+
+      const oc = document.createElement("canvas");
+      oc.width = size.w;
+      oc.height = size.h;
+
+      const ctx = oc.getContext("2d");
+      if (!ctx) return;
+
+      // Ensure offscreen mask generation has no smoothing to preserve pixel fidelity
+      ctx.imageSmoothingEnabled = false;
+
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, oc.width, oc.height);
+
+      ctx.fillStyle = "white";
+
+      // Fix: MASK_PADDING completely removed to prevent blur over healthy background
+      list.forEach((r) => ctx.fillRect(r.x, r.y, r.w, r.h));
+
+      setMask(oc.toDataURL("image/png"));
+    },
+    [size, setMask],
+  );
+
+  /* ================= EVENTS ================= */
+
+  const start = (e: any) => {
     if (isProcessing) return;
     const p = getPos(e);
     if (!p) return;
 
-    setIsDrawing(true);
-    currentPointsRef.current = [p];
-
-    const ctx = canvasRef.current?.getContext("2d");
-    if (ctx) {
-      ctx.lineCap = "round";
-      ctx.lineJoin = "round";
-      ctx.strokeStyle = "rgba(168, 85, 247, 0.5)";
-      ctx.shadowColor = "rgba(168, 85, 247, 0.8)";
-      ctx.shadowBlur = 12;
-      ctx.lineWidth = brushSize;
-      ctx.beginPath();
-      ctx.moveTo(p.x, p.y);
-      ctx.lineTo(p.x, p.y);
-      ctx.stroke();
-    }
+    startPointRef.current = p;
+    isSelectingRef.current = true;
   };
 
-  const move = (e: ReactMouseEvent | ReactTouchEvent) => {
-    if (containerRef.current && !("touches" in e)) {
-      const rect = containerRef.current.getBoundingClientRect();
-      setMousePos({
-        x: (e as ReactMouseEvent).clientX - rect.left,
-        y: (e as ReactMouseEvent).clientY - rect.top,
-      });
-    }
-
-    if (!isDrawing) return;
+  const move = (e: any) => {
+    if (!isSelectingRef.current || !startPointRef.current) return;
     const p = getPos(e);
     if (!p) return;
 
-    currentPointsRef.current.push(p);
+    const sx = startPointRef.current.x;
+    const sy = startPointRef.current.y;
 
-    const ctx = canvasRef.current?.getContext("2d");
-    if (ctx) {
-      ctx.lineTo(p.x, p.y);
-      ctx.stroke();
-    }
+    previewRectRef.current = {
+      x: Math.min(sx, p.x),
+      y: Math.min(sy, p.y),
+      w: Math.abs(p.x - sx),
+      h: Math.abs(p.y - sy),
+    };
+
+    // Trigger imperative redraw immediately
+    requestAnimationFrame(redrawCanvas);
   };
 
   const end = () => {
-    if (!isDrawing) return;
-    setIsDrawing(false);
+    if (!isSelectingRef.current) return;
+    isSelectingRef.current = false;
 
-    if (currentPointsRef.current.length > 0) {
-      const newStroke = { points: [...currentPointsRef.current], size: brushSize };
-      const updatedStrokes = [...strokes, newStroke];
-      setStrokes(updatedStrokes);
-      buildMask(updatedStrokes);
-    }
-    currentPointsRef.current = [];
-  };
-
-  // --- 5. Build Final Mask ---
-  const buildMask = (strokeList: Stroke[]) => {
-    if (!canvasRef.current || strokeList.length === 0) {
-      setMask(null);
+    const previewRect = previewRectRef.current;
+    if (!previewRect || previewRect.w < 5 || previewRect.h < 5) {
+      previewRectRef.current = null;
+      requestAnimationFrame(redrawCanvas);
       return;
     }
-    const oc = document.createElement("canvas");
-    oc.width = size.w;
-    oc.height = size.h;
-    const ctx = oc.getContext("2d");
-    if (!ctx) return;
 
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, oc.width, oc.height);
+    const updated = [...rects, previewRect];
+    setRects(updated);
+    buildMask(updated);
 
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.strokeStyle = "white"; 
-    ctx.shadowBlur = 0; 
-
-    strokeList.forEach((stroke) => {
-      if (stroke.points.length === 0) return;
-      ctx.lineWidth = stroke.size;
-      ctx.beginPath();
-      ctx.moveTo(stroke.points[0].x, stroke.points[0].y);
-      stroke.points.forEach((p) => ctx.lineTo(p.x, p.y));
-      ctx.stroke();
-    });
-
-    setMask(oc.toDataURL("image/png"));
+    previewRectRef.current = null;
+    requestAnimationFrame(redrawCanvas);
   };
 
+  /* ================= ACTIONS ================= */
+
   const undo = () => {
-    const updated = strokes.slice(0, -1);
-    setStrokes(updated);
+    if (isProcessing || rects.length === 0) return;
+    const updated = rects.slice(0, -1);
+    setRects(updated);
     buildMask(updated);
   };
 
   const clear = () => {
-    setStrokes([]);
+    if (isProcessing || rects.length === 0) return;
+    setRects([]);
     setMask(null);
-  };
-
-  useEffect(() => {
-    const handler = () => { setStrokes([]); setMask(null); };
-    window.addEventListener("clear-mask-rects", handler);
-    return () => window.removeEventListener("clear-mask-rects", handler);
-  }, []);
-
-  const getVisualBrushSize = () => {
-    if (!canvasRef.current) return brushSize;
-    const rect = canvasRef.current.getBoundingClientRect();
-    const scale = rect.width / size.w;
-    return brushSize * scale;
   };
 
   if (!image) return null;
 
   return (
-    <div className="flex flex-col w-full border border-border/50 rounded-2xl shadow-sm bg-background overflow-hidden">
-      
-      {/* --- Desktop-Style Top Toolbar --- */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-3 px-5 border-b border-border/50 bg-muted/30">
-        
-        {/* Left: Tool Settings */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-            <Paintbrush size={16} className="text-primary" />
-            <span>Brush Size</span>
-          </div>
-          
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-muted-foreground w-4 text-right">{brushSize}</span>
-            <input
-              type="range"
-              min="10"
-              max="150"
-              value={brushSize}
-              onChange={(e) => setBrushSize(Number(e.target.value))}
-              className="w-32 md:w-48 h-1.5 bg-muted-foreground/20 rounded-full appearance-none cursor-pointer outline-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:rounded-full hover:[&::-webkit-slider-thumb]:scale-110 transition-all"
-            />
-          </div>
-        </div>
+    <div className="flex flex-col w-full h-full sm:rounded-2xl overflow-hidden">
+      {/* Canvas Tool Actions (Undo, Eraser) */}
+      <div className="flex justify-end gap-3 p-3 sm:p-0 sm:mb-3 border-b border-border/30 sm:border-none bg-background/30 sm:bg-transparent">
+        <button
+          onClick={undo}
+          disabled={isProcessing || rects.length === 0}
+          className="p-1.5 text-gray-600 hover:text-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          title="Undo"
+        >
+          <Undo size={18} />
+        </button>
 
-        {/* Right: Actions */}
-        <div className="flex items-center gap-2">
-          <button 
-            onClick={undo} 
-            disabled={!strokes.length || isProcessing} 
-            className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-all disabled:opacity-40 disabled:hover:bg-transparent disabled:cursor-not-allowed"
-          >
-            <Undo size={16} />
-            <span className="hidden sm:inline">Undo</span>
-          </button>
-          
-          <div className="w-px h-5 bg-border mx-1 hidden sm:block" />
-          
-          <button 
-            onClick={clear} 
-            disabled={!strokes.length || isProcessing} 
-            className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-md transition-all disabled:opacity-40 disabled:hover:bg-transparent disabled:cursor-not-allowed"
-          >
-            <Eraser size={16} />
-            <span className="hidden sm:inline">Clear All</span>
-          </button>
-        </div>
+        <button
+          onClick={clear}
+          disabled={isProcessing || rects.length === 0}
+          className="p-1.5 text-gray-600 hover:text-red-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          title="Clear"
+        >
+          <Eraser size={18} />
+        </button>
       </div>
 
-      {/* --- Editor Workspace --- */}
-      <div 
-        ref={containerRef}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => { setIsHovering(false); end(); }}
-        className="relative w-full flex items-center justify-center overflow-hidden bg-muted/30 p-2 md:p-4"
-      >
-        {/* Custom Brush Cursor */}
-        {isHovering && mousePos && !isProcessing && (
-          <div
-            className="absolute z-50 rounded-full border-[1.5px] border-white shadow-[0_0_4px_rgba(0,0,0,0.5)] pointer-events-none bg-purple-500/20 backdrop-invert backdrop-opacity-10"
+      {/* Canvas */}
+      <div className="w-full flex-1 flex items-center justify-center sm:px-4 pb-4 sm:pb-0 min-h-0">
+        <div className="relative w-full h-full flex justify-center items-center">
+          <canvas
+            ref={canvasRef}
+            width={size.w}
+            height={size.h}
+            onMouseDown={start}
+            onMouseMove={move}
+            onMouseUp={end}
+            onMouseLeave={end}
+            onTouchStart={start}
+            onTouchMove={move}
+            onTouchEnd={end}
             style={{
-              left: mousePos.x,
-              top: mousePos.y,
-              width: `${getVisualBrushSize()}px`,
-              height: `${getVisualBrushSize()}px`,
-              transform: "translate(-50%, -50%)",
+              maxWidth: "100%",
+              maxHeight: "100%",
+              aspectRatio: `${size.w} / ${size.h}`,
+              touchAction: "none",
             }}
+            className={`mt-0 sm:mt-3
+rounded-none sm:rounded-xl
+shadow-none sm:shadow-xl
+select-none object-contain ${isProcessing ? "cursor-wait opacity-75" : "cursor-crosshair"}`}
           />
-        )}
-
-        <canvas
-          ref={canvasRef}
-          width={size.w}
-          height={size.h}
-          onMouseDown={start}
-          onMouseMove={move}
-          onMouseUp={end}
-          onTouchStart={start}
-          onTouchMove={move}
-          onTouchEnd={end}
-          style={{
-            width: 'auto',
-            height: 'auto',
-            maxWidth: '100%',
-            maxHeight: '65vh',
-            aspectRatio: size.w && size.h ? `${size.w} / ${size.h}` : 'auto'
-          }}
-          className={`block touch-none shadow-xl rounded-md ${isHovering ? 'cursor-none' : ''}`}
-        />
+        </div>
       </div>
     </div>
   );
