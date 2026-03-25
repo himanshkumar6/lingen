@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 
 interface SchemaProps {
-  type: 'SoftwareApplication' | 'Article' | 'FAQPage';
+  type: 'SoftwareApplication' | 'Article' | 'FAQPage' | 'WebSite';
   data: any;
 }
 
