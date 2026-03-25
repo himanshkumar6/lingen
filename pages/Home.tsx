@@ -81,8 +81,8 @@ const Home: React.FC = () => {
               <button
                 onClick={() => setActiveCategory(null)}
                 className={`px-4 py-2 text-xs rounded-full border transition ${activeCategory === null
-                    ? "bg-primary text-white border-primary"
-                    : "border-border hover:bg-muted"
+                  ? "bg-primary text-white border-primary"
+                  : "border-border hover:bg-muted"
                   }`}
               >
                 All
@@ -93,8 +93,8 @@ const Home: React.FC = () => {
                   key={category}
                   onClick={() => setActiveCategory(category)}
                   className={`px-4 py-2 text-xs rounded-full border transition ${activeCategory === category
-                      ? "bg-primary text-white border-primary"
-                      : "border-border hover:bg-muted"
+                    ? "bg-primary text-white border-primary"
+                    : "border-border hover:bg-muted"
                     }`}
                 >
                   {category}
@@ -221,14 +221,31 @@ const Home: React.FC = () => {
         <section className="mt-24 space-y-12">
           <h2 className="text-3xl font-bold text-center">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+
+            {/* FAQ 1: Replaced the PDF question with an Instagram Bio tool question */}
             <div className="p-6 rounded-2xl border border-border bg-card">
-              <h4 className="font-semibold mb-2 text-foreground">How do I compress a PDF to exactly 200kb?</h4>
-              <p className="text-sm text-muted-foreground text-pretty">LinkGen uses advanced compression algorithms to reduce file size while maintaining readability, helping you meet strict government or job application limits.</p>
+              <h4 className="font-semibold mb-2 text-foreground">How does the AI Instagram Bio Generator work?</h4>
+              <p className="text-sm text-muted-foreground text-pretty">Our AI analyzes your specific niche, target keywords, and audience to craft professional, SEO-optimized Instagram bios. It helps you rank better in Instagram search and converts profile visitors into loyal followers.</p>
             </div>
+
+            {/* FAQ 2: Improved the 'Free' question with more relevant keywords */}
             <div className="p-6 rounded-2xl border border-border bg-card">
-              <h4 className="font-semibold mb-2 text-foreground">Are these tools free to use?</h4>
-              <p className="text-sm text-muted-foreground text-pretty">Yes, all tools on LinkGen.in are 100% free. We aim to support the creator community by providing high-quality utility tools without a subscription.</p>
+              <h4 className="font-semibold mb-2 text-foreground">Are all the creator tools completely free to use?</h4>
+              <p className="text-sm text-muted-foreground text-pretty">Yes, absolutely! All productivity tools on LinkGen.in, including the YouTube Tag Extractor and Font Converter, are 100% free. Our mission is to support the creator economy by providing premium utility tools without expensive subscriptions.</p>
             </div>
+
+            {/* FAQ 3: Added new question for trust/safety (AdSense loves this) */}
+            <div className="p-6 rounded-2xl border border-border bg-card">
+              <h4 className="font-semibold mb-2 text-foreground">Is my data safe when using these tools?</h4>
+              <p className="text-sm text-muted-foreground text-pretty">Your privacy and data security are our top priorities. Our tools process your requests securely, and we do not store your personal social media data, passwords, or search queries on our servers.</p>
+            </div>
+
+            {/* FAQ 4: Added new question focusing on YouTube SEO keywords */}
+            <div className="p-6 rounded-2xl border border-border bg-card">
+              <h4 className="font-semibold mb-2 text-foreground">Do these tools help with YouTube SEO and ranking?</h4>
+              <p className="text-sm text-muted-foreground text-pretty">Yes! Our YouTube specific tools, like the description and tag extractors, allow you to analyze top-performing competitor metadata. This helps you optimize your own videos for better search rankings and higher click-through rates (CTR).</p>
+            </div>
+
           </div>
         </section>
 

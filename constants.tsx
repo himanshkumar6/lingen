@@ -52,7 +52,7 @@ export const TOOLS: Tool[] = [
     name: 'Stylish Font Converter – Generate Cool Unicode Text',
     description: 'Convert normal text into stylish, fancy, and cool Unicode fonts instantly. Free font converter for Instagram bios, usernames, and social media.',
     icon: <Type className="w-6 h-6 text-purple-600" />,
-    path: '/stylish-font-converter',
+    path: '/font-converter',
     category: 'General'
   },
   {
@@ -65,8 +65,8 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'anime-name',
-    name: 'Anime Name Generator (Free) – Create Random Anime Character Names',
-    description: 'Generate unique anime names instantly with our free anime name generator. Create cool anime character names, usernames, and alter-ego identities in seconds.',
+    name: 'AI Anime Character Creator & Name Generator',
+    description: 'Use advanced AI to generate highly detailed anime character names, complete with unique abilities, clans, and origin stories for your manga or roleplay.',
     icon: <Smile className="w-6 h-6 text-orange-500" />,
     path: '/ai-anime-name-generator',
     category: 'General',
@@ -74,8 +74,8 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'anime-multiverse',
-    name: 'Anime Name Generator (Free) – Create Random Anime Character Names',
-    description: 'Generate unique anime names instantly with our free anime name generator. Create cool anime character names, usernames, and alter-ego identities in seconds.',
+    name: 'Random Anime Name & Username Generator (Free)',
+    description: 'Instantly create authentic Japanese anime names and hardcore gamer tags. Whether you want a dark sci-fi vibe or something magical straight out of a Ghibli movie, find your perfect alter-ego in seconds.',
     icon: <Sparkles className="w-6 h-6 text-orange-600" />,
     path: '/anime-name-generator',
     category: 'General',

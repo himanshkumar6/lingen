@@ -55,7 +55,7 @@ const InstagramBio: React.FC = () => {
         }}
       />
 
-      <SEOWrapper title="Free AI Instagram Bio Generator">
+      <SEOWrapper title="Free AI Instagram Bio Generator | Create SEO Optimized Profiles">
         <div className="space-y-16 lg:space-y-20 py-8 lg:py-16 px-4 sm:px-6">
           <header className="text-center space-y-6 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide">
@@ -70,10 +70,11 @@ const InstagramBio: React.FC = () => {
 
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
               Build a brand, not just a bio. Generate aesthetic and SEO-friendly
-              bios that drive profile visits and followers.
+              bios that drive profile visits, increase discoverability, and convert casual scrollers into loyal followers instantly.
             </p>
           </header>
 
+          {/* Tool Section (Unchanged UI) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start max-w-5xl mx-auto">
             <div className="space-y-6 bg-card border border-border p-6 lg:p-8 rounded-2xl shadow-sm">
               <div className="space-y-2">
@@ -183,12 +184,13 @@ const InstagramBio: React.FC = () => {
             </div>
           </div>
 
+          {/* AdSense Optimized Content Section Starts Here */}
           <section className="max-w-4xl mx-auto space-y-14">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: <Rocket />, title: "Conversion Focus", desc: "Optimized for profile visits & follows." },
-                { icon: <SearchIcon />, title: "SEO Optimized", desc: "Smart keyword placement for discoverability." },
-                { icon: <ShieldCheck />, title: "Privacy Safe", desc: "No tracking or cookies." }
+                { icon: <Rocket />, title: "Conversion Focus", desc: "Optimized to turn casual profile visits into loyal followers." },
+                { icon: <SearchIcon />, title: "SEO Optimized", desc: "Smart keyword placement for high discoverability on Instagram." },
+                { icon: <ShieldCheck />, title: "Privacy Safe", desc: "No tracking, no cookies, and completely secure processing." }
               ].map((item, i) => (
                 <div key={i} className="text-center p-5 border border-border bg-card rounded-2xl">
                   <div className="h-10 w-10 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary mb-3">
@@ -201,41 +203,55 @@ const InstagramBio: React.FC = () => {
             </div>
 
             <article className="text-muted-foreground space-y-12 leading-relaxed text-base border-t border-border pt-14">
+
               <div className="space-y-5">
                 <h2 className="text-2xl lg:text-4xl font-extrabold text-foreground tracking-tight">
                   The Science of a High-Converting Instagram Bio
                 </h2>
                 <p>
-                  In 2026, an Instagram bio isn't just a description; it's a <strong>search ranking factor</strong>.
-                  With social search growing rapidly, profiles now rank based on keywords.
-                  Our generator uses AI-based Natural Language Processing (NLP) to craft bios
-                  optimized for both users and algorithms.
+                  In the modern creator economy of 2026, an Instagram bio is no longer just a brief description of who you are. It is a critical <strong>search ranking factor</strong>. With platforms leaning heavily into social search functionality, user profiles now rank directly based on keyword inclusion, niche authority, and readability.
                 </p>
+                <p>
+                  Our advanced AI Instagram Bio Generator leverages cutting-edge Natural Language Processing (NLP) to craft bios that satisfy both human readers and the Instagram algorithm. By intelligently blending your specific niche, target keywords, and desired tone, the tool produces highly aesthetic text that hooks attention and drives real profile conversions.
+                </p>
+              </div>
+
+              {/* NEW SECTION: How to Use */}
+              <div className="space-y-5">
+                <h3 className="text-xl lg:text-2xl font-bold text-foreground">
+                  How to Use the Free AI Bio Generator
+                </h3>
+                <p>
+                  Crafting the perfect first impression is now effortless. Follow these three simple steps to upgrade your social media presence:
+                </p>
+                <ul className="list-decimal pl-6 space-y-3">
+                  <li><strong>Define Your Niche:</strong> Enter your exact profession, industry, or identity (e.g., "Fitness Coach", "Tech YouTuber", "Local Bakery"). Be as specific as possible to get targeted results.</li>
+                  <li><strong>Add Target Keywords:</strong> What do people search for when looking for content like yours? Add 2-3 keywords (e.g., "Weight loss tips", "Web development tutorials") to ensure your bio is fully SEO-optimized.</li>
+                  <li><strong>Select Tone & Generate:</strong> Choose a vibe that matches your brand personality—whether it's Professional, Aesthetic, or Creative. Hit generate, and instantly copy the variation that resonates best with your brand!</li>
+                </ul>
               </div>
 
               <div className="space-y-6 bg-muted/30 p-8 rounded-3xl border border-border">
                 <h3 className="text-xl lg:text-2xl font-bold text-foreground">
-                  Why Your Bio Matters
+                  Why Your Instagram Bio Matters So Much
                 </h3>
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">
-                      First Impression (0.05s)
+                      The First Impression (0.05s)
                     </h4>
                     <p className="text-sm">
-                      Visitors decide in under a second whether to follow you.
-                      A clear and aesthetic bio builds instant trust.
+                      Psychological studies show that profile visitors decide whether to hit the "Follow" button in a fraction of a second. A messy, unclear, or overly long bio creates cognitive overload, leading to high bounce rates. A structured, clear bio builds instant trust.
                     </p>
                   </div>
 
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">
-                      Search Optimization
+                      Instagram Search Optimization
                     </h4>
                     <p className="text-sm">
-                      Including niche keywords helps you appear in Instagram search results
-                      and suggested accounts.
+                      Instagram now indexes the words in your bio. If a user searches for "New York Photographer" and those exact words are missing from your bio, you are leaving massive organic growth on the table. Keyword integration is no longer optional.
                     </p>
                   </div>
                 </div>
@@ -243,24 +259,24 @@ const InstagramBio: React.FC = () => {
 
               <div className="space-y-6">
                 <h3 className="text-xl lg:text-2xl font-bold text-foreground">
-                  Instagram Bio Best Practices
+                  Instagram Bio Best Practices for 2026
                 </h3>
 
                 <div className="grid gap-4">
                   {[
-                    { t: "Value Proposition", d: "Clearly communicate what value you provide." },
-                    { t: "Social Proof", d: "Mention achievements or metrics for credibility." },
-                    { t: "Call to Action", d: "Guide visitors with clear action steps." }
+                    { t: "Clear Value Proposition", d: "Don't just say what you do; state how you help the viewer. Replace 'Digital Marketer' with 'Helping small businesses 10x their sales through digital marketing strategies.'" },
+                    { t: "Strategic Social Proof", d: "Trust is currency on the internet. Mention measurable achievements, featured publications, or client metrics to instantly establish authority in your niche." },
+                    { t: "Strong Call to Action (CTA)", d: "Never leave your audience guessing what to do next. Use emojis like arrows (⬇️) pointing directly to your Linktree, YouTube channel, or lead magnet." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 p-5 bg-background border border-border rounded-2xl">
-                      <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">
+                      <div className="h-8 w-8 min-w-[32px] rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">
                         {i + 1}
                       </div>
                       <div>
                         <p className="font-semibold text-foreground text-sm">
                           {item.t}
                         </p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground mt-1">
                           {item.d}
                         </p>
                       </div>
@@ -269,27 +285,45 @@ const InstagramBio: React.FC = () => {
                 </div>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-6 border-t border-border pt-10">
                 <h3 className="text-xl lg:text-2xl font-bold text-foreground">
-                  Creator FAQ
+                  Frequently Asked Questions (Creator FAQ)
                 </h3>
 
                 <div className="space-y-6">
                   <div>
                     <p className="font-semibold text-foreground">
-                      Do emojis help in Instagram bios?
+                      Do emojis actually help in Instagram bios?
                     </p>
-                    <p className="text-sm text-muted-foreground">
-                      Yes. Emojis improve readability and structure, but overuse can reduce professionalism.
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Yes. Emojis act as visual bullet points, drastically improving the readability and structure of your bio. However, it's crucial to use them strategically. Overusing emojis can make a professional brand look spammy, while the right amount highlights key information.
                     </p>
                   </div>
 
                   <div>
                     <p className="font-semibold text-foreground">
-                      How often should I update my bio?
+                      How many characters are allowed in an Instagram bio?
                     </p>
-                    <p className="text-sm text-muted-foreground">
-                      Every 3–6 months or whenever you launch something new.
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Instagram allows a strict maximum of 150 characters for your bio section. This is why our AI generator is specifically trained to create concise, punchy, and impactful statements that fit perfectly within the platform's constraints without cutting off important keywords.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-foreground">
+                      Should I include hashtags in my Instagram bio?
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      While clickable hashtags in bios used to be a major trend, in 2026, it is better to use natural keywords instead. Unless you are promoting a specific branded campaign hashtag (like #ShotOniPhone), placing generic hashtags in your bio often drives traffic away from your profile.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-foreground">
+                      How often should I update my profile bio?
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      You should review and optimize your bio every 3 to 6 months. Additionally, make sure to update it immediately whenever you achieve a new milestone, shift your content niche, or launch a new product, service, or YouTube video link.
                     </p>
                   </div>
                 </div>

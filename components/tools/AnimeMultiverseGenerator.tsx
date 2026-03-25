@@ -9,12 +9,14 @@ import {
   Sparkles,
   Layers,
   Fingerprint,
-  Info,
   ShieldCheck,
   HelpCircle,
   ChevronDown,
   BookOpen,
-  Compass
+  Compass,
+  Swords,
+  BrainCircuit,
+  Star
 } from "lucide-react";
 import { ANIME_CHARACTERS, AnimeCharacter } from "@/data/animeCharacters";
 import { Container } from "@/components/Layout/Container";
@@ -24,30 +26,29 @@ import SnowfallBackground from "@/components/background/SnowfallBackground";
 const FAQS = [
   {
     q: "How does the Anime Multiverse Generator calculate my character?",
-    a: "Our tool utilizes an advanced dynamic randomization algorithm. It takes your name and searches across our extensive multiverse database to pull an anime character whose energy aligns with yours at this exact moment."
+    a: "Our tool utilizes an advanced dynamic randomization algorithm combined with seed-based hashing. It takes your name, processes it through our localized engine, and searches across our extensive multiverse database to pull an anime character whose energy and archetype align with your input at this exact moment."
   },
   {
     q: "Is my personal data or name stored on your servers?",
-    a: "Absolutely not. Privacy is our top priority. The Anime Multiverse Generator processes your name entirely locally within your internet browser. We do not transmit, save, or store your name or any personal data on our servers."
+    a: "Absolutely not. Privacy is our top priority. The Anime Multiverse Generator processes your name entirely locally within your internet browser. We do not transmit, save, or store your name, IP address, or any personal data on our servers. Once you close the tab, the data is gone."
   },
   {
     q: "Is this anime identity tool completely free to use?",
-    a: "Yes! The Anime Multiverse Generator is 100% free to use. You can generate as many identities as you want without any hidden fees, subscriptions, or limits."
+    a: "Yes! The Anime Multiverse Generator is 100% free to use. You can generate as many identities as you want without any hidden fees, premium subscriptions, or daily limits. It is built purely for the anime and manga community to enjoy."
   },
   {
     q: "Will I get a different character if I type my name again?",
-    a: "Yes! The anime multiverse is vast and ever-shifting. Every time you initiate a new scan, our system explores a different parallel timeline, revealing a brand-new character for you to discover."
+    a: "Yes! The anime multiverse is vast, chaotic, and ever-shifting. Every time you initiate a new scan or click 'New Scan', our system explores a different parallel timeline, revealing a brand-new character, role, and universe for you to discover."
   },
   {
     q: "Does capitalization or spacing matter when entering my name?",
-    a: "No. Our algorithm automatically normalizes your input so you can focus purely on the fun of discovering your next anime identity without worrying about formatting."
+    a: "No, it does not. Our algorithm automatically normalizes your input (removing extra spaces and adjusting capitalization) so you can focus purely on the fun of discovering your next anime identity without worrying about strict formatting rules."
   },
   {
     q: "Can I share my newly discovered anime identity on social media?",
-    a: "Yes! Once you generate your character, simply click the 'Share Identity' button. It will copy a beautifully formatted text snippet to your clipboard, perfect for pasting on Twitter, Discord, WhatsApp, or Instagram."
+    a: "Yes! Once you generate your character, simply click the 'Share Identity' button. It will instantly copy a beautifully formatted text snippet to your clipboard, perfect for pasting on Twitter, Discord servers, WhatsApp statuses, or your Instagram bio."
   }
 ];
-
 
 const AnimeMultiverseGenerator: React.FC = () => {
   const [name, setName] = useState("");
@@ -113,7 +114,7 @@ const AnimeMultiverseGenerator: React.FC = () => {
         "name": "Anime Multiverse Generator",
         "applicationCategory": "EntertainmentApplication",
         "operatingSystem": "All",
-        "description": "Discover your parallel identity in the anime multiverse. Enter your name to discover randomized anime character matches from hundreds of parallel universes.",
+        "description": "Discover your parallel identity in the anime multiverse. Enter your name to discover randomized anime character matches, archetypes, and abilities from hundreds of parallel universes.",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -159,11 +160,10 @@ const AnimeMultiverseGenerator: React.FC = () => {
               Anime Multiverse
             </span>{" "}
             Identity
-
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/80 max-w-2xl mx-auto font-medium leading-relaxed tracking-tight px-4">
-            Enter your name to securely decode your exact parallel coordinates in the anime universe.
+            Enter your name to securely decode your exact parallel coordinates, abilities, and alter-ego in the vast Japanese anime universe.
           </p>
 
           <form onSubmit={handleGenerate} className="max-w-2xl mx-auto pt-8 sm:pt-10">
@@ -288,15 +288,15 @@ const AnimeMultiverseGenerator: React.FC = () => {
           </div>
         )}
 
-        {/* --- ADDED CONTENT SECTION FOR E-E-A-T & ADSENSE COMPLIANCE --- */}
-        <article className="mt-16 sm:mt-20 space-y-12 sm:space-y-16 border-t border-border/30 pt-16 sm:pt-20">
+        {/* --- EXPANDED ADSENSE COMPLIANCE CONTENT SECTION --- */}
+        <article className="mt-16 sm:mt-20 space-y-16 sm:space-y-20 border-t border-border/30 pt-16 sm:pt-20">
 
           <div className="text-center max-w-3xl mx-auto space-y-6 sm:space-y-8">
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-display font-black text-foreground tracking-tight">
               Mastering the <span className="text-primary italic">Anime Multiverse</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/80 leading-relaxed font-medium">
-              Your comprehensive guide to understanding how our neural synchronization tool maps your identity across Japanese animation genres.
+              Your comprehensive guide to understanding how our neural synchronization tool maps your true identity across Japanese animation genres, archetypes, and legendary universes.
             </p>
           </div>
 
@@ -319,14 +319,39 @@ const AnimeMultiverseGenerator: React.FC = () => {
               </div>
               <h3 className="text-2xl sm:text-3xl font-black text-foreground mb-4 sm:mb-6 font-display tracking-tight">Exploring Anime Genres</h3>
               <p className="text-sm sm:text-base lg:text-lg text-muted-foreground/80 leading-relaxed font-medium">
-                Our database spans the most beloved genres in the anime industry. You might find yourself mapped as a determined protagonist in a high-octane <strong>Shonen</strong> battle series, a strategic mastermind in a psychological <strong>Seinen</strong> thriller, or an overpowered adventurer transported to a fantasy <strong>Isekai</strong> world. The tool is designed to celebrate the rich diversity of Japanese storytelling.
+                Our database spans the most beloved genres in the anime and manga industry. You might find yourself mapped as a determined protagonist in a high-octane <strong>Shonen</strong> battle series, a strategic mastermind in a psychological <strong>Seinen</strong> thriller, or an overpowered adventurer transported to a fantasy <strong>Isekai</strong> world. The tool is designed to celebrate the rich storytelling of Japanese animation.
               </p>
             </div>
           </div>
 
+          {/* NEW SECTION: Archetypes (Boosts SEO & Word Count) */}
+          <section className="max-w-[1000px] mx-auto space-y-8">
+            <h3 className="text-2xl sm:text-3xl font-black text-foreground font-display tracking-tight text-center">
+              Popular Archetypes You Might Discover
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="bg-secondary/30 border border-border/40 p-6 rounded-3xl">
+                <Swords className="w-8 h-8 text-rose-500 mb-4" />
+                <h4 className="font-bold text-foreground text-lg mb-2">The Shonen Hero</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">Boundless energy, immense willpower, and a tragic backstory. This archetype relies on the power of friendship and an unbreakable spirit to overcome impossible villains.</p>
+              </div>
+              <div className="bg-secondary/30 border border-border/40 p-6 rounded-3xl">
+                <BrainCircuit className="w-8 h-8 text-cyan-500 mb-4" />
+                <h4 className="font-bold text-foreground text-lg mb-2">The Seinen Mastermind</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">Highly intelligent, morally gray, and always three steps ahead. This character thrives in psychological warfare, treating every encounter like a high-stakes game of chess.</p>
+              </div>
+              <div className="bg-secondary/30 border border-border/40 p-6 rounded-3xl">
+                <Star className="w-8 h-8 text-amber-500 mb-4" />
+                <h4 className="font-bold text-foreground text-lg mb-2">The Isekai Wanderer</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">Reincarnated into a magical fantasy realm with overpowered abilities. This archetype explores vast new worlds, builds guilds, and defeats demon lords with ease.</p>
+              </div>
+            </div>
+          </section>
+
           {/* Extended About Section */}
-          <section className="bg-secondary/20 border border-border/50 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-10 lg:p-12 max-w-[1000px] mx-auto backdrop-blur-3xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full" />
+          <section className="bg-secondary/20 border border-border/50 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-10 lg:p-12 max-w-[1000px] mx-auto backdrop-blur-3xl relative overflow-hidden shadow-sm">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/5 blur-[100px] rounded-full pointer-events-none" />
             <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 items-start relative z-10">
               <div className="lg:w-1/3">
                 <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black text-foreground font-display leading-[1.1] tracking-tighter">
@@ -334,12 +359,12 @@ const AnimeMultiverseGenerator: React.FC = () => {
                   <span className="text-primary">Anime Alter Ego?</span>
                 </h3>
               </div>
-              <div className="lg:w-2/3 space-y-6 text-sm sm:text-base lg:text-xl text-muted-foreground/80 leading-relaxed font-medium">
+              <div className="lg:w-2/3 space-y-6 text-sm sm:text-base lg:text-lg text-muted-foreground/80 leading-relaxed font-medium">
                 <p>
-                  Anime has become a global cultural phenomenon, offering stories of resilience, friendship, and extraordinary power. The Anime Multiverse Generator is built for fans who want to immerse themselves further into these worlds. It serves as a fun, interactive bridge between reality and fiction.
+                  Anime (Japanese Animation) and Manga have evolved into a massive global cultural phenomenon. From the hidden ninja villages of classic Shonen to the cyberpunk dystopias of futuristic sci-fi, these stories offer incredible tales of resilience, friendship, and extraordinary power. The Anime Multiverse Generator is built for dedicated Otakus and casual fans alike who want to immerse themselves further into these creative worlds.
                 </p>
                 <p>
-                  Whether you are using this tool to find inspiration for your next cosplay, creating a fun status update for your social media profiles, or just sharing a laugh with fellow anime enthusiasts on Discord, our generator ensures a high-quality, seamless experience. Remember, no personal data is ever saved—your journey through the multiverse is entirely private.
+                  Whether you are using this tool to find creative inspiration for your next comic convention cosplay, generating a fun, engaging status update for your social media profiles, or just sharing a laugh with fellow anime enthusiasts on Discord, our name-matching generator ensures a high-quality, seamless experience. Remember, no personal data is ever saved—your journey through the multiverse is entirely private, secure, and limitless.
                 </p>
               </div>
             </div>
@@ -356,7 +381,7 @@ const AnimeMultiverseGenerator: React.FC = () => {
             </div>
             <div>
               <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-display font-black text-foreground tracking-tight">Frequently Asked Questions</h2>
-              <p className="text-sm sm:text-base font-medium mt-2 text-muted-foreground/70">Everything you need to know about the multiverse synchronization.</p>
+              <p className="text-sm sm:text-base font-medium mt-2 text-muted-foreground/70">Everything you need to know about the multiverse synchronization process.</p>
             </div>
           </div>
 
