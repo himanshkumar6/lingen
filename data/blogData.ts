@@ -396,8 +396,7 @@ While retention varies wildly by niche and video length, a general benchmark for
     slug: "create-stylish-gaming-username-pubg-free-fire",
     excerpt:
       "Stand out in the lobby. Learn how to craft the perfect aesthetic gaming tag using Unicode symbols and psychological naming tricks.",
-    coverImage:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop",
+    coverImage: "/blog/username-pubg-free-fire.png",
     category: "Gaming & Creators",
     publishDate: "16 Mar 2026",
     readingTime: "7 min read",
@@ -870,8 +869,7 @@ Both serve different purposes. The description is better for permanent, long-ter
     slug: "top-free-ai-tools-digital-creators",
     excerpt:
       "Automate your workflow and scale your content. These are the absolute best free AI tools for YouTubers, writers, and social media managers.",
-    coverImage:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
+    coverImage: "/blog/top-free-ai-tools-digital-creators.png",
     category: "AI & Creator Tools",
     publishDate: "24 Mar 2026",
     readingTime: "8 min read",
@@ -939,8 +937,7 @@ AI should be viewed as a powerful co-pilot, not an autopilot. While AI can flawl
     slug: "choose-perfect-anime-name-manga-character",
     excerpt:
       "Unlock the secrets of Japanese naming conventions. Learn how to use Kanji meanings and phonetics to create legendary anime characters.",
-    coverImage:
-      "https://images.unsplash.com/photo-1541562232579-512a21359920?q=80&w=1200&auto=format&fit=crop",
+    coverImage: "/blog/choose-perfect-anime-name-manga-character.png",
     category: "Gaming & Creators",
     publishDate: "25 Mar 2026",
     readingTime: "8 min read",
@@ -1006,8 +1003,7 @@ It is best to avoid using names like "Naruto" or "Goku" directly, as they are ic
     slug: "stylish-fonts-discord-social-media-guide",
     excerpt:
       "Stand out from the crowd. Learn how to use Unicode symbols to create aesthetic, bold, and gothic text for your online bios.",
-    coverImage:
-      "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=1200&auto=format&fit=crop",
+    coverImage: "/blog/stylish-fonts-discord-social-media-guide.png",
     category: "Social Media Growth",
     publishDate: "25 Mar 2026",
     readingTime: "6 min read",
@@ -1316,7 +1312,7 @@ Yes! A well-linked site shows that you have a structured, professional website w
     excerpt:
       "Stop guessing and start winning. Learn how to legally 'spy' on your competitors to find viral video ideas and ranking tags.",
     coverImage:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+      "/blog/how-to-use-competitor-analysis-grow-youtube.png",
     category: "YouTube Growth",
     publishDate: "27 Mar 2026",
     readingTime: "8 min read",
@@ -1371,7 +1367,7 @@ Specialized metadata extractors and analytics platforms (like VidIQ or our own [
     excerpt:
       "Blogging isn't dead. Learn how to build a high-traffic website that gets approved for AdSense and generates passive income.",
     coverImage:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200&auto=format&fit=crop",
+      "/blog/how-to-start-profitable-blog-2026-guide.png",
     category: "SEO Basics",
     publishDate: "27 Mar 2026",
     readingTime: "10 min read",
@@ -1429,7 +1425,7 @@ Earnings vary wildly based on your traffic and niche. A small blog with 10k mont
     excerpt:
       "From Isekai tropes to complex time loops. Discover how the anime multiverse theory is changing storytelling in 2026.",
     coverImage:
-      "https://images.unsplash.com/photo-1541562232579-512a21359920?q=80&w=1200&auto=format&fit=crop",
+      "/blog/understanding-anime-multiverse-guide.png",
     category: "Gaming & Creators",
     publishDate: "28 Mar 2026",
     readingTime: "9 min read",
@@ -1484,7 +1480,7 @@ The phonetics should change. Sci-Fi names often sound "harder" and more metallic
     excerpt:
       "Don't wait for traffic to drop. Learn the quick checklist to ensure your blog is perfectly optimized for Google's 2026 algorithm.",
     coverImage:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+      "/blog/10-minute-seo-audit-blog-guide.png",
     category: "SEO Basics",
     publishDate: "28 Mar 2026",
     readingTime: "7 min read",
@@ -1539,7 +1535,7 @@ Instead of deleting them, try "Refreshing" them. Update the info, add new keywor
     excerpt:
       "Your username is your brand. Discover how to create a consistent and stylish identity across Twitch, Discord, and PUBG.",
     coverImage:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop",
+      "/blog/art-digital-branding-gamer-unique-id.png",
     category: "Gaming & Creators",
     publishDate: "28 Mar 2026",
     readingTime: "7 min read",
@@ -1589,8 +1585,7 @@ Aim for 6 to 12 characters. It should be long enough to be unique but short enou
     slug: "5-advanced-youtube-description-hacks-ctr",
     excerpt:
       "Move beyond the basics. Discover the secret formatting and linking hacks that top YouTubers use to boost their click-through rates.",
-    coverImage:
-      "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?q=80&w=1200&auto=format&fit=crop",
+    coverImage: "/blog/advanced-youtube-description-hacks-ctr.png",
     category: "YouTube SEO",
     publishDate: "28 Mar 2026",
     readingTime: "6 min read",
@@ -1648,8 +1643,7 @@ No. Descriptions are just text metadata and have no impact on the loading speed 
     slug: "future-content-creation-late-2026-trends",
     excerpt:
       "Stay ahead of the curve. From AI-driven video to the decline of traditional social media, here is where the creator economy is heading.",
-    coverImage:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
+    coverImage: "/blog/future-content-creation-late-2026-trends.png",
     category: "AI & Creator Tools",
     publishDate: "28 Mar 2026",
     readingTime: "10 min read",
