@@ -1070,7 +1070,7 @@ Yes, they can. Instagram's search algorithm reads standard text better than Unic
     excerpt:
       "Professional product photography on a budget. Learn how to remove distracting backgrounds and watermarks using AI cleanup tools.",
     coverImage:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop",
+      "/blog/clean-up-product-photos-ecommerce-ai-guide.png",
     category: "AI & Creator Tools",
     publishDate: "25 Mar 2026",
     readingTime: "7 min read",
@@ -1133,7 +1133,7 @@ For e-commerce, PNG is excellent if you need transparency, but JPG is better for
     excerpt:
       "Confused about metadata? Learn the technical difference between tags and keywords and how to use both to rank your content on Google and YouTube.",
     coverImage:
-      "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c1d8?q=80&w=1200&auto=format&fit=crop",
+      "/blog/tags-vs-keywords-seo-difference.png",
     category: "SEO Basics",
     publishDate: "26 Mar 2026",
     readingTime: "7 min read",
@@ -1196,7 +1196,7 @@ You should use between 10 to 15 highly relevant tags. Using too many (keyword st
     excerpt:
       "Step into the multiverse. Learn the professional secrets to creating deep, balanced, and aesthetically pleasing anime characters for roleplay or stories.",
     coverImage:
-      "https://images.unsplash.com/photo-1541562232579-512a21359920?q=80&w=1200&auto=format&fit=crop",
+      "/blog/how-to-build-original-anime-character-oc.png",
     category: "Gaming & Creators",
     publishDate: "27 Mar 2026",
     readingTime: "9 min read",
@@ -1255,7 +1255,7 @@ Absolutely. Professional writers often use generators to bypass writer's block a
     excerpt:
       "Boost your rankings without extra content. Learn how to strategically link your articles and tools to keep users on your site longer.",
     coverImage:
-      "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop",
+      "/blog/importance-internal-linking-blog-seo.png",
     category: "SEO Basics",
     publishDate: "27 Mar 2026",
     readingTime: "7 min read",
