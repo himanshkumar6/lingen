@@ -20,6 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+
+<head>
+        <meta name="google-adsense-account" content="ca-pub-3086505347357144" />
+      </head>
    
       <body className="min-h-screen flex flex-col relative overflow-x-hidden">
         {/* Anti-Flicker Script: Must run BEFORE React hydrates or any UI paints */}
